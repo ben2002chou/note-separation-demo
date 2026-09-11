@@ -42,6 +42,7 @@
         </div>
         <div class="spectrogram" id="spectrogram" aria-label="Spectrogram timeline. Drag to select a playback region.">
           <img class="spectrogram-image" id="spectrogram-image" alt="Magnitude spectrogram of the selected audio output">
+          <div class="mask-dimmer" id="mask-dimmer" aria-hidden="true"></div>
           <img class="mask-overlay" id="mask-overlay" alt="" aria-hidden="true">
           <div class="selection" id="selection"></div>
           <div class="playhead" id="playhead"></div>
@@ -50,7 +51,7 @@
         </div>
         <div class="spectrogram-footer">
           <p class="hint">Click a score note to reveal its time-frequency allocation. Drag across the spectrogram to choose a playback region.</p>
-          <label class="mask-toggle"><input id="mask-toggle" type="checkbox" checked> Show ASO allocation</label>
+          <label class="mask-toggle"><input id="mask-toggle" type="checkbox" checked> <i></i> Selected-note allocation</label>
         </div>
       </div>
 

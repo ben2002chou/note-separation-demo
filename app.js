@@ -7,6 +7,7 @@ const ui = {
   midi: document.querySelector('#midi-download'),
   image: document.querySelector('#spectrogram-image'),
   mask: document.querySelector('#mask-overlay'),
+  maskDimmer: document.querySelector('#mask-dimmer'),
   maskToggle: document.querySelector('#mask-toggle'),
   spectrogram: document.querySelector('#spectrogram'),
   selection: document.querySelector('#selection'),
@@ -79,8 +80,10 @@ function setSelection(start, end, event = null) {
     note.classList.toggle('roll-note--selected', Number(note.dataset.event) === state.selectedEvent);
   });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
-  ui.mask.src = selected?.outputs?.aso?.mask || '';
-  ui.mask.classList.toggle('mask-overlay--hidden', !ui.maskToggle.checked || !ui.mask.src);
+  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=2` : '';
+  const hideMask = !ui.maskToggle.checked || !ui.mask.src;
+  ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
+  ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
   if (selected) {
     ui.request.textContent = `Frozen request ${state.example.pieceId}:${String(selected.event).padStart(4, '0')} · queried pitch ${pitchName(selected.pitch)}`;
   }
@@ -303,7 +306,9 @@ ui.showFigureExample.addEventListener('click', () => {
 });
 
 ui.maskToggle.addEventListener('change', () => {
-  ui.mask.classList.toggle('mask-overlay--hidden', !ui.maskToggle.checked || !ui.mask.src);
+  const hideMask = !ui.maskToggle.checked || !ui.mask.src;
+  ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
+  ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
 });
 
 ui.spectrogram.addEventListener('pointerdown', (event) => {

@@ -40,12 +40,12 @@ def rgba_overlay(mixture: np.ndarray, estimate: np.ndarray) -> np.ndarray:
     allocation = np.clip(estimate_mag / np.maximum(mixture_mag, reference * 1e-6), 0.0, 1.0)
     mixture_db = 20.0 * np.log10(mixture_mag / reference + 1e-8)
     audible_energy = np.clip((mixture_db + 72.0) / 54.0, 0.0, 1.0)
-    strength = np.power(allocation, 0.58) * np.power(audible_energy, 0.72)
+    strength = np.power(allocation, 0.42) * np.power(audible_energy, 0.55)
 
-    low = np.array([0.18, 0.52, 1.00])[:, None, None]
-    high = np.array([0.12, 1.00, 0.82])[:, None, None]
+    low = np.array([0.08, 0.72, 1.00])[:, None, None]
+    high = np.array([0.06, 1.00, 0.76])[:, None, None]
     rgb = low * (1.0 - allocation[None, :, :]) + high * allocation[None, :, :]
-    alpha = np.clip(0.9 * strength, 0.0, 0.9)[None, :, :]
+    alpha = np.clip(1.18 * strength, 0.0, 0.96)[None, :, :]
     return np.ascontiguousarray(np.moveaxis(np.concatenate((rgb, alpha), axis=0), 0, -1))
 
 
