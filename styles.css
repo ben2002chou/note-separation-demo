@@ -99,6 +99,16 @@ main { margin-top: -1.55rem; }
 .tab:hover { background: #e9eef2; }
 .tab[aria-selected="true"] { color: white; background: var(--blue-dark); }
 
+.curation-note {
+  margin: 0 1.1rem;
+  padding: 0.58rem 1rem 0.68rem;
+  border-right: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+  color: var(--ink-soft);
+  background: rgba(248, 251, 253, 0.96);
+  font-size: 0.82rem;
+}
+
 .demo-shell, .figure-section, .about {
   padding: clamp(1.25rem, 4vw, 2.4rem);
   border: 1px solid var(--line);

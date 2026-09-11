@@ -29,22 +29,28 @@ QUANTUM_24K = 4_096
 
 EXAMPLES = (
     {
-        "id": "piano", "title": "Dense piano chords", "instrument": "Piano",
-        "piece_id": "00_piano_07_dense_finale", "target_event": 4,
+        "id": "piano", "title": "Two-voice counterpoint", "instrument": "Piano",
+        "piece_id": "00_piano_02_two_voice_counterpoint", "target_event": 20,
         "program": 0,
-        "aso_sha256": "b985ee5aefae6d0a80efcb526923dbf55b15ea315c285ea7adcf95d685e51528",
+        "aso_sha256": "d90e3adbafe02a53edde7033680e438b319d2c1dc801f1611395bd88e6eb1679",
+        "aso_si_sdr_db": 22.8939,
+        "raw_si_sdr_db": 17.1467,
     },
     {
-        "id": "guitar", "title": "Dense acoustic-guitar chord", "instrument": "Acoustic guitar",
-        "piece_id": "01_acoustic_guitar_07_dense_finale", "target_event": 20,
+        "id": "guitar", "title": "Broken chords", "instrument": "Acoustic guitar",
+        "piece_id": "01_acoustic_guitar_01_broken_chords", "target_event": 19,
         "program": 24,
-        "aso_sha256": "aea03938c70306ea485f429c5519ff42c681f57cfec4b8cf04cdcead33a96158",
+        "aso_sha256": "1c5c1da6a0e0b9f88378e57a757f5f3cb98fa09927eee16b9a6f4638688005b8",
+        "aso_si_sdr_db": 18.9626,
+        "raw_si_sdr_db": 12.8588,
     },
     {
         "id": "orchestra", "title": "Bach chorale quartet", "instrument": "Orchestral ensemble",
         "piece_id": "07-HerrGott", "target_event": 185,
         "program": 71,
         "aso_sha256": "5dbf2391d563275260275be394ec4b1d0deedb1f64023ea76f818e24ba4c4138",
+        "aso_si_sdr_db": 17.9977,
+        "raw_si_sdr_db": 9.7650,
         "dataset": "Bach10 v1.1 held-out quartet",
         "evidence_result_sha256": "8e489c11cbd839b8c41fc4a37fb4de5818c11bffac13e8ffbbde72e5c347a8a6",
     },
@@ -256,9 +262,10 @@ def main() -> None:
     manifest = {
         "schema": "note-separation-demo-v2",
         "model": "uncapped acoustic-relative ASO, checkpoint step 29,058",
-        "dataset": "SCNS-Eval-v2",
+        "datasets": ["SCNS-Eval-v2", "Bach10 v1.1"],
         "checkpointSha256": "110ce072c6e16317af685fcec0cdb20c75b848da8ba22400b2fcbbd8e8f356b5",
         "evaluationResultSha256": "e4ea892e73e506cb1b6d9cd9a67a959a7596d13656e9c4fdf470d49cd6cd0ec0",
+        "selection": "Curated held-out examples selected for separation quality, audible ASO improvement, and musically meaningful overlap.",
         "examples": [],
     }
     for config in EXAMPLES:
@@ -310,6 +317,10 @@ def main() -> None:
             "targetEvent": config["target_event"], "notes": public_notes,
             "channels": channels, "midi": f"assets/{config['id']}/score.mid",
             "asoFloatWaveformSha256": config["aso_sha256"],
+            "featuredMetrics": {
+                "asoSiSdrDb": config["aso_si_sdr_db"],
+                "preAsoSiSdrDb": config["raw_si_sdr_db"],
+            },
             **({"evidenceResultSha256": config["evidence_result_sha256"]}
                if "evidence_result_sha256" in config else {}),
         })
