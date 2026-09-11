@@ -67,6 +67,10 @@ function currentChannel(id = state.channel) {
   return note?.outputs?.[id] ? {...channel, ...note.outputs[id]} : channel;
 }
 
+function mixtureChannel() {
+  return state.example.channels.find((item) => item.id === 'mixture');
+}
+
 function setSelection(start, end, event = null, refreshChannel = true) {
   const duration = state.example.duration;
   const queryChanged = event !== null && event !== state.selectedEvent;
@@ -231,8 +235,8 @@ function selectChannel(id, onReady = null) {
     else if (wasPlaying) audio.play().catch(() => {});
   }, {once: true});
   audio.load();
-  ui.image.src = channel.spectrogram;
-  ui.channelLabel.textContent = channel.label;
+  ui.image.src = mixtureChannel().spectrogram;
+  ui.channelLabel.textContent = `Mixture spectrogram · listening: ${channel.label}`;
   document.querySelectorAll('.source-button').forEach((button) => {
     button.setAttribute('aria-pressed', String(button.dataset.channel === id));
   });
@@ -252,8 +256,8 @@ function selectExample(id) {
   ui.midi.download = `${state.example.id}-score.mid`;
   audio.src = currentChannel().audio;
   audio.load();
-  ui.image.src = currentChannel().spectrogram;
-  ui.channelLabel.textContent = currentChannel().label;
+  ui.image.src = mixtureChannel().spectrogram;
+  ui.channelLabel.textContent = 'Mixture spectrogram · listening: Original mixture';
   renderTabs();
   renderChannels();
   renderScore();
