@@ -367,6 +367,12 @@ h3 { margin-bottom: 0; font-size: 1.05rem; }
 .roll-playhead { stroke: #172230; stroke-width: 1.5; pointer-events: none; }
 .score-note { margin: 0.55rem 0 0; }
 
+.keyboard-hint {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
 .figure-section { margin-top: 2rem; border-radius: 15px; }
 .text-button { padding: 0; border: 0; background: none; cursor: pointer; }
 .figure-copy { max-width: 760px; }

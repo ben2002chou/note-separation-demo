@@ -112,6 +112,42 @@ function auditionNote(note) {
   auditionAudio.play().catch((error) => console.warn('Note audition was blocked:', error));
 }
 
+function temporalDistance(a, b) {
+  if (a.end < b.start) return b.start - a.end;
+  if (b.end < a.start) return a.start - b.end;
+  return 0;
+}
+
+function neighboringNote(note, key) {
+  const chronological = [...state.example.notes].sort(
+    (a, b) => a.start - b.start || a.pitch - b.pitch || a.event - b.event,
+  );
+  if (key === 'ArrowLeft' || key === 'ArrowRight') {
+    const index = chronological.findIndex((candidate) => candidate.event === note.event);
+    const step = key === 'ArrowLeft' ? -1 : 1;
+    return chronological[clamp(index + step, 0, chronological.length - 1)];
+  }
+
+  const direction = key === 'ArrowUp' ? 1 : -1;
+  const candidates = state.example.notes.filter(
+    (candidate) => direction * (candidate.pitch - note.pitch) > 0,
+  );
+  candidates.sort((a, b) => (
+    temporalDistance(note, a) - temporalDistance(note, b)
+    || Math.abs(a.pitch - note.pitch) - Math.abs(b.pitch - note.pitch)
+    || Math.abs(a.start - note.start) - Math.abs(b.start - note.start)
+  ));
+  return candidates[0] || note;
+}
+
+function navigateScore(note, key) {
+  const next = neighboringNote(note, key);
+  auditionNote(next);
+  requestAnimationFrame(() => {
+    ui.roll.querySelector(`[data-event="${next.event}"]`)?.focus();
+  });
+}
+
 function renderTabs() {
   ui.tabs.replaceChildren(...state.manifest.examples.map((example) => {
     const button = document.createElement('button');
@@ -201,6 +237,10 @@ function renderScore() {
     rect.addEventListener('click', choose);
     rect.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); }
+      if (['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) {
+        event.preventDefault();
+        navigateScore(note, event.key);
+      }
     });
     svg.append(rect);
   });
@@ -215,6 +255,15 @@ function renderScore() {
   svg.append(playhead);
   ui.roll.replaceChildren(svg);
 }
+
+ui.roll.addEventListener('keydown', (event) => {
+  if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+  if (event.target?.classList?.contains('roll-note')) return;
+  const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
+  if (!selected) return;
+  event.preventDefault();
+  navigateScore(selected, event.key);
+});
 
 function selectChannel(id, onReady = null) {
   const channel = currentChannel(id);
