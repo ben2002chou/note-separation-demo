@@ -10,6 +10,7 @@
       "title": "Dense piano chords",
       "instrument": "Piano",
       "pieceId": "00_piano_07_dense_finale",
+      "dataset": "SCNS-Eval-v2",
       "requestId": "00_piano_07_dense_finale:0004",
       "duration": 1.194687,
       "targetPitch": 76,
@@ -1269,6 +1270,7 @@
       "title": "Dense acoustic-guitar chord",
       "instrument": "Acoustic guitar",
       "pieceId": "01_acoustic_guitar_07_dense_finale",
+      "dataset": "SCNS-Eval-v2",
       "requestId": "01_acoustic_guitar_07_dense_finale:0020",
       "duration": 1.194687,
       "targetPitch": 60,
@@ -2980,6 +2982,807 @@
       "hitMap": "assets/guitar/aso_hit_map.png",
       "hitMapSize": [
         150,
+        513
+      ]
+    },
+    {
+      "id": "orchestra",
+      "title": "Bach chorale quartet",
+      "instrument": "Orchestral ensemble",
+      "pieceId": "07-HerrGott",
+      "dataset": "Bach10 v1.1 held-out quartet",
+      "requestId": "07-HerrGott:0185",
+      "duration": 2.730688,
+      "targetPitch": 62,
+      "targetEvent": 185,
+      "notes": [
+        {
+          "event": 176,
+          "pitch": 72,
+          "start": 0.0,
+          "end": 0.152,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0176/target.wav",
+              "spectrogram": "assets/orchestra/q0176/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0176/aso.wav",
+              "spectrogram": "assets/orchestra/q0176/aso.png",
+              "mask": "assets/orchestra/q0176/aso_mask.png",
+              "audition": "assets/orchestra/q0176/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0176/nmf.wav",
+              "spectrogram": "assets/orchestra/q0176/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0176/hpss.wav",
+              "spectrogram": "assets/orchestra/q0176/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0176/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0176/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0176/mixture_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0176/aso_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0176/target_audition.wav",
+              "start": 0.0
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0176/symmetric_audition.wav",
+              "start": 0.0
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0176/hpss_audition.wav",
+              "start": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0176/nmf_audition.wav",
+              "start": 0.0
+            }
+          },
+          "waveform": [
+            0.986,
+            0.974,
+            1.0,
+            0.919,
+            0.791,
+            0.624,
+            0.504,
+            0.489,
+            0.41,
+            0.286,
+            0.196,
+            0.135,
+            0.116,
+            0.134,
+            0.13,
+            0.121,
+            0.118,
+            0.089,
+            0.065,
+            0.051,
+            0.03,
+            0.022,
+            0.018,
+            0.019,
+            0.027,
+            0.023,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 180,
+          "pitch": 57,
+          "start": 0.0,
+          "end": 0.232,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0180/target.wav",
+              "spectrogram": "assets/orchestra/q0180/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0180/aso.wav",
+              "spectrogram": "assets/orchestra/q0180/aso.png",
+              "mask": "assets/orchestra/q0180/aso_mask.png",
+              "audition": "assets/orchestra/q0180/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0180/nmf.wav",
+              "spectrogram": "assets/orchestra/q0180/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0180/hpss.wav",
+              "spectrogram": "assets/orchestra/q0180/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0180/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0180/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0180/mixture_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0180/aso_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0180/target_audition.wav",
+              "start": 0.0
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0180/symmetric_audition.wav",
+              "start": 0.0
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0180/hpss_audition.wav",
+              "start": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0180/nmf_audition.wav",
+              "start": 0.0
+            }
+          },
+          "waveform": [
+            0.916,
+            0.892,
+            0.943,
+            0.951,
+            0.905,
+            0.944,
+            1.0,
+            0.939,
+            0.911,
+            0.874,
+            0.843,
+            0.851,
+            0.833,
+            0.744,
+            0.64,
+            0.399,
+            0.26,
+            0.17,
+            0.195,
+            0.205,
+            0.142,
+            0.101,
+            0.104,
+            0.104,
+            0.09,
+            0.078,
+            0.101,
+            0.163,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 182,
+          "pitch": 63,
+          "start": 0.0,
+          "end": 0.182,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0182/target.wav",
+              "spectrogram": "assets/orchestra/q0182/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0182/aso.wav",
+              "spectrogram": "assets/orchestra/q0182/aso.png",
+              "mask": "assets/orchestra/q0182/aso_mask.png",
+              "audition": "assets/orchestra/q0182/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0182/nmf.wav",
+              "spectrogram": "assets/orchestra/q0182/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0182/hpss.wav",
+              "spectrogram": "assets/orchestra/q0182/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0182/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0182/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0182/mixture_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0182/aso_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0182/target_audition.wav",
+              "start": 0.0
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0182/symmetric_audition.wav",
+              "start": 0.0
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0182/hpss_audition.wav",
+              "start": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0182/nmf_audition.wav",
+              "start": 0.0
+            }
+          },
+          "waveform": [
+            0.748,
+            0.763,
+            0.701,
+            0.695,
+            0.741,
+            0.643,
+            0.785,
+            0.685,
+            0.673,
+            0.721,
+            0.666,
+            0.636,
+            0.625,
+            0.461,
+            0.342,
+            0.477,
+            0.576,
+            0.675,
+            0.778,
+            0.924,
+            1.0,
+            0.993,
+            0.94,
+            0.811,
+            0.667,
+            0.544,
+            0.127,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 183,
+          "pitch": 41,
+          "start": 0.0,
+          "end": 0.242,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0183/target.wav",
+              "spectrogram": "assets/orchestra/q0183/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0183/aso.wav",
+              "spectrogram": "assets/orchestra/q0183/aso.png",
+              "mask": "assets/orchestra/q0183/aso_mask.png",
+              "audition": "assets/orchestra/q0183/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0183/nmf.wav",
+              "spectrogram": "assets/orchestra/q0183/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0183/hpss.wav",
+              "spectrogram": "assets/orchestra/q0183/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0183/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0183/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0183/mixture_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0183/aso_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0183/target_audition.wav",
+              "start": 0.0
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0183/symmetric_audition.wav",
+              "start": 0.0
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0183/hpss_audition.wav",
+              "start": 0.0
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0183/nmf_audition.wav",
+              "start": 0.0
+            }
+          },
+          "waveform": [
+            0.98,
+            0.868,
+            0.898,
+            0.974,
+            0.901,
+            0.942,
+            0.927,
+            0.912,
+            1.0,
+            0.929,
+            0.898,
+            0.953,
+            0.804,
+            0.719,
+            0.459,
+            0.369,
+            0.456,
+            0.384,
+            0.248,
+            0.196,
+            0.231,
+            0.221,
+            0.247,
+            0.278,
+            0.312,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 184,
+          "pitch": 70,
+          "start": 0.152,
+          "end": 2.502,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0184/target.wav",
+              "spectrogram": "assets/orchestra/q0184/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0184/aso.wav",
+              "spectrogram": "assets/orchestra/q0184/aso.png",
+              "mask": "assets/orchestra/q0184/aso_mask.png",
+              "audition": "assets/orchestra/q0184/aso_audition.wav",
+              "auditionStart": 0.127
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0184/nmf.wav",
+              "spectrogram": "assets/orchestra/q0184/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0184/hpss.wav",
+              "spectrogram": "assets/orchestra/q0184/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0184/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0184/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0184/mixture_audition.wav",
+              "start": 0.127
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0184/aso_audition.wav",
+              "start": 0.127
+            },
+            "target": {
+              "audio": "assets/orchestra/q0184/target_audition.wav",
+              "start": 0.127
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0184/symmetric_audition.wav",
+              "start": 0.127
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0184/hpss_audition.wav",
+              "start": 0.127
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0184/nmf_audition.wav",
+              "start": 0.127
+            }
+          },
+          "waveform": [
+            0.153,
+            0.522,
+            0.875,
+            0.707,
+            0.528,
+            0.729,
+            0.742,
+            0.555,
+            0.671,
+            0.886,
+            0.959,
+            0.862,
+            1.0,
+            0.986,
+            0.716,
+            0.853,
+            0.721,
+            0.555,
+            0.697,
+            0.708,
+            0.522,
+            0.542,
+            0.553,
+            0.372,
+            0.227,
+            0.184,
+            0.189,
+            0.196,
+            0.154,
+            0.151,
+            0.103,
+            0.026
+          ]
+        },
+        {
+          "event": 185,
+          "pitch": 62,
+          "start": 0.182,
+          "end": 2.502,
+          "target": true,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0185/target.wav",
+              "spectrogram": "assets/orchestra/q0185/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0185/aso.wav",
+              "spectrogram": "assets/orchestra/q0185/aso.png",
+              "mask": "assets/orchestra/q0185/aso_mask.png",
+              "audition": "assets/orchestra/q0185/aso_audition.wav",
+              "auditionStart": 0.157
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0185/nmf.wav",
+              "spectrogram": "assets/orchestra/q0185/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0185/hpss.wav",
+              "spectrogram": "assets/orchestra/q0185/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0185/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0185/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0185/mixture_audition.wav",
+              "start": 0.157
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0185/aso_audition.wav",
+              "start": 0.157
+            },
+            "target": {
+              "audio": "assets/orchestra/q0185/target_audition.wav",
+              "start": 0.157
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0185/symmetric_audition.wav",
+              "start": 0.157
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0185/hpss_audition.wav",
+              "start": 0.157
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0185/nmf_audition.wav",
+              "start": 0.157
+            }
+          },
+          "waveform": [
+            0.188,
+            0.801,
+            0.991,
+            1.0,
+            0.993,
+            0.977,
+            0.99,
+            0.972,
+            0.971,
+            0.981,
+            0.984,
+            0.979,
+            0.977,
+            0.985,
+            0.987,
+            0.985,
+            0.976,
+            0.957,
+            0.952,
+            0.939,
+            0.92,
+            0.921,
+            0.903,
+            0.879,
+            0.842,
+            0.787,
+            0.729,
+            0.675,
+            0.614,
+            0.571,
+            0.487,
+            0.147
+          ]
+        },
+        {
+          "event": 186,
+          "pitch": 46,
+          "start": 0.242,
+          "end": 2.502,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0186/target.wav",
+              "spectrogram": "assets/orchestra/q0186/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0186/aso.wav",
+              "spectrogram": "assets/orchestra/q0186/aso.png",
+              "mask": "assets/orchestra/q0186/aso_mask.png",
+              "audition": "assets/orchestra/q0186/aso_audition.wav",
+              "auditionStart": 0.217
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0186/nmf.wav",
+              "spectrogram": "assets/orchestra/q0186/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0186/hpss.wav",
+              "spectrogram": "assets/orchestra/q0186/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0186/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0186/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0186/mixture_audition.wav",
+              "start": 0.217
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0186/aso_audition.wav",
+              "start": 0.217
+            },
+            "target": {
+              "audio": "assets/orchestra/q0186/target_audition.wav",
+              "start": 0.217
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0186/symmetric_audition.wav",
+              "start": 0.217
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0186/hpss_audition.wav",
+              "start": 0.217
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0186/nmf_audition.wav",
+              "start": 0.217
+            }
+          },
+          "waveform": [
+            0.165,
+            0.71,
+            0.821,
+            0.755,
+            0.796,
+            0.896,
+            0.937,
+            0.916,
+            0.9,
+            0.908,
+            1.0,
+            0.877,
+            0.82,
+            0.862,
+            0.831,
+            0.75,
+            0.748,
+            0.789,
+            0.711,
+            0.759,
+            0.753,
+            0.684,
+            0.633,
+            0.643,
+            0.529,
+            0.545,
+            0.479,
+            0.38,
+            0.255,
+            0.121,
+            0.066,
+            0.0
+          ]
+        },
+        {
+          "event": 187,
+          "pitch": 53,
+          "start": 0.272,
+          "end": 2.362,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0187/target.wav",
+              "spectrogram": "assets/orchestra/q0187/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0187/aso.wav",
+              "spectrogram": "assets/orchestra/q0187/aso.png",
+              "mask": "assets/orchestra/q0187/aso_mask.png",
+              "audition": "assets/orchestra/q0187/aso_audition.wav",
+              "auditionStart": 0.247
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0187/nmf.wav",
+              "spectrogram": "assets/orchestra/q0187/nmf.png"
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0187/hpss.wav",
+              "spectrogram": "assets/orchestra/q0187/hpss.png"
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0187/symmetric.wav",
+              "spectrogram": "assets/orchestra/q0187/symmetric.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0187/mixture_audition.wav",
+              "start": 0.247
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0187/aso_audition.wav",
+              "start": 0.247
+            },
+            "target": {
+              "audio": "assets/orchestra/q0187/target_audition.wav",
+              "start": 0.247
+            },
+            "symmetric": {
+              "audio": "assets/orchestra/q0187/symmetric_audition.wav",
+              "start": 0.247
+            },
+            "hpss": {
+              "audio": "assets/orchestra/q0187/hpss_audition.wav",
+              "start": 0.247
+            },
+            "nmf": {
+              "audio": "assets/orchestra/q0187/nmf_audition.wav",
+              "start": 0.247
+            }
+          },
+          "waveform": [
+            0.226,
+            0.914,
+            1.0,
+            0.954,
+            0.904,
+            0.926,
+            0.906,
+            0.847,
+            0.938,
+            0.767,
+            0.946,
+            0.739,
+            0.884,
+            0.691,
+            0.831,
+            0.639,
+            0.834,
+            0.637,
+            0.736,
+            0.609,
+            0.669,
+            0.659,
+            0.603,
+            0.485,
+            0.581,
+            0.339,
+            0.311,
+            0.153,
+            0.112,
+            0.051,
+            0.019,
+            0.0
+          ]
+        }
+      ],
+      "channels": [
+        {
+          "id": "mixture",
+          "label": "Original mixture",
+          "audio": "assets/orchestra/mixture.wav",
+          "spectrogram": "assets/orchestra/mixture.png"
+        },
+        {
+          "id": "target",
+          "label": "Isolated target",
+          "audio": "assets/orchestra/q0185/target.wav",
+          "spectrogram": "assets/orchestra/q0185/target.png"
+        },
+        {
+          "id": "aso",
+          "label": "ASO",
+          "audio": "assets/orchestra/q0185/aso.wav",
+          "spectrogram": "assets/orchestra/q0185/aso.png"
+        },
+        {
+          "id": "nmf",
+          "label": "Score-Informed NMF",
+          "audio": "assets/orchestra/q0185/nmf.wav",
+          "spectrogram": "assets/orchestra/q0185/nmf.png"
+        },
+        {
+          "id": "hpss",
+          "label": "Score-Gated HPSS",
+          "audio": "assets/orchestra/q0185/hpss.wav",
+          "spectrogram": "assets/orchestra/q0185/hpss.png"
+        },
+        {
+          "id": "symmetric",
+          "label": "Symmetric Gated Dual-Branch",
+          "audio": "assets/orchestra/q0185/symmetric.wav",
+          "spectrogram": "assets/orchestra/q0185/symmetric.png"
+        },
+        {
+          "id": "midi",
+          "label": "MIDI score",
+          "audio": "assets/orchestra/midi.wav",
+          "spectrogram": "assets/orchestra/midi.png"
+        }
+      ],
+      "midi": "assets/orchestra/score.mid",
+      "asoFloatWaveformSha256": "5dbf2391d563275260275be394ec4b1d0deedb1f64023ea76f818e24ba4c4138",
+      "evidenceResultSha256": "8e489c11cbd839b8c41fc4a37fb4de5818c11bffac13e8ffbbde72e5c347a8a6",
+      "hitMap": "assets/orchestra/aso_hit_map.png",
+      "hitMapSize": [
+        342,
         513
       ]
     }

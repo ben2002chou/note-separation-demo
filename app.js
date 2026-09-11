@@ -91,7 +91,7 @@ function setSelection(start, end, event = null, refreshChannel = true) {
     waveform.classList.toggle('roll-waveform--selected', Number(waveform.dataset.event) === state.selectedEvent);
   });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
-  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=2` : '';
+  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-1942` : '';
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
   ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
   ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
@@ -131,7 +131,7 @@ function loadHitMap() {
     canvas.height = image.naturalHeight;
     canvas.getContext('2d', {willReadFrequently: true}).drawImage(image, 0, 0);
   }, {once: true});
-  image.src = `${state.example.hitMap}?v=20260912-0045`;
+  image.src = `${state.example.hitMap}?v=20260911-1942`;
 }
 
 function fallbackSpectralNote(time, frequency) {
@@ -502,6 +502,8 @@ function renderFigureCompanion() {
     button.type = 'button';
     const image = document.createElement('img');
     image.src = channel.spectrogram;
+    image.loading = 'lazy';
+    image.decoding = 'async';
     image.alt = '';
     const label = document.createElement('span');
     label.textContent = channel.label;
@@ -564,7 +566,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=20260912-0045')
+fetch('assets/manifest.json?v=20260911-1942')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();

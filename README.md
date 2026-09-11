@@ -14,16 +14,18 @@ python3 -m http.server 8000
 Then open <http://localhost:8000>.
 
 The committed audio, score metadata, and spectrograms are precomputed.
-To rebuild them after staging the two frozen SCNS-Eval-v2 piece folders and
-their retained method sprites, run:
+To rebuild them after staging the two frozen SCNS-Eval-v2 examples, the
+held-out Bach10 quartet, and their retained method sprites, run:
 
 ```sh
 python build_assets.py --source-root /path/to/staged-assets
 ```
 
 The build script preserves one shared amplitude scale within each example. The
-headline extraction is the finalized uncapped acoustic-relative ASO checkpoint
-at step 29,058.
+three curated examples cover piano, acoustic guitar, and a real four-part
+Bach10 ensemble. The headline extraction is the finalized uncapped
+acoustic-relative ASO checkpoint at step 29,058. Browser audio and ownership
+maps are loaded only when an example or note is selected.
 
 Run `python build_mask_overlays.py` after rebuilding the audio assets. It
 recovers each note's displayed ASO magnitude allocation from the aligned

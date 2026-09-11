@@ -40,6 +40,14 @@ EXAMPLES = (
         "program": 24,
         "aso_sha256": "aea03938c70306ea485f429c5519ff42c681f57cfec4b8cf04cdcead33a96158",
     },
+    {
+        "id": "orchestra", "title": "Bach chorale quartet", "instrument": "Orchestral ensemble",
+        "piece_id": "07-HerrGott", "target_event": 185,
+        "program": 71,
+        "aso_sha256": "5dbf2391d563275260275be394ec4b1d0deedb1f64023ea76f818e24ba4c4138",
+        "dataset": "Bach10 v1.1 held-out quartet",
+        "evidence_result_sha256": "8e489c11cbd839b8c41fc4a37fb4de5818c11bffac13e8ffbbde72e5c347a8a6",
+    },
 )
 
 CHANNELS = (
@@ -163,6 +171,15 @@ def place_on_display(signal: np.ndarray, source_start: int, display_start: int, 
 def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, list[dict]]:
     root = source_root / config["piece_id"]
     metadata = json.loads((root / "piece.json").read_text(encoding="utf-8"))
+    retained_geometry = {}
+    retained_result = root / "result.json"
+    if retained_result.exists():
+        result = json.loads(retained_result.read_text(encoding="utf-8"))
+        retained_geometry = {
+            int(row["event_index"]): (int(row["crop_start16"]), int(row["crop_samples16"]))
+            for row in result.get("rows", [])
+            if "crop_start16" in row and "crop_samples16" in row
+        }
     target_event = metadata["events"][config["target_event"]]
     if target_event["event_index"] != config["target_event"]:
         raise ValueError("event index mismatch")
@@ -188,9 +205,12 @@ def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, lis
     cursor = 0
     with zipfile.ZipFile(root / "occurrences.zip") as archive:
         for event in metadata["events"]:
-            query_start24, query_stop24 = crop_geometry(len(mixture24), event)
-            query_samples = len(resample_poly(mixture24[query_start24:query_stop24], 2, 3))
-            query_start16 = round(query_start24 * RATE / SOURCE_RATE)
+            if event["event_index"] in retained_geometry:
+                query_start16, query_samples = retained_geometry[event["event_index"]]
+            else:
+                query_start24, query_stop24 = crop_geometry(len(mixture24), event)
+                query_samples = len(resample_poly(mixture24[query_start24:query_stop24], 2, 3))
+                query_start16 = round(query_start24 * RATE / SOURCE_RATE)
             event_estimates = {
                 key: np.asarray(sprite[cursor:cursor + query_samples], dtype=np.float32)
                 for key, sprite in sprites.items()
@@ -230,7 +250,7 @@ def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, lis
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-root", type=Path, required=True,
-                        help="Directory containing the two staged SCNS-Eval-v2 piece folders")
+                        help="Directory containing the staged demo source folders")
     args = parser.parse_args()
     OUTPUT.mkdir(parents=True, exist_ok=True)
     manifest = {
@@ -284,11 +304,14 @@ def main() -> None:
         manifest["examples"].append({
             "id": config["id"], "title": config["title"],
             "instrument": config["instrument"], "pieceId": config["piece_id"],
+            "dataset": config.get("dataset", "SCNS-Eval-v2"),
             "requestId": f"{config['piece_id']}:{config['target_event']:04d}",
             "duration": round(duration, 6), "targetPitch": target_event["pitch"],
             "targetEvent": config["target_event"], "notes": public_notes,
             "channels": channels, "midi": f"assets/{config['id']}/score.mid",
             "asoFloatWaveformSha256": config["aso_sha256"],
+            **({"evidenceResultSha256": config["evidence_result_sha256"]}
+               if "evidence_result_sha256" in config else {}),
         })
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {len(manifest['examples'])} strongest-model examples to {OUTPUT}")
