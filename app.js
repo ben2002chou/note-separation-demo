@@ -5,7 +5,6 @@ const ui = {
   title: document.querySelector('#example-title'),
   instrument: document.querySelector('#example-instrument'),
   request: document.querySelector('#request-label'),
-  midi: document.querySelector('#midi-download'),
   image: document.querySelector('#spectrogram-image'),
   mask: document.querySelector('#mask-overlay'),
   maskDimmer: document.querySelector('#mask-dimmer'),
@@ -46,7 +45,6 @@ const channelNotes = {
   mixture: 'Full polyphonic recording',
   target: 'Ground-truth isolated note',
   aso: 'Strongest finalized separator output',
-  midi: 'Score rendered as a simple reference synth',
   nmf: 'Score-informed signal-processing baseline',
   hpss: 'Dual-branch neural baseline',
   symmetric: 'Separator output before joint ASO allocation',
@@ -97,7 +95,7 @@ function setSelection(start, end, event = null, refreshChannel = true) {
   ui.scoreNote.textContent = selected
     ? `${pitchName(selected.pitch)}, ${state.start.toFixed(2)}–${state.end.toFixed(2)} s. This note is now the separator query.`
     : 'The selected region can be compared across every audio output.';
-  if (queryChanged && refreshChannel && !['mixture', 'midi'].includes(state.channel)) {
+  if (queryChanged && refreshChannel && state.channel !== 'mixture') {
     selectChannel(state.channel);
   }
 }
@@ -143,9 +141,10 @@ function channelButton(channel) {
 }
 
 function renderChannels() {
-  const primary = ['mixture', 'aso', 'midi'];
-  ui.primaryChannels.replaceChildren(...state.example.channels.filter((c) => primary.includes(c.id)).map(channelButton));
-  ui.baselineChannels.replaceChildren(...state.example.channels.filter((c) => !primary.includes(c.id)).map(channelButton));
+  const primary = ['mixture', 'aso'];
+  const visibleChannels = state.example.channels.filter((channel) => channel.id !== 'midi');
+  ui.primaryChannels.replaceChildren(...visibleChannels.filter((c) => primary.includes(c.id)).map(channelButton));
+  ui.baselineChannels.replaceChildren(...visibleChannels.filter((c) => !primary.includes(c.id)).map(channelButton));
 }
 
 function renderScore() {
@@ -252,8 +251,6 @@ function selectExample(id) {
   ui.instrument.textContent = state.example.instrument;
   ui.request.textContent = `Frozen request ${state.example.requestId} · queried pitch ${pitchName(state.example.targetPitch)}`;
   ui.duration.textContent = state.example.duration.toFixed(2);
-  ui.midi.href = state.example.midi;
-  ui.midi.download = `${state.example.id}-score.mid`;
   audio.src = currentChannel().audio;
   audio.load();
   ui.image.src = mixtureChannel().spectrogram;
@@ -361,7 +358,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=4')
+fetch('assets/manifest.json?v=6')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();

@@ -132,14 +132,12 @@ h3 { margin-bottom: 0; font-size: 1.05rem; }
   font-size: 0.9rem;
 }
 
-.midi-download, .text-button {
+.text-button {
   color: var(--blue-dark);
   font-weight: 700;
   text-decoration: none;
 }
 
-.midi-download { padding: 0.55rem 0; white-space: nowrap; }
-.midi-download:hover { text-decoration: underline; }
 
 .spectrogram-card {
   margin-top: 1.5rem;
@@ -275,7 +273,7 @@ h3 { margin-bottom: 0; font-size: 1.05rem; }
 
 .source-buttons {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.55rem;
 }
 
@@ -313,7 +311,10 @@ h3 { margin-bottom: 0; font-size: 1.05rem; }
 }
 
 .baseline-details summary { width: max-content; cursor: pointer; }
-.source-buttons--secondary { margin-top: 0.7rem; }
+.source-buttons--secondary {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 0.7rem;
+}
 
 .transport {
   display: flex;
@@ -399,7 +400,6 @@ footer { padding: 0 0 3rem; color: var(--muted); font-size: 0.86rem; }
 @media (max-width: 720px) {
   .hero { padding-top: 4rem; }
   .demo-heading, .score-heading, .figure-heading { display: block; }
-  .midi-download { display: inline-block; margin-top: 0.25rem; }
   .source-buttons, .figure-grid { grid-template-columns: 1fr; }
   .source-buttons--secondary { grid-template-columns: 1fr 1fr; }
   .figure-card { display: grid; grid-template-columns: 40% 1fr; align-items: center; }

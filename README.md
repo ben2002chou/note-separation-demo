@@ -13,7 +13,7 @@ python3 -m http.server 8000
 
 Then open <http://localhost:8000>.
 
-The committed audio, MIDI, score metadata, and spectrograms are precomputed.
+The committed audio, score metadata, and spectrograms are precomputed.
 To rebuild them after staging the two frozen SCNS-Eval-v2 piece folders and
 their retained method sprites, run:
 
