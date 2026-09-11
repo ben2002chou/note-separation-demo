@@ -119,13 +119,26 @@ function temporalDistance(a, b) {
 }
 
 function neighboringNote(note, key) {
-  const chronological = [...state.example.notes].sort(
-    (a, b) => a.start - b.start || a.pitch - b.pitch || a.event - b.event,
-  );
   if (key === 'ArrowLeft' || key === 'ArrowRight') {
-    const index = chronological.findIndex((candidate) => candidate.event === note.event);
-    const step = key === 'ArrowLeft' ? -1 : 1;
-    return chronological[clamp(index + step, 0, chronological.length - 1)];
+    const direction = key === 'ArrowRight' ? 1 : -1;
+    const chordTolerance = 0.075;
+    const candidates = state.example.notes.filter(
+      (candidate) => direction * (candidate.start - note.start) > chordTolerance,
+    );
+    if (!candidates.length) return note;
+
+    const nearestOnsetDistance = Math.min(
+      ...candidates.map((candidate) => Math.abs(candidate.start - note.start)),
+    );
+    const onsetGroup = candidates.filter(
+      (candidate) => Math.abs(Math.abs(candidate.start - note.start) - nearestOnsetDistance) <= chordTolerance,
+    );
+    onsetGroup.sort((a, b) => (
+      Math.abs(a.pitch - note.pitch) - Math.abs(b.pitch - note.pitch)
+      || temporalDistance(note, a) - temporalDistance(note, b)
+      || a.event - b.event
+    ));
+    return onsetGroup[0];
   }
 
   const direction = key === 'ArrowUp' ? 1 : -1;
