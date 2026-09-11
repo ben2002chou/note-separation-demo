@@ -357,7 +357,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json')
+fetch('assets/manifest.json?v=4')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();
