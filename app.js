@@ -1,4 +1,5 @@
 const audio = document.querySelector('#audio');
+const auditionAudio = document.querySelector('#note-audition');
 const ui = {
   tabs: document.querySelector('#example-tabs'),
   title: document.querySelector('#example-title'),
@@ -38,6 +39,7 @@ const state = {
   dragStart: null,
   animation: null,
   loadToken: 0,
+  auditionOffset: null,
 };
 
 const channelNotes = {
@@ -65,7 +67,7 @@ function currentChannel(id = state.channel) {
   return note?.outputs?.[id] ? {...channel, ...note.outputs[id]} : channel;
 }
 
-function setSelection(start, end, event = null, audition = false) {
+function setSelection(start, end, event = null, refreshChannel = true) {
   const duration = state.example.duration;
   const queryChanged = event !== null && event !== state.selectedEvent;
   state.start = clamp(Math.min(start, end), 0, duration);
@@ -91,11 +93,21 @@ function setSelection(start, end, event = null, audition = false) {
   ui.scoreNote.textContent = selected
     ? `${pitchName(selected.pitch)}, ${state.start.toFixed(2)}–${state.end.toFixed(2)} s. This note is now the separator query.`
     : 'The selected region can be compared across every audio output.';
-  if (audition) {
-    selectChannel('aso', () => play(state.start, state.end));
-  } else if (queryChanged && !['mixture', 'midi'].includes(state.channel)) {
+  if (queryChanged && refreshChannel && !['mixture', 'midi'].includes(state.channel)) {
     selectChannel(state.channel);
   }
+}
+
+function auditionNote(note) {
+  stop();
+  setSelection(note.start, note.end, note.event, false);
+  selectChannel('aso');
+  const audition = note.outputs?.aso?.audition;
+  if (!audition) return;
+  auditionAudio.src = audition;
+  auditionAudio.currentTime = 0;
+  state.auditionOffset = note.outputs.aso.auditionStart || 0;
+  auditionAudio.play().catch((error) => console.warn('Note audition was blocked:', error));
 }
 
 function renderTabs() {
@@ -182,7 +194,7 @@ function renderScore() {
     rect.setAttribute('aria-label', `${pitchName(note.pitch)}, ${note.start.toFixed(2)} to ${note.end.toFixed(2)} seconds${note.target ? ', queried note' : ''}`);
     rect.dataset.event = note.event;
     rect.setAttribute('class', 'roll-note');
-    const choose = () => setSelection(note.start, note.end, note.event, true);
+    const choose = () => auditionNote(note);
     rect.addEventListener('click', choose);
     rect.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); }
@@ -206,6 +218,8 @@ function selectChannel(id, onReady = null) {
   if (!channel) return;
   const wasPlaying = !audio.paused;
   const position = audio.currentTime || 0;
+  auditionAudio.pause();
+  state.auditionOffset = null;
   audio.pause();
   const loadToken = ++state.loadToken;
   state.channel = id;
@@ -248,6 +262,8 @@ function selectExample(id) {
 }
 
 function play(start, end = null) {
+  auditionAudio.pause();
+  state.auditionOffset = null;
   audio.currentTime = clamp(start, 0, state.example.duration);
   state.segmentEnd = end;
   audio.play().catch((error) => console.warn('Playback was blocked:', error));
@@ -255,15 +271,20 @@ function play(start, end = null) {
 
 function stop() {
   audio.pause();
+  auditionAudio.pause();
+  state.auditionOffset = null;
   state.segmentEnd = null;
 }
 
 function updatePlayhead() {
   if (!state.example) return;
   if (state.segmentEnd !== null && audio.currentTime >= state.segmentEnd) stop();
-  const ratio = clamp((audio.currentTime || 0) / state.example.duration, 0, 1);
+  const displayTime = state.auditionOffset === null
+    ? (audio.currentTime || 0)
+    : state.auditionOffset + (auditionAudio.currentTime || 0);
+  const ratio = clamp(displayTime / state.example.duration, 0, 1);
   ui.playhead.style.left = `${ratio * 100}%`;
-  ui.currentTime.textContent = (audio.currentTime || 0).toFixed(2);
+  ui.currentTime.textContent = displayTime.toFixed(2);
   const rollHead = document.querySelector('#roll-playhead');
   if (rollHead) {
     const x = 38 + ratio * (1000 - 38);
@@ -330,6 +351,10 @@ ui.spectrogram.addEventListener('pointermove', (event) => {
 ui.spectrogram.addEventListener('pointerup', (event) => {
   if (state.dragStart !== null) setSelection(state.dragStart, spectrogramTime(event));
   state.dragStart = null;
+});
+
+auditionAudio.addEventListener('ended', () => {
+  state.auditionOffset = null;
 });
 
 fetch('assets/manifest.json')

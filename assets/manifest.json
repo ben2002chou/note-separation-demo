@@ -29,7 +29,9 @@
             "aso": {
               "audio": "assets/piano/q0000/aso.wav",
               "spectrogram": "assets/piano/q0000/aso.png",
-              "mask": "assets/piano/q0000/aso_mask.png"
+              "mask": "assets/piano/q0000/aso_mask.png",
+              "audition": "assets/piano/q0000/aso_audition.wav",
+              "auditionStart": 0.1093
             },
             "nmf": {
               "audio": "assets/piano/q0000/nmf.wav",
@@ -59,7 +61,9 @@
             "aso": {
               "audio": "assets/piano/q0001/aso.wav",
               "spectrogram": "assets/piano/q0001/aso.png",
-              "mask": "assets/piano/q0001/aso_mask.png"
+              "mask": "assets/piano/q0001/aso_mask.png",
+              "audition": "assets/piano/q0001/aso_audition.wav",
+              "auditionStart": 0.1213
             },
             "nmf": {
               "audio": "assets/piano/q0001/nmf.wav",
@@ -89,7 +93,9 @@
             "aso": {
               "audio": "assets/piano/q0002/aso.wav",
               "spectrogram": "assets/piano/q0002/aso.png",
-              "mask": "assets/piano/q0002/aso_mask.png"
+              "mask": "assets/piano/q0002/aso_mask.png",
+              "audition": "assets/piano/q0002/aso_audition.wav",
+              "auditionStart": 0.1333
             },
             "nmf": {
               "audio": "assets/piano/q0002/nmf.wav",
@@ -119,7 +125,9 @@
             "aso": {
               "audio": "assets/piano/q0003/aso.wav",
               "spectrogram": "assets/piano/q0003/aso.png",
-              "mask": "assets/piano/q0003/aso_mask.png"
+              "mask": "assets/piano/q0003/aso_mask.png",
+              "audition": "assets/piano/q0003/aso_audition.wav",
+              "auditionStart": 0.1453
             },
             "nmf": {
               "audio": "assets/piano/q0003/nmf.wav",
@@ -149,7 +157,9 @@
             "aso": {
               "audio": "assets/piano/q0004/aso.wav",
               "spectrogram": "assets/piano/q0004/aso.png",
-              "mask": "assets/piano/q0004/aso_mask.png"
+              "mask": "assets/piano/q0004/aso_mask.png",
+              "audition": "assets/piano/q0004/aso_audition.wav",
+              "auditionStart": 0.1573
             },
             "nmf": {
               "audio": "assets/piano/q0004/nmf.wav",
@@ -179,7 +189,9 @@
             "aso": {
               "audio": "assets/piano/q0005/aso.wav",
               "spectrogram": "assets/piano/q0005/aso.png",
-              "mask": "assets/piano/q0005/aso_mask.png"
+              "mask": "assets/piano/q0005/aso_mask.png",
+              "audition": "assets/piano/q0005/aso_audition.wav",
+              "auditionStart": 0.5693
             },
             "nmf": {
               "audio": "assets/piano/q0005/nmf.wav",
@@ -209,7 +221,9 @@
             "aso": {
               "audio": "assets/piano/q0006/aso.wav",
               "spectrogram": "assets/piano/q0006/aso.png",
-              "mask": "assets/piano/q0006/aso_mask.png"
+              "mask": "assets/piano/q0006/aso_mask.png",
+              "audition": "assets/piano/q0006/aso_audition.wav",
+              "auditionStart": 0.5813
             },
             "nmf": {
               "audio": "assets/piano/q0006/nmf.wav",
@@ -239,7 +253,9 @@
             "aso": {
               "audio": "assets/piano/q0007/aso.wav",
               "spectrogram": "assets/piano/q0007/aso.png",
-              "mask": "assets/piano/q0007/aso_mask.png"
+              "mask": "assets/piano/q0007/aso_mask.png",
+              "audition": "assets/piano/q0007/aso_audition.wav",
+              "auditionStart": 0.5933
             },
             "nmf": {
               "audio": "assets/piano/q0007/nmf.wav",
@@ -269,7 +285,9 @@
             "aso": {
               "audio": "assets/piano/q0008/aso.wav",
               "spectrogram": "assets/piano/q0008/aso.png",
-              "mask": "assets/piano/q0008/aso_mask.png"
+              "mask": "assets/piano/q0008/aso_mask.png",
+              "audition": "assets/piano/q0008/aso_audition.wav",
+              "auditionStart": 0.6053
             },
             "nmf": {
               "audio": "assets/piano/q0008/nmf.wav",
@@ -299,7 +317,9 @@
             "aso": {
               "audio": "assets/piano/q0009/aso.wav",
               "spectrogram": "assets/piano/q0009/aso.png",
-              "mask": "assets/piano/q0009/aso_mask.png"
+              "mask": "assets/piano/q0009/aso_mask.png",
+              "audition": "assets/piano/q0009/aso_audition.wav",
+              "auditionStart": 1.0293
             },
             "nmf": {
               "audio": "assets/piano/q0009/nmf.wav",
@@ -329,7 +349,9 @@
             "aso": {
               "audio": "assets/piano/q0010/aso.wav",
               "spectrogram": "assets/piano/q0010/aso.png",
-              "mask": "assets/piano/q0010/aso_mask.png"
+              "mask": "assets/piano/q0010/aso_mask.png",
+              "audition": "assets/piano/q0010/aso_audition.wav",
+              "auditionStart": 1.0413
             },
             "nmf": {
               "audio": "assets/piano/q0010/nmf.wav",
@@ -359,7 +381,9 @@
             "aso": {
               "audio": "assets/piano/q0011/aso.wav",
               "spectrogram": "assets/piano/q0011/aso.png",
-              "mask": "assets/piano/q0011/aso_mask.png"
+              "mask": "assets/piano/q0011/aso_mask.png",
+              "audition": "assets/piano/q0011/aso_audition.wav",
+              "auditionStart": 1.0533
             },
             "nmf": {
               "audio": "assets/piano/q0011/nmf.wav",
@@ -389,7 +413,9 @@
             "aso": {
               "audio": "assets/piano/q0012/aso.wav",
               "spectrogram": "assets/piano/q0012/aso.png",
-              "mask": "assets/piano/q0012/aso_mask.png"
+              "mask": "assets/piano/q0012/aso_mask.png",
+              "audition": "assets/piano/q0012/aso_audition.wav",
+              "auditionStart": 1.0653
             },
             "nmf": {
               "audio": "assets/piano/q0012/nmf.wav",
@@ -477,7 +503,9 @@
             "aso": {
               "audio": "assets/guitar/q0013/aso.wav",
               "spectrogram": "assets/guitar/q0013/aso.png",
-              "mask": "assets/guitar/q0013/aso_mask.png"
+              "mask": "assets/guitar/q0013/aso_mask.png",
+              "audition": "assets/guitar/q0013/aso_audition.wav",
+              "auditionStart": 0.0
             },
             "nmf": {
               "audio": "assets/guitar/q0013/nmf.wav",
@@ -507,7 +535,9 @@
             "aso": {
               "audio": "assets/guitar/q0014/aso.wav",
               "spectrogram": "assets/guitar/q0014/aso.png",
-              "mask": "assets/guitar/q0014/aso_mask.png"
+              "mask": "assets/guitar/q0014/aso_mask.png",
+              "audition": "assets/guitar/q0014/aso_audition.wav",
+              "auditionStart": 0.0
             },
             "nmf": {
               "audio": "assets/guitar/q0014/nmf.wav",
@@ -537,7 +567,9 @@
             "aso": {
               "audio": "assets/guitar/q0015/aso.wav",
               "spectrogram": "assets/guitar/q0015/aso.png",
-              "mask": "assets/guitar/q0015/aso_mask.png"
+              "mask": "assets/guitar/q0015/aso_mask.png",
+              "audition": "assets/guitar/q0015/aso_audition.wav",
+              "auditionStart": 0.0
             },
             "nmf": {
               "audio": "assets/guitar/q0015/nmf.wav",
@@ -567,7 +599,9 @@
             "aso": {
               "audio": "assets/guitar/q0016/aso.wav",
               "spectrogram": "assets/guitar/q0016/aso.png",
-              "mask": "assets/guitar/q0016/aso_mask.png"
+              "mask": "assets/guitar/q0016/aso_mask.png",
+              "audition": "assets/guitar/q0016/aso_audition.wav",
+              "auditionStart": 0.0
             },
             "nmf": {
               "audio": "assets/guitar/q0016/nmf.wav",
@@ -597,7 +631,9 @@
             "aso": {
               "audio": "assets/guitar/q0017/aso.wav",
               "spectrogram": "assets/guitar/q0017/aso.png",
-              "mask": "assets/guitar/q0017/aso_mask.png"
+              "mask": "assets/guitar/q0017/aso_mask.png",
+              "audition": "assets/guitar/q0017/aso_audition.wav",
+              "auditionStart": 0.0
             },
             "nmf": {
               "audio": "assets/guitar/q0017/nmf.wav",
@@ -627,7 +663,9 @@
             "aso": {
               "audio": "assets/guitar/q0018/aso.wav",
               "spectrogram": "assets/guitar/q0018/aso.png",
-              "mask": "assets/guitar/q0018/aso_mask.png"
+              "mask": "assets/guitar/q0018/aso_mask.png",
+              "audition": "assets/guitar/q0018/aso_audition.wav",
+              "auditionStart": 0.1333
             },
             "nmf": {
               "audio": "assets/guitar/q0018/nmf.wav",
@@ -657,7 +695,9 @@
             "aso": {
               "audio": "assets/guitar/q0019/aso.wav",
               "spectrogram": "assets/guitar/q0019/aso.png",
-              "mask": "assets/guitar/q0019/aso_mask.png"
+              "mask": "assets/guitar/q0019/aso_mask.png",
+              "audition": "assets/guitar/q0019/aso_audition.wav",
+              "auditionStart": 0.1453
             },
             "nmf": {
               "audio": "assets/guitar/q0019/nmf.wav",
@@ -687,7 +727,9 @@
             "aso": {
               "audio": "assets/guitar/q0020/aso.wav",
               "spectrogram": "assets/guitar/q0020/aso.png",
-              "mask": "assets/guitar/q0020/aso_mask.png"
+              "mask": "assets/guitar/q0020/aso_mask.png",
+              "audition": "assets/guitar/q0020/aso_audition.wav",
+              "auditionStart": 0.1573
             },
             "nmf": {
               "audio": "assets/guitar/q0020/nmf.wav",
@@ -717,7 +759,9 @@
             "aso": {
               "audio": "assets/guitar/q0021/aso.wav",
               "spectrogram": "assets/guitar/q0021/aso.png",
-              "mask": "assets/guitar/q0021/aso_mask.png"
+              "mask": "assets/guitar/q0021/aso_mask.png",
+              "audition": "assets/guitar/q0021/aso_audition.wav",
+              "auditionStart": 0.1693
             },
             "nmf": {
               "audio": "assets/guitar/q0021/nmf.wav",
@@ -747,7 +791,9 @@
             "aso": {
               "audio": "assets/guitar/q0022/aso.wav",
               "spectrogram": "assets/guitar/q0022/aso.png",
-              "mask": "assets/guitar/q0022/aso_mask.png"
+              "mask": "assets/guitar/q0022/aso_mask.png",
+              "audition": "assets/guitar/q0022/aso_audition.wav",
+              "auditionStart": 0.5933
             },
             "nmf": {
               "audio": "assets/guitar/q0022/nmf.wav",
@@ -777,7 +823,9 @@
             "aso": {
               "audio": "assets/guitar/q0023/aso.wav",
               "spectrogram": "assets/guitar/q0023/aso.png",
-              "mask": "assets/guitar/q0023/aso_mask.png"
+              "mask": "assets/guitar/q0023/aso_mask.png",
+              "audition": "assets/guitar/q0023/aso_audition.wav",
+              "auditionStart": 0.6053
             },
             "nmf": {
               "audio": "assets/guitar/q0023/nmf.wav",
@@ -807,7 +855,9 @@
             "aso": {
               "audio": "assets/guitar/q0024/aso.wav",
               "spectrogram": "assets/guitar/q0024/aso.png",
-              "mask": "assets/guitar/q0024/aso_mask.png"
+              "mask": "assets/guitar/q0024/aso_mask.png",
+              "audition": "assets/guitar/q0024/aso_audition.wav",
+              "auditionStart": 0.6173
             },
             "nmf": {
               "audio": "assets/guitar/q0024/nmf.wav",
@@ -837,7 +887,9 @@
             "aso": {
               "audio": "assets/guitar/q0025/aso.wav",
               "spectrogram": "assets/guitar/q0025/aso.png",
-              "mask": "assets/guitar/q0025/aso_mask.png"
+              "mask": "assets/guitar/q0025/aso_mask.png",
+              "audition": "assets/guitar/q0025/aso_audition.wav",
+              "auditionStart": 0.6293
             },
             "nmf": {
               "audio": "assets/guitar/q0025/nmf.wav",
@@ -867,7 +919,9 @@
             "aso": {
               "audio": "assets/guitar/q0026/aso.wav",
               "spectrogram": "assets/guitar/q0026/aso.png",
-              "mask": "assets/guitar/q0026/aso_mask.png"
+              "mask": "assets/guitar/q0026/aso_mask.png",
+              "audition": "assets/guitar/q0026/aso_audition.wav",
+              "auditionStart": 1.0533
             },
             "nmf": {
               "audio": "assets/guitar/q0026/nmf.wav",
@@ -897,7 +951,9 @@
             "aso": {
               "audio": "assets/guitar/q0027/aso.wav",
               "spectrogram": "assets/guitar/q0027/aso.png",
-              "mask": "assets/guitar/q0027/aso_mask.png"
+              "mask": "assets/guitar/q0027/aso_mask.png",
+              "audition": "assets/guitar/q0027/aso_audition.wav",
+              "auditionStart": 1.0653
             },
             "nmf": {
               "audio": "assets/guitar/q0027/nmf.wav",
@@ -927,7 +983,9 @@
             "aso": {
               "audio": "assets/guitar/q0028/aso.wav",
               "spectrogram": "assets/guitar/q0028/aso.png",
-              "mask": "assets/guitar/q0028/aso_mask.png"
+              "mask": "assets/guitar/q0028/aso_mask.png",
+              "audition": "assets/guitar/q0028/aso_audition.wav",
+              "auditionStart": 1.0773
             },
             "nmf": {
               "audio": "assets/guitar/q0028/nmf.wav",
@@ -957,7 +1015,9 @@
             "aso": {
               "audio": "assets/guitar/q0029/aso.wav",
               "spectrogram": "assets/guitar/q0029/aso.png",
-              "mask": "assets/guitar/q0029/aso_mask.png"
+              "mask": "assets/guitar/q0029/aso_mask.png",
+              "audition": "assets/guitar/q0029/aso_audition.wav",
+              "auditionStart": 1.0893
             },
             "nmf": {
               "audio": "assets/guitar/q0029/nmf.wav",
@@ -987,7 +1047,9 @@
             "aso": {
               "audio": "assets/guitar/q0030/aso.wav",
               "spectrogram": "assets/guitar/q0030/aso.png",
-              "mask": "assets/guitar/q0030/aso_mask.png"
+              "mask": "assets/guitar/q0030/aso_mask.png",
+              "audition": "assets/guitar/q0030/aso_audition.wav",
+              "auditionStart": 1.1013
             },
             "nmf": {
               "audio": "assets/guitar/q0030/nmf.wav",

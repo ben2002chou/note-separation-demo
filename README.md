@@ -28,3 +28,5 @@ at step 29,058.
 Run `python build_mask_overlays.py` after rebuilding the audio assets. It
 recovers each note's displayed ASO magnitude allocation from the aligned
 mixture and ASO output and writes the transparent overlays used by the score.
+Run `python build_note_auditions.py` to create the short ASO clips played
+directly by piano-roll note clicks.
