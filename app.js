@@ -16,7 +16,7 @@ const ui = {
   currentTime: document.querySelector('#current-time'),
   duration: document.querySelector('#duration'),
   primaryChannels: document.querySelector('#primary-channels'),
-  baselineChannels: document.querySelector('#baseline-channels'),
+  binCandidates: document.querySelector('#bin-candidates'),
   playWhole: document.querySelector('#play-whole'),
   playRegion: document.querySelector('#play-region'),
   stop: document.querySelector('#stop'),
@@ -35,10 +35,13 @@ const state = {
   end: 0,
   selectedEvent: null,
   segmentEnd: null,
-  dragStart: null,
+  pointerStart: null,
+  dragging: false,
   animation: null,
   loadToken: 0,
   auditionOffset: null,
+  hitMapImage: null,
+  hitMapCanvas: document.createElement('canvas'),
 };
 
 const channelNotes = {
@@ -84,6 +87,9 @@ function setSelection(start, end, event = null, refreshChannel = true) {
   document.querySelectorAll('.roll-note').forEach((note) => {
     note.classList.toggle('roll-note--selected', Number(note.dataset.event) === state.selectedEvent);
   });
+  document.querySelectorAll('.roll-waveform').forEach((waveform) => {
+    waveform.classList.toggle('roll-waveform--selected', Number(waveform.dataset.event) === state.selectedEvent);
+  });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
   ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=2` : '';
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
@@ -93,23 +99,105 @@ function setSelection(start, end, event = null, refreshChannel = true) {
     ui.request.textContent = `Frozen request ${state.example.pieceId}:${String(selected.event).padStart(4, '0')} · queried pitch ${pitchName(selected.pitch)}`;
   }
   ui.scoreNote.textContent = selected
-    ? `${pitchName(selected.pitch)}, ${state.start.toFixed(2)}–${state.end.toFixed(2)} s. This note is now the separator query.`
+    ? `${pitchName(selected.pitch)}, ${state.start.toFixed(2)}–${state.end.toFixed(2)} s · ${currentChannel()?.label || 'selected method'}`
     : 'The selected region can be compared across every audio output.';
   if (queryChanged && refreshChannel && state.channel !== 'mixture') {
     selectChannel(state.channel);
   }
 }
 
-function auditionNote(note) {
+function auditionNote(note, channelId = state.channel) {
+  ui.binCandidates.hidden = true;
   stop();
+  state.channel = channelId;
   setSelection(note.start, note.end, note.event, false);
-  selectChannel('aso');
-  const audition = note.outputs?.aso?.audition;
+  selectChannel(channelId);
+  const audition = note.auditions?.[channelId];
   if (!audition) return;
-  auditionAudio.src = audition;
+  auditionAudio.src = audition.audio;
   auditionAudio.currentTime = 0;
-  state.auditionOffset = note.outputs.aso.auditionStart || 0;
+  state.auditionOffset = audition.start || 0;
   auditionAudio.play().catch((error) => console.warn('Note audition was blocked:', error));
+}
+
+function loadHitMap() {
+  const exampleId = state.example.id;
+  const image = new Image();
+  state.hitMapImage = image;
+  image.addEventListener('load', () => {
+    if (state.example.id !== exampleId || state.hitMapImage !== image) return;
+    const canvas = state.hitMapCanvas;
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    canvas.getContext('2d', {willReadFrequently: true}).drawImage(image, 0, 0);
+  }, {once: true});
+  image.src = `${state.example.hitMap}?v=20260912-0045`;
+}
+
+function fallbackSpectralNote(time, frequency) {
+  const active = state.example.notes.filter((note) => time >= note.start - 0.04 && time <= note.end + 0.25);
+  const candidates = active.length ? active : state.example.notes;
+  const safeFrequency = Math.max(20, frequency);
+  return [...candidates].sort((a, b) => {
+    const harmonicError = (note) => {
+      const fundamental = 440 * 2 ** ((note.pitch - 69) / 12);
+      const harmonic = clamp(Math.round(safeFrequency / fundamental), 1, 20);
+      return Math.abs(1200 * Math.log2(safeFrequency / (fundamental * harmonic)));
+    };
+    return harmonicError(a) - harmonicError(b)
+      || Math.abs(a.start - time) - Math.abs(b.start - time);
+  })[0];
+}
+
+function renderBinCandidates(notes, time, frequency, shared) {
+  ui.binCandidates.hidden = false;
+  const description = document.createElement('span');
+  description.textContent = `${shared ? 'Shared energy' : 'Likely owner'} at ${time.toFixed(2)} s, ${frequency >= 1000 ? `${(frequency / 1000).toFixed(1)} kHz` : `${Math.round(frequency)} Hz`}:`;
+  const buttons = notes.map((note, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'candidate-button';
+    button.textContent = `${pitchName(note.pitch)}${index === 0 ? ' · strongest' : ' · alternate'}`;
+    button.addEventListener('click', () => {
+      auditionNote(note);
+      renderBinCandidates(notes, time, frequency, shared);
+    });
+    return button;
+  });
+  ui.binCandidates.replaceChildren(description, ...buttons);
+}
+
+function selectSpectrogramPoint(event) {
+  const bounds = ui.spectrogram.getBoundingClientRect();
+  const xRatio = clamp((event.clientX - bounds.left) / bounds.width, 0, 1);
+  const yRatio = clamp((event.clientY - bounds.top) / bounds.height, 0, 1);
+  const time = xRatio * state.example.duration;
+  const frequency = (1 - yRatio) * 8000;
+  let candidates = [];
+  let shared = false;
+
+  const image = state.hitMapImage;
+  if (image?.complete && image.naturalWidth) {
+    const x = clamp(Math.floor(xRatio * image.naturalWidth), 0, image.naturalWidth - 1);
+    const y = clamp(Math.floor(yRatio * image.naturalHeight), 0, image.naturalHeight - 1);
+    const [winnerEvent, runnerEvent, packed] = state.hitMapCanvas
+      .getContext('2d', {willReadFrequently: true})
+      .getImageData(x, y, 1, 1).data;
+    const strength = ((packed >> 4) & 15) * 17;
+    const ambiguity = (packed & 15) * 17;
+    if (strength >= 24) {
+      const winner = state.example.notes.find((note) => note.event === winnerEvent);
+      const runner = state.example.notes.find((note) => note.event === runnerEvent);
+      if (winner) candidates.push(winner);
+      shared = ambiguity >= 145 && runner && runner.event !== winner?.event;
+      if (shared) candidates.push(runner);
+    }
+  }
+
+  if (!candidates.length) candidates = [fallbackSpectralNote(time, frequency)].filter(Boolean);
+  if (!candidates.length) return;
+  auditionNote(candidates[0]);
+  renderBinCandidates(candidates, time, frequency, shared);
 }
 
 function temporalDistance(a, b) {
@@ -179,21 +267,27 @@ function channelButton(channel) {
   button.className = 'source-button';
   button.type = 'button';
   button.dataset.channel = channel.id;
+  if (channel.id === 'aso') button.classList.add('source-button--ours');
   button.setAttribute('aria-pressed', String(channel.id === state.channel));
   const strong = document.createElement('strong');
-  strong.textContent = channel.label;
+  strong.textContent = channel.id === 'aso' ? 'ASO · ours' : channel.label;
   const small = document.createElement('small');
   small.textContent = channelNotes[channel.id] || '';
   button.append(strong, small);
-  button.addEventListener('click', () => selectChannel(channel.id));
+  button.addEventListener('click', () => {
+    const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
+    if (selected) auditionNote(selected, channel.id);
+    else selectChannel(channel.id);
+  });
   return button;
 }
 
 function renderChannels() {
-  const primary = ['mixture', 'aso'];
-  const visibleChannels = state.example.channels.filter((channel) => channel.id !== 'midi');
-  ui.primaryChannels.replaceChildren(...visibleChannels.filter((c) => primary.includes(c.id)).map(channelButton));
-  ui.baselineChannels.replaceChildren(...visibleChannels.filter((c) => !primary.includes(c.id)).map(channelButton));
+  const order = ['aso', 'mixture', 'target', 'symmetric', 'hpss', 'nmf'];
+  const channels = order
+    .map((id) => state.example.channels.find((channel) => channel.id === id))
+    .filter(Boolean);
+  ui.primaryChannels.replaceChildren(...channels.map(channelButton));
 }
 
 function renderScore() {
@@ -202,7 +296,7 @@ function renderScore() {
   const high = Math.max(...notes.map((note) => note.pitch)) + 1;
   const rows = high - low + 1;
   const width = 1000;
-  const height = 210;
+  const height = 250;
   const labelWidth = 38;
   const plotWidth = width - labelWidth;
   const rowHeight = height / rows;
@@ -214,6 +308,13 @@ function renderScore() {
 
   for (let pitch = low; pitch <= high; pitch += 1) {
     const y = (high - pitch) * rowHeight;
+    const row = document.createElementNS(ns, 'rect');
+    row.setAttribute('x', labelWidth);
+    row.setAttribute('y', y);
+    row.setAttribute('width', plotWidth);
+    row.setAttribute('height', rowHeight);
+    row.setAttribute('class', [1, 3, 6, 8, 10].includes(pitch % 12) ? 'roll-row roll-row--black' : 'roll-row');
+    svg.append(row);
     const line = document.createElementNS(ns, 'line');
     line.setAttribute('x1', labelWidth);
     line.setAttribute('x2', width);
@@ -221,14 +322,23 @@ function renderScore() {
     line.setAttribute('y2', y);
     line.setAttribute('class', 'roll-grid');
     svg.append(line);
-    if (pitch % 12 === 0 || pitch === low || pitch === high) {
-      const label = document.createElementNS(ns, 'text');
-      label.setAttribute('x', 4);
-      label.setAttribute('y', y + rowHeight * 0.72);
-      label.setAttribute('class', 'roll-label');
-      label.textContent = pitchName(pitch);
-      svg.append(label);
-    }
+    const label = document.createElementNS(ns, 'text');
+    label.setAttribute('x', 4);
+    label.setAttribute('y', y + rowHeight * 0.72);
+    label.setAttribute('class', 'roll-label');
+    label.textContent = pitchName(pitch);
+    svg.append(label);
+  }
+
+  for (let index = 0; index <= 8; index += 1) {
+    const x = labelWidth + index / 8 * plotWidth;
+    const line = document.createElementNS(ns, 'line');
+    line.setAttribute('x1', x);
+    line.setAttribute('x2', x);
+    line.setAttribute('y1', 0);
+    line.setAttribute('y2', height);
+    line.setAttribute('class', 'roll-time-grid');
+    svg.append(line);
   }
 
   notes.forEach((note) => {
@@ -256,6 +366,25 @@ function renderScore() {
       }
     });
     svg.append(rect);
+
+    if (note.waveform?.length > 1) {
+      const noteHeight = Math.max(4, rowHeight - 2);
+      const center = y + noteHeight / 2;
+      const amplitude = noteHeight * 0.36;
+      const top = note.waveform.map((value, index) => [
+        x + index / (note.waveform.length - 1) * noteWidth,
+        center - value * amplitude,
+      ]);
+      const bottom = [...note.waveform].reverse().map((value, reverseIndex) => {
+        const index = note.waveform.length - 1 - reverseIndex;
+        return [x + index / (note.waveform.length - 1) * noteWidth, center + value * amplitude];
+      });
+      const path = document.createElementNS(ns, 'path');
+      path.setAttribute('d', [...top, ...bottom].map(([px, py], index) => `${index ? 'L' : 'M'}${px.toFixed(1)},${py.toFixed(1)}`).join(' ') + ' Z');
+      path.setAttribute('class', 'roll-waveform');
+      path.dataset.event = note.event;
+      svg.append(path);
+    }
   });
 
   const playhead = document.createElementNS(ns, 'line');
@@ -307,7 +436,7 @@ function selectExample(id) {
   audio.pause();
   state.segmentEnd = null;
   state.example = state.manifest.examples.find((example) => example.id === id);
-  state.channel = 'mixture';
+  state.channel = 'aso';
   state.selectedEvent = state.example.targetEvent;
   ui.title.textContent = state.example.title;
   ui.instrument.textContent = state.example.instrument;
@@ -316,7 +445,9 @@ function selectExample(id) {
   audio.src = currentChannel().audio;
   audio.load();
   ui.image.src = mixtureChannel().spectrogram;
-  ui.channelLabel.textContent = 'Mixture spectrogram · listening: Original mixture';
+  ui.channelLabel.textContent = 'Mixture spectrogram · listening: ASO';
+  ui.binCandidates.hidden = true;
+  loadHitMap();
   renderTabs();
   renderChannels();
   renderScore();
@@ -404,23 +535,36 @@ ui.maskToggle.addEventListener('change', () => {
 });
 
 ui.spectrogram.addEventListener('pointerdown', (event) => {
-  state.dragStart = spectrogramTime(event);
+  state.pointerStart = {
+    x: event.clientX,
+    y: event.clientY,
+    time: spectrogramTime(event),
+  };
+  state.dragging = false;
   ui.spectrogram.setPointerCapture(event.pointerId);
-  setSelection(state.dragStart, state.dragStart + 0.04);
 });
 ui.spectrogram.addEventListener('pointermove', (event) => {
-  if (state.dragStart !== null) setSelection(state.dragStart, spectrogramTime(event));
+  if (!state.pointerStart) return;
+  if (Math.abs(event.clientX - state.pointerStart.x) > 6) state.dragging = true;
+  if (state.dragging) setSelection(state.pointerStart.time, spectrogramTime(event));
 });
 ui.spectrogram.addEventListener('pointerup', (event) => {
-  if (state.dragStart !== null) setSelection(state.dragStart, spectrogramTime(event));
-  state.dragStart = null;
+  if (!state.pointerStart) return;
+  if (state.dragging) setSelection(state.pointerStart.time, spectrogramTime(event));
+  else selectSpectrogramPoint(event);
+  state.pointerStart = null;
+  state.dragging = false;
+});
+ui.spectrogram.addEventListener('pointercancel', () => {
+  state.pointerStart = null;
+  state.dragging = false;
 });
 
 auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=20260911-2210')
+fetch('assets/manifest.json?v=20260912-0045')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();

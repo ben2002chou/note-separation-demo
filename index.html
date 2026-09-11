@@ -11,7 +11,7 @@
   <meta property="og:image" content="https://ben2002chou.github.io/note-separation-demo/assets/piano/mixture.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Score-Informed Note Separation Demo</title>
-  <link rel="stylesheet" href="styles.css?v=20260911-2300">
+  <link rel="stylesheet" href="styles.css?v=20260912-0045">
 </head>
 <body>
   <header class="hero">
@@ -34,6 +34,14 @@
         </div>
       </div>
 
+      <div class="source-section">
+        <div class="source-heading">
+          <p class="control-label">Audition method</p>
+          <p>Choose a method, then click any score note or spectrogram region.</p>
+        </div>
+        <div class="source-buttons" id="primary-channels" role="group" aria-label="Audition method"></div>
+      </div>
+
       <div class="spectrogram-card">
         <div class="spectrogram-meta">
           <span id="channel-label">Mixture spectrogram · listening: Original mixture</span>
@@ -49,19 +57,27 @@
           <div class="axis-label axis-label--time">time</div>
         </div>
         <div class="spectrogram-footer">
-          <p class="hint">Click a score note to reveal its time-frequency allocation. Drag across the spectrogram to choose a playback region.</p>
+          <p class="hint">Click spectral energy to identify and audition its likely note. Drag horizontally to select a playback region.</p>
           <label class="mask-toggle"><input id="mask-toggle" type="checkbox" checked> <i></i> Selected-note allocation</label>
         </div>
+        <div class="bin-candidates" id="bin-candidates" hidden></div>
       </div>
 
-      <div class="source-section">
-        <p class="control-label">Listen to</p>
-        <div class="source-buttons" id="primary-channels" role="group" aria-label="Audio source"></div>
-        <details class="baseline-details">
-          <summary>Compare baselines</summary>
-          <div class="source-buttons source-buttons--secondary" id="baseline-channels"></div>
-        </details>
-      </div>
+      <section class="score-section" aria-labelledby="score-title">
+        <div class="score-heading">
+          <div>
+            <p class="control-label">Score</p>
+            <h3 id="score-title">Click a note to hear it with the selected method</h3>
+          </div>
+          <div class="legend" aria-label="Score legend">
+            <span><i class="legend__swatch legend__swatch--target"></i> selected query</span>
+            <span><i class="legend__swatch"></i> score context</span>
+          </div>
+        </div>
+        <div class="piano-roll" id="piano-roll" tabindex="0"></div>
+        <p class="score-note" id="score-note"></p>
+        <p class="keyboard-hint">Keyboard: ←/→ previous or next onset at the closest pitch · ↑/↓ nearby higher or lower note · Enter/Space replay</p>
+      </section>
 
       <div class="transport" role="group" aria-label="Playback controls">
         <button class="button button--primary" id="play-whole" type="button">
@@ -73,22 +89,6 @@
         <button class="button button--quiet" id="stop" type="button">Stop</button>
         <span class="region-readout" id="region-readout"></span>
       </div>
-
-      <section class="score-section" aria-labelledby="score-title">
-        <div class="score-heading">
-          <div>
-            <p class="control-label">Score</p>
-            <h3 id="score-title">Click a note to hear its ASO separation</h3>
-          </div>
-          <div class="legend" aria-label="Score legend">
-            <span><i class="legend__swatch legend__swatch--target"></i> selected query</span>
-            <span><i class="legend__swatch"></i> score context</span>
-          </div>
-        </div>
-        <div class="piano-roll" id="piano-roll" tabindex="0"></div>
-        <p class="score-note" id="score-note"></p>
-        <p class="keyboard-hint">Keyboard: ←/→ previous or next onset at the closest pitch · ↑/↓ nearby higher or lower note · Enter/Space replay</p>
-      </section>
     </section>
 
     <section class="figure-section" aria-labelledby="figure-title">
@@ -106,7 +106,7 @@
     <section class="about" aria-labelledby="about-title">
       <p class="section-kicker">How to use this page</p>
       <h2 id="about-title">Everything is precomputed</h2>
-      <p>The page runs entirely in the browser. Audio, MIDI, score events, and spectrograms are static files served by GitHub Pages. No recording is uploaded and no model runs in your browser.</p>
+      <p>The page runs entirely in the browser. Audio, score events, ownership maps, and spectrograms are static files served by GitHub Pages. No recording is uploaded and no model runs in your browser.</p>
     </section>
   </main>
 
@@ -116,6 +116,6 @@
 
   <audio id="audio" preload="auto"></audio>
   <audio id="note-audition" preload="metadata"></audio>
-  <script src="app.js?v=20260911-2345" defer></script>
+  <script src="app.js?v=20260912-0045" defer></script>
 </body>
 </html>
