@@ -37,6 +37,7 @@ const state = {
   segmentEnd: null,
   dragStart: null,
   animation: null,
+  loadToken: 0,
 };
 
 const channelNotes = {
@@ -64,7 +65,7 @@ function currentChannel(id = state.channel) {
   return note?.outputs?.[id] ? {...channel, ...note.outputs[id]} : channel;
 }
 
-function setSelection(start, end, event = null) {
+function setSelection(start, end, event = null, audition = false) {
   const duration = state.example.duration;
   const queryChanged = event !== null && event !== state.selectedEvent;
   state.start = clamp(Math.min(start, end), 0, duration);
@@ -90,7 +91,11 @@ function setSelection(start, end, event = null) {
   ui.scoreNote.textContent = selected
     ? `${pitchName(selected.pitch)}, ${state.start.toFixed(2)}–${state.end.toFixed(2)} s. This note is now the separator query.`
     : 'The selected region can be compared across every audio output.';
-  if (queryChanged && !['mixture', 'midi'].includes(state.channel)) selectChannel(state.channel);
+  if (audition) {
+    selectChannel('aso', () => play(state.start, state.end));
+  } else if (queryChanged && !['mixture', 'midi'].includes(state.channel)) {
+    selectChannel(state.channel);
+  }
 }
 
 function renderTabs() {
@@ -177,7 +182,7 @@ function renderScore() {
     rect.setAttribute('aria-label', `${pitchName(note.pitch)}, ${note.start.toFixed(2)} to ${note.end.toFixed(2)} seconds${note.target ? ', queried note' : ''}`);
     rect.dataset.event = note.event;
     rect.setAttribute('class', 'roll-note');
-    const choose = () => setSelection(note.start, note.end, note.event);
+    const choose = () => setSelection(note.start, note.end, note.event, true);
     rect.addEventListener('click', choose);
     rect.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); }
@@ -196,17 +201,20 @@ function renderScore() {
   ui.roll.replaceChildren(svg);
 }
 
-function selectChannel(id) {
+function selectChannel(id, onReady = null) {
   const channel = currentChannel(id);
   if (!channel) return;
   const wasPlaying = !audio.paused;
   const position = audio.currentTime || 0;
   audio.pause();
+  const loadToken = ++state.loadToken;
   state.channel = id;
   audio.src = channel.audio;
   audio.addEventListener('loadedmetadata', () => {
+    if (loadToken !== state.loadToken) return;
     audio.currentTime = clamp(position, 0, state.example.duration);
-    if (wasPlaying) audio.play().catch(() => {});
+    if (onReady) onReady();
+    else if (wasPlaying) audio.play().catch(() => {});
   }, {once: true});
   audio.load();
   ui.image.src = channel.spectrogram;
