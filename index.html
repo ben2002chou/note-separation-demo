@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive audio companion for score-informed deep note separation.">
+  <meta property="og:title" content="Listen Inside the Score">
+  <meta property="og:description" content="Select a scored note, hear the strongest ASO separation, and inspect its time-frequency allocation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ben2002chou.github.io/note-separation-demo/">
+  <meta property="og:image" content="https://ben2002chou.github.io/note-separation-demo/assets/piano/mixture.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Score-Informed Note Separation Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">ICASSP 2027 audio companion</p>
+      <h1>Listen inside the score</h1>
+      <p class="lede">Select a scored note, compare the strongest ASO output with the original mixture, and see the note's allocation across time and frequency.</p>
+    </div>
+  </header>
+
+  <main>
+    <nav class="example-tabs" aria-label="Demo example" id="example-tabs"></nav>
+
+    <section class="demo-shell" aria-labelledby="example-title">
+      <div class="demo-heading">
+        <div>
+          <p class="section-kicker" id="example-instrument"></p>
+          <h2 id="example-title">Loading audio...</h2>
+          <p class="request-label" id="request-label"></p>
+        </div>
+        <a class="midi-download" id="midi-download" download>Download MIDI</a>
+      </div>
+
+      <div class="spectrogram-card">
+        <div class="spectrogram-meta">
+          <span id="channel-label">Original mixture</span>
+          <span><span id="current-time">0.00</span> / <span id="duration">0.00</span> s</span>
+        </div>
+        <div class="spectrogram" id="spectrogram" aria-label="Spectrogram timeline. Drag to select a playback region.">
+          <img class="spectrogram-image" id="spectrogram-image" alt="Magnitude spectrogram of the selected audio output">
+          <img class="mask-overlay" id="mask-overlay" alt="" aria-hidden="true">
+          <div class="selection" id="selection"></div>
+          <div class="playhead" id="playhead"></div>
+          <div class="axis-label axis-label--frequency">frequency</div>
+          <div class="axis-label axis-label--time">time</div>
+        </div>
+        <div class="spectrogram-footer">
+          <p class="hint">Click a score note to reveal its time-frequency allocation. Drag across the spectrogram to choose a playback region.</p>
+          <label class="mask-toggle"><input id="mask-toggle" type="checkbox" checked> Show ASO allocation</label>
+        </div>
+      </div>
+
+      <div class="source-section">
+        <p class="control-label">Listen to</p>
+        <div class="source-buttons" id="primary-channels" role="group" aria-label="Audio source"></div>
+        <details class="baseline-details">
+          <summary>Compare baselines</summary>
+          <div class="source-buttons source-buttons--secondary" id="baseline-channels"></div>
+        </details>
+      </div>
+
+      <div class="transport" role="group" aria-label="Playback controls">
+        <button class="button button--primary" id="play-whole" type="button">
+          <span aria-hidden="true">▶</span> Play whole excerpt
+        </button>
+        <button class="button" id="play-region" type="button">
+          <span aria-hidden="true">↔</span> Play selected region
+        </button>
+        <button class="button button--quiet" id="stop" type="button">Stop</button>
+        <span class="region-readout" id="region-readout"></span>
+      </div>
+
+      <section class="score-section" aria-labelledby="score-title">
+        <div class="score-heading">
+          <div>
+            <p class="control-label">Score</p>
+            <h3 id="score-title">Click a note to select its time region</h3>
+          </div>
+          <div class="legend" aria-label="Score legend">
+            <span><i class="legend__swatch legend__swatch--target"></i> selected query</span>
+            <span><i class="legend__swatch"></i> score context</span>
+          </div>
+        </div>
+        <div class="piano-roll" id="piano-roll" tabindex="0"></div>
+        <p class="score-note" id="score-note"></p>
+      </section>
+    </section>
+
+    <section class="figure-section" aria-labelledby="figure-title">
+      <div class="figure-heading">
+        <div>
+          <p class="section-kicker">Paper figure 2</p>
+          <h2 id="figure-title">Listen to every spectrogram panel</h2>
+        </div>
+        <button class="text-button" id="show-figure-example" type="button">Open the guitar example above ↑</button>
+      </div>
+      <p class="figure-copy">Each panel uses the same frozen SCNS-Eval-v2 acoustic-guitar crop and amplitude scale. Click a panel to load its audio into the player.</p>
+      <div class="figure-grid" id="figure-grid"></div>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <p class="section-kicker">How to use this page</p>
+      <h2 id="about-title">Everything is precomputed</h2>
+      <p>The page runs entirely in the browser. Audio, MIDI, score events, and spectrograms are static files served by GitHub Pages. No recording is uploaded and no model runs in your browser.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Score-Informed Deep Note Separation · Research preview</p>
+  </footer>
+
+  <audio id="audio" preload="auto"></audio>
+  <script src="app.js" defer></script>
+</body>
+</html>
