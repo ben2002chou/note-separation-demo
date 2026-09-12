@@ -47,10 +47,9 @@ const state = {
 const channelNotes = {
   mixture: 'Full polyphonic recording',
   target: 'Ground-truth isolated note',
-  aso: 'Strongest finalized separator output',
-  nmf: 'Score-informed signal-processing baseline',
-  hpss: 'Dual-branch neural baseline',
-  symmetric: 'Separator output before joint ASO allocation',
+  aso: 'Final jointly allocated note output',
+  magnitude: 'Mixture magnitude divided by raw separator evidence',
+  symmetric: 'Final separator output before ASO allocation',
 };
 
 function pitchName(pitch) {
@@ -91,7 +90,7 @@ function setSelection(start, end, event = null, refreshChannel = true) {
     waveform.classList.toggle('roll-waveform--selected', Number(waveform.dataset.event) === state.selectedEvent);
   });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
-  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2018` : '';
+  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2044` : '';
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
   ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
   ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
@@ -131,7 +130,7 @@ function loadHitMap() {
     canvas.height = image.naturalHeight;
     canvas.getContext('2d', {willReadFrequently: true}).drawImage(image, 0, 0);
   }, {once: true});
-  image.src = `${state.example.hitMap}?v=20260911-2018`;
+  image.src = `${state.example.hitMap}?v=20260911-2044`;
 }
 
 function fallbackSpectralNote(time, frequency) {
@@ -283,7 +282,7 @@ function channelButton(channel) {
 }
 
 function renderChannels() {
-  const order = ['aso', 'mixture', 'target', 'symmetric', 'hpss', 'nmf'];
+  const order = ['aso', 'mixture', 'target', 'symmetric', 'magnitude'];
   const channels = order
     .map((id) => state.example.channels.find((channel) => channel.id === id))
     .filter(Boolean);
@@ -495,7 +494,7 @@ function spectrogramTime(event) {
 
 function renderFigureCompanion() {
   const guitar = state.manifest.examples.find((example) => example.id === 'guitar');
-  const figureOrder = ['mixture', 'target', 'nmf', 'hpss', 'symmetric', 'aso'];
+  const figureOrder = ['mixture', 'target', 'symmetric', 'magnitude', 'aso'];
   const cards = figureOrder.map((id) => guitar.channels.find((channel) => channel.id === id)).map((channel) => {
     const button = document.createElement('button');
     button.className = 'figure-card';
@@ -566,7 +565,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=20260911-2018')
+fetch('assets/manifest.json?v=20260911-2044')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();

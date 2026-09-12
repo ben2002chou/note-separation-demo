@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Interactive audio companion for score-informed deep note separation.">
   <meta property="og:title" content="Listen Inside the Score">
-  <meta property="og:description" content="Select a scored note, hear the strongest ASO separation, and inspect its time-frequency allocation.">
+  <meta property="og:description" content="Select a scored note, hear the final ASO separation, and inspect its time-frequency allocation.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ben2002chou.github.io/note-separation-demo/">
   <meta property="og:image" content="https://ben2002chou.github.io/note-separation-demo/assets/piano/mixture.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Score-Informed Note Separation Demo</title>
-  <link rel="stylesheet" href="styles.css?v=20260911-2018">
+  <link rel="stylesheet" href="styles.css?v=20260911-2044">
 </head>
 <body>
   <header class="hero">
     <div class="hero__inner">
       <p class="eyebrow">ICASSP 2027 audio companion</p>
       <h1>Listen inside the score</h1>
-      <p class="lede">Select a scored note, compare the strongest ASO output with the original mixture, and see the note's allocation across time and frequency.</p>
+      <p class="lede">Select a scored note, compare the final ASO output with the original mixture, and see the note's allocation across time and frequency.</p>
     </div>
   </header>
 
   <main>
     <nav class="example-tabs" aria-label="Demo example" id="example-tabs"></nav>
-    <p class="curation-note">Curated from held-out evaluation recordings so the separation differences are easy to hear. Aggregate results are reported in the paper.</p>
+    <p class="curation-note">Curated from held-out evaluation recordings for separation quality and clear preservation of onsets and reattacks. Aggregate results are reported in the paper.</p>
 
     <section class="demo-shell" aria-labelledby="example-title">
       <div class="demo-heading">
@@ -100,7 +100,7 @@
         </div>
         <button class="text-button" id="show-figure-example" type="button">Open the guitar example above ↑</button>
       </div>
-      <p class="figure-copy">Each panel uses the same frozen SCNS-Eval-v2 acoustic-guitar crop and amplitude scale. Click a panel to load its audio into the player.</p>
+      <p class="figure-copy">Each panel uses the same frozen SCNS-Eval-v3 acoustic-guitar crop and amplitude scale. Click a panel to load its audio into the player.</p>
       <div class="figure-grid" id="figure-grid"></div>
     </section>
 
@@ -117,6 +117,6 @@
 
   <audio id="audio" preload="auto"></audio>
   <audio id="note-audition" preload="metadata"></audio>
-  <script src="app.js?v=20260911-2018" defer></script>
+  <script src="app.js?v=20260911-2044" defer></script>
 </body>
 </html>

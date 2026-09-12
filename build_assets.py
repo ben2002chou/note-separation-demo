@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build static demo assets from frozen SCNS-Eval-v2 files and output sprites."""
+"""Build static demo assets from frozen SCNS-Eval-v3 files and output sprites."""
 
 from __future__ import annotations
 
@@ -29,30 +29,28 @@ QUANTUM_24K = 4_096
 
 EXAMPLES = (
     {
-        "id": "piano", "title": "Two-voice counterpoint", "instrument": "Piano",
-        "piece_id": "00_piano_02_two_voice_counterpoint", "target_event": 20,
+        "id": "piano", "title": "Repeated-note passage", "instrument": "Piano",
+        "piece_id": "scns_eval_v3_101", "target_event": 36,
         "program": 0,
-        "aso_sha256": "d90e3adbafe02a53edde7033680e438b319d2c1dc801f1611395bd88e6eb1679",
-        "aso_si_sdr_db": 22.8939,
-        "raw_si_sdr_db": 17.1467,
+        "aso_sha256": "8c40378084328d6311f599ead86081bb01090862db18c03ce806384a35c864d7",
+        "aso_si_sdr_db": 16.0444,
+        "raw_si_sdr_db": 7.5991,
     },
     {
-        "id": "guitar", "title": "Broken chords", "instrument": "Acoustic guitar",
-        "piece_id": "01_acoustic_guitar_01_broken_chords", "target_event": 19,
+        "id": "guitar", "title": "Repeated guitar phrase", "instrument": "Acoustic guitar",
+        "piece_id": "scns_eval_v3_003", "target_event": 14,
         "program": 24,
-        "aso_sha256": "1c5c1da6a0e0b9f88378e57a757f5f3cb98fa09927eee16b9a6f4638688005b8",
-        "aso_si_sdr_db": 18.9626,
-        "raw_si_sdr_db": 12.8588,
+        "aso_sha256": "bd78e8eb18c208c521a9e870100a4cd7fd5e6f243806f06ee78c97ba40ebc980",
+        "aso_si_sdr_db": 12.6392,
+        "raw_si_sdr_db": 2.5292,
     },
     {
-        "id": "orchestra", "title": "Bach chorale quartet", "instrument": "Orchestral ensemble",
-        "piece_id": "07-HerrGott", "target_event": 185,
-        "program": 71,
-        "aso_sha256": "5dbf2391d563275260275be394ec4b1d0deedb1f64023ea76f818e24ba4c4138",
-        "aso_si_sdr_db": 17.9977,
-        "raw_si_sdr_db": 9.7650,
-        "dataset": "Bach10 v1.1 held-out quartet",
-        "evidence_result_sha256": "8e489c11cbd839b8c41fc4a37fb4de5818c11bffac13e8ffbbde72e5c347a8a6",
+        "id": "cello", "title": "Sustained cello phrase", "instrument": "Cello",
+        "piece_id": "scns_eval_v3_028", "target_event": 12,
+        "program": 42,
+        "aso_sha256": "ba232e6b2d3c6bd90b0c8f0b9f3861f4f212e2e436b1a380afd77e2e7db973f9",
+        "aso_si_sdr_db": 18.9579,
+        "raw_si_sdr_db": 3.6683,
     },
 )
 
@@ -60,9 +58,8 @@ CHANNELS = (
     ("mixture", "Original mixture"),
     ("target", "Isolated target"),
     ("aso", "ASO"),
-    ("nmf", "Score-Informed NMF"),
-    ("hpss", "Score-Gated HPSS"),
-    ("symmetric", "Symmetric Gated Dual-Branch"),
+    ("magnitude", "Magnitude partition"),
+    ("symmetric", "Raw separator"),
 )
 
 
@@ -200,8 +197,8 @@ def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, lis
     duration = samples / RATE
     sprites = {}
     for key, filename in {
-        "aso": "selected_aso_sprite.wav", "nmf": "nmf_sprite.wav",
-        "hpss": "hpss_sprite.wav", "symmetric": "symmetric_sprite.wav",
+        "aso": "selected_aso_sprite.wav", "magnitude": "magnitude_sprite.wav",
+        "symmetric": "symmetric_sprite.wav",
     }.items():
         sprites[key], sprite_rate = sf.read(root / filename, dtype="float32")
         if sprite_rate != RATE:
@@ -224,7 +221,8 @@ def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, lis
             cursor += query_samples + round(0.02 * RATE)
 
             start = max(0.0, event["onset_seconds"] - crop_start_seconds)
-            end = min(duration, event["offset_seconds"] - crop_start_seconds)
+            offset_seconds = event.get("offset_seconds", event["offset_sample"] / SOURCE_RATE)
+            end = min(duration, offset_seconds - crop_start_seconds)
             if end <= start:
                 continue
             raw = archive.read(event["occurrence_member"])
@@ -261,11 +259,11 @@ def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     manifest = {
         "schema": "note-separation-demo-v2",
-        "model": "uncapped acoustic-relative ASO, checkpoint step 29,058",
-        "datasets": ["SCNS-Eval-v2", "Bach10 v1.1"],
-        "checkpointSha256": "110ce072c6e16317af685fcec0cdb20c75b848da8ba22400b2fcbbd8e8f356b5",
-        "evaluationResultSha256": "e4ea892e73e506cb1b6d9cd9a67a959a7596d13656e9c4fdf470d49cd6cd0ec0",
-        "selection": "Curated held-out examples selected for separation quality, audible ASO improvement, and musically meaningful overlap.",
+        "model": "ASO, final temporal checkpoint step 29,058",
+        "datasets": ["SCNS-Eval-v3"],
+        "checkpointSha256": "ff89599cef65e5eb98ff061372d8362e0752d2060d167aaf553b24c29577ae2a",
+        "evaluationResultSha256": "1fab27ff756bfb3a1757798e31a1a959fd7f52981daa16623cbd0f58a75e67d0",
+        "selection": "Curated held-out examples selected for separation quality, audible ASO improvement, and onset or reattack preservation.",
         "examples": [],
     }
     for config in EXAMPLES:
@@ -304,14 +302,14 @@ def main() -> None:
             "spectrogram": f"assets/{config['id']}/mixture.png",
         }]
         channels.extend({"id": key, "label": labels[key], **default_note["outputs"][key]}
-                        for key in ("target", "aso", "nmf", "hpss", "symmetric"))
+                        for key in ("target", "aso", "magnitude", "symmetric"))
         channels.append({"id": "midi", "label": "MIDI score",
                          "audio": f"assets/{config['id']}/midi.wav",
                          "spectrogram": f"assets/{config['id']}/midi.png"})
         manifest["examples"].append({
             "id": config["id"], "title": config["title"],
             "instrument": config["instrument"], "pieceId": config["piece_id"],
-            "dataset": config.get("dataset", "SCNS-Eval-v2"),
+            "dataset": config.get("dataset", "SCNS-Eval-v3"),
             "requestId": f"{config['piece_id']}:{config['target_event']:04d}",
             "duration": round(duration, 6), "targetPitch": target_event["pitch"],
             "targetEvent": config["target_event"], "notes": public_notes,
@@ -325,7 +323,7 @@ def main() -> None:
                if "evidence_result_sha256" in config else {}),
         })
     (OUTPUT / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(manifest['examples'])} strongest-model examples to {OUTPUT}")
+    print(f"Wrote {len(manifest['examples'])} final-model examples to {OUTPUT}")
 
 
 if __name__ == "__main__":
