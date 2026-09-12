@@ -3,7 +3,8 @@
   "model": "ASO, final temporal checkpoint step 29,058",
   "datasets": [
     "SCNS-Eval-v3",
-    "MAESTRO v3 test"
+    "MAESTRO v3 test",
+    "Bach10 v1.1 held-out quartet"
   ],
   "checkpointSha256": "ff89599cef65e5eb98ff061372d8362e0752d2060d167aaf553b24c29577ae2a",
   "evaluationResultSha256": "1fab27ff756bfb3a1757798e31a1a959fd7f52981daa16623cbd0f58a75e67d0",
@@ -3180,1387 +3181,691 @@
       ]
     },
     {
-      "id": "guitar",
-      "title": "Repeated guitar phrase",
-      "instrument": "Acoustic guitar",
-      "pieceId": "scns_eval_v3_003",
-      "dataset": "SCNS-Eval-v3",
-      "requestId": "scns_eval_v3_003:0014",
-      "duration": 1.877375,
-      "targetPitch": 52,
-      "targetEvent": 14,
+      "id": "orchestra",
+      "title": "Herr Gott, Bach chorale quartet",
+      "instrument": "Four-part orchestral ensemble",
+      "pieceId": "07-HerrGott",
+      "dataset": "Bach10 v1.1 held-out quartet",
+      "requestId": "07-HerrGott:0185",
+      "duration": 3.072,
+      "targetPitch": 62,
+      "targetEvent": 185,
       "notes": [
         {
-          "event": 5,
-          "pitch": 79,
+          "event": 176,
+          "pitch": 72,
+          "start": 0.0,
+          "end": 0.201,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0176/target.wav",
+              "spectrogram": "assets/orchestra/q0176/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0176/aso.wav",
+              "spectrogram": "assets/orchestra/q0176/aso.png",
+              "mask": "assets/orchestra/q0176/aso_mask.png",
+              "audition": "assets/orchestra/q0176/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0176/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0176/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0176/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0176/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0176/mixture_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0176/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0176/score_informed_nmf_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0176/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0176/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 6.04,
+          "waveform": [
+            1.0,
+            0.926,
+            0.873,
+            0.812,
+            0.813,
+            0.831,
+            0.76,
+            0.67,
+            0.496,
+            0.408,
+            0.345,
+            0.266,
+            0.184,
+            0.102,
+            0.076,
+            0.085,
+            0.09,
+            0.086,
+            0.076,
+            0.054,
+            0.042,
+            0.022,
+            0.013,
+            0.016,
+            0.014,
+            0.011,
+            0.005,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 180,
+          "pitch": 57,
+          "start": 0.0,
+          "end": 0.321,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0180/target.wav",
+              "spectrogram": "assets/orchestra/q0180/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0180/aso.wav",
+              "spectrogram": "assets/orchestra/q0180/aso.png",
+              "mask": "assets/orchestra/q0180/aso_mask.png",
+              "audition": "assets/orchestra/q0180/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0180/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0180/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0180/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0180/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0180/mixture_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0180/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0180/score_informed_nmf_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0180/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0180/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 12.56,
+          "waveform": [
+            1.0,
+            0.927,
+            0.885,
+            0.821,
+            0.797,
+            0.797,
+            0.789,
+            0.806,
+            0.821,
+            0.783,
+            0.754,
+            0.765,
+            0.764,
+            0.765,
+            0.683,
+            0.462,
+            0.256,
+            0.14,
+            0.145,
+            0.126,
+            0.073,
+            0.065,
+            0.069,
+            0.057,
+            0.045,
+            0.033,
+            0.015,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 182,
+          "pitch": 63,
+          "start": 0.0,
+          "end": 0.231,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0182/target.wav",
+              "spectrogram": "assets/orchestra/q0182/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0182/aso.wav",
+              "spectrogram": "assets/orchestra/q0182/aso.png",
+              "mask": "assets/orchestra/q0182/aso_mask.png",
+              "audition": "assets/orchestra/q0182/aso_audition.wav",
+              "auditionStart": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0182/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0182/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0182/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0182/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0182/mixture_audition.wav",
+              "start": 0.0
+            },
+            "target": {
+              "audio": "assets/orchestra/q0182/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0182/score_informed_nmf_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0182/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0182/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.992,
+            0.952,
+            1.0,
+            0.915,
+            0.975,
+            0.903,
+            0.919,
+            0.862,
+            0.922,
+            0.901,
+            0.887,
+            0.897,
+            0.864,
+            0.861,
+            0.721,
+            0.522,
+            0.324,
+            0.275,
+            0.175,
+            0.108,
+            0.056,
+            0.078,
+            0.097,
+            0.077,
+            0.064,
+            0.095,
+            0.071,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 183,
+          "pitch": 41,
           "start": 0.0,
           "end": 0.291,
           "target": false,
           "outputs": {
             "target": {
-              "audio": "assets/guitar/q0005/target.wav",
-              "spectrogram": "assets/guitar/q0005/target.png"
+              "audio": "assets/orchestra/q0183/target.wav",
+              "spectrogram": "assets/orchestra/q0183/target.png"
             },
             "aso": {
-              "audio": "assets/guitar/q0005/aso.wav",
-              "spectrogram": "assets/guitar/q0005/aso.png",
-              "mask": "assets/guitar/q0005/aso_mask.png",
-              "audition": "assets/guitar/q0005/aso_audition.wav",
+              "audio": "assets/orchestra/q0183/aso.wav",
+              "spectrogram": "assets/orchestra/q0183/aso.png",
+              "mask": "assets/orchestra/q0183/aso_mask.png",
+              "audition": "assets/orchestra/q0183/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0005/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0005/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0005/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0005/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0005/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0005/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0005/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0005/symmetric_ungated.png"
-            },
             "symmetric_selective": {
-              "audio": "assets/guitar/q0005/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0005/symmetric_selective.png"
+              "audio": "assets/orchestra/q0183/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0183/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0183/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0183/score_informed_nmf.png"
             }
           },
           "auditions": {
             "mixture": {
-              "audio": "assets/guitar/q0005/mixture_audition.wav",
+              "audio": "assets/orchestra/q0183/mixture_audition.wav",
               "start": 0.0
             },
             "target": {
-              "audio": "assets/guitar/q0005/target_audition.wav",
+              "audio": "assets/orchestra/q0183/target_audition.wav",
               "start": 0.0
             },
             "score_informed_nmf": {
-              "audio": "assets/guitar/q0005/score_informed_nmf_audition.wav",
-              "start": 0.0
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0005/independent_ungated_audition.wav",
-              "start": 0.0
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0005/independent_selective_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0005/symmetric_ungated_audition.wav",
+              "audio": "assets/orchestra/q0183/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "symmetric_selective": {
-              "audio": "assets/guitar/q0005/symmetric_selective_audition.wav",
+              "audio": "assets/orchestra/q0183/symmetric_selective_audition.wav",
               "start": 0.0
             },
             "aso": {
-              "audio": "assets/guitar/q0005/aso_audition.wav",
+              "audio": "assets/orchestra/q0183/aso_audition.wav",
               "start": 0.0
             }
           },
+          "auditionGainDb": 7.95,
           "waveform": [
-            1.0,
-            0.953,
-            0.917,
-            0.883,
-            0.828,
-            0.796,
-            0.748,
-            0.723,
-            0.678,
-            0.651,
-            0.614,
-            0.595,
-            0.69,
-            0.701,
-            0.41,
-            0.147,
-            0.052,
-            0.034,
-            0.02,
-            0.011,
-            0.005,
-            0.002,
-            0.001,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        {
-          "event": 6,
-          "pitch": 77,
-          "start": 0.2192,
-          "end": 0.7896,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0006/target.wav",
-              "spectrogram": "assets/guitar/q0006/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0006/aso.wav",
-              "spectrogram": "assets/guitar/q0006/aso.png",
-              "mask": "assets/guitar/q0006/aso_mask.png",
-              "audition": "assets/guitar/q0006/aso_audition.wav",
-              "auditionStart": 0.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0006/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0006/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0006/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0006/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0006/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0006/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0006/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0006/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0006/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0006/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0006/mixture_audition.wav",
-              "start": 0.1942
-            },
-            "target": {
-              "audio": "assets/guitar/q0006/target_audition.wav",
-              "start": 0.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0006/score_informed_nmf_audition.wav",
-              "start": 0.1942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0006/independent_ungated_audition.wav",
-              "start": 0.1942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0006/independent_selective_audition.wav",
-              "start": 0.1942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0006/symmetric_ungated_audition.wav",
-              "start": 0.1942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0006/symmetric_selective_audition.wav",
-              "start": 0.1942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0006/aso_audition.wav",
-              "start": 0.1942
-            }
-          },
-          "waveform": [
-            0.353,
-            1.0,
-            0.862,
-            0.769,
-            0.715,
-            0.667,
-            0.617,
-            0.564,
-            0.524,
-            0.489,
-            0.453,
-            0.421,
-            0.396,
-            0.371,
-            0.35,
-            0.328,
-            0.306,
-            0.283,
-            0.259,
-            0.206,
-            0.155,
-            0.104,
-            0.06,
-            0.03,
-            0.014,
-            0.008,
-            0.004,
-            0.002,
-            0.001,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        {
-          "event": 7,
-          "pitch": 65,
-          "start": 0.7192,
-          "end": 1.2913,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0007/target.wav",
-              "spectrogram": "assets/guitar/q0007/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0007/aso.wav",
-              "spectrogram": "assets/guitar/q0007/aso.png",
-              "mask": "assets/guitar/q0007/aso_mask.png",
-              "audition": "assets/guitar/q0007/aso_audition.wav",
-              "auditionStart": 0.6942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0007/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0007/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0007/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0007/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0007/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0007/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0007/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0007/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0007/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0007/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0007/mixture_audition.wav",
-              "start": 0.6942
-            },
-            "target": {
-              "audio": "assets/guitar/q0007/target_audition.wav",
-              "start": 0.6942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0007/score_informed_nmf_audition.wav",
-              "start": 0.6942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0007/independent_ungated_audition.wav",
-              "start": 0.6942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0007/independent_selective_audition.wav",
-              "start": 0.6942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0007/symmetric_ungated_audition.wav",
-              "start": 0.6942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0007/symmetric_selective_audition.wav",
-              "start": 0.6942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0007/aso_audition.wav",
-              "start": 0.6942
-            }
-          },
-          "waveform": [
-            0.292,
-            1.0,
-            0.775,
-            0.687,
-            0.672,
-            0.647,
-            0.633,
-            0.596,
-            0.575,
-            0.556,
-            0.532,
-            0.505,
-            0.486,
-            0.475,
-            0.45,
-            0.436,
-            0.42,
-            0.402,
-            0.356,
-            0.283,
-            0.204,
-            0.102,
-            0.064,
-            0.038,
-            0.019,
-            0.008,
-            0.002,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        {
-          "event": 8,
-          "pitch": 65,
-          "start": 1.2192,
-          "end": 1.7913,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0008/target.wav",
-              "spectrogram": "assets/guitar/q0008/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0008/aso.wav",
-              "spectrogram": "assets/guitar/q0008/aso.png",
-              "mask": "assets/guitar/q0008/aso_mask.png",
-              "audition": "assets/guitar/q0008/aso_audition.wav",
-              "auditionStart": 1.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0008/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0008/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0008/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0008/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0008/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0008/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0008/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0008/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0008/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0008/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0008/mixture_audition.wav",
-              "start": 1.1942
-            },
-            "target": {
-              "audio": "assets/guitar/q0008/target_audition.wav",
-              "start": 1.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0008/score_informed_nmf_audition.wav",
-              "start": 1.1942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0008/independent_ungated_audition.wav",
-              "start": 1.1942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0008/independent_selective_audition.wav",
-              "start": 1.1942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0008/symmetric_ungated_audition.wav",
-              "start": 1.1942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0008/symmetric_selective_audition.wav",
-              "start": 1.1942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0008/aso_audition.wav",
-              "start": 1.1942
-            }
-          },
-          "waveform": [
-            0.197,
-            1.0,
-            0.899,
-            0.821,
-            0.772,
-            0.749,
-            0.74,
-            0.734,
-            0.698,
-            0.687,
-            0.657,
-            0.652,
-            0.623,
-            0.607,
-            0.588,
-            0.566,
-            0.558,
-            0.538,
-            0.53,
-            0.507,
-            0.504,
-            0.471,
-            0.46,
-            0.42,
-            0.368,
-            0.225,
-            0.107,
-            0.064,
-            0.034,
-            0.018,
-            0.006,
-            0.003
-          ]
-        },
-        {
-          "event": 9,
-          "pitch": 77,
-          "start": 1.7192,
-          "end": 1.8774,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0009/target.wav",
-              "spectrogram": "assets/guitar/q0009/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0009/aso.wav",
-              "spectrogram": "assets/guitar/q0009/aso.png",
-              "mask": "assets/guitar/q0009/aso_mask.png",
-              "audition": "assets/guitar/q0009/aso_audition.wav",
-              "auditionStart": 1.6942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0009/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0009/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0009/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0009/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0009/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0009/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0009/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0009/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0009/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0009/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0009/mixture_audition.wav",
-              "start": 1.6942
-            },
-            "target": {
-              "audio": "assets/guitar/q0009/target_audition.wav",
-              "start": 1.6942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0009/score_informed_nmf_audition.wav",
-              "start": 1.6942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0009/independent_ungated_audition.wav",
-              "start": 1.6942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0009/independent_selective_audition.wav",
-              "start": 1.6942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0009/symmetric_ungated_audition.wav",
-              "start": 1.6942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0009/symmetric_selective_audition.wav",
-              "start": 1.6942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0009/aso_audition.wav",
-              "start": 1.6942
-            }
-          },
-          "waveform": [
-            0.061,
-            0.08,
-            0.11,
-            0.212,
-            0.924,
-            1.0,
-            0.812,
-            0.78,
-            0.871,
-            0.782,
-            0.812,
-            0.805,
-            0.774,
-            0.74,
-            0.716,
-            0.719,
-            0.694,
-            0.697,
-            0.697,
-            0.7,
-            0.676,
-            0.658,
-            0.647,
-            0.651,
-            0.63,
-            0.627,
-            0.617,
-            0.612,
-            0.602,
-            0.584,
-            0.581,
-            0.571
-          ]
-        },
-        {
-          "event": 13,
-          "pitch": 50,
-          "start": 0.0,
-          "end": 0.29,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0013/target.wav",
-              "spectrogram": "assets/guitar/q0013/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0013/aso.wav",
-              "spectrogram": "assets/guitar/q0013/aso.png",
-              "mask": "assets/guitar/q0013/aso_mask.png",
-              "audition": "assets/guitar/q0013/aso_audition.wav",
-              "auditionStart": 0.0
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0013/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0013/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0013/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0013/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0013/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0013/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0013/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0013/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0013/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0013/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0013/mixture_audition.wav",
-              "start": 0.0
-            },
-            "target": {
-              "audio": "assets/guitar/q0013/target_audition.wav",
-              "start": 0.0
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0013/score_informed_nmf_audition.wav",
-              "start": 0.0
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0013/independent_ungated_audition.wav",
-              "start": 0.0
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0013/independent_selective_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0013/symmetric_ungated_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0013/symmetric_selective_audition.wav",
-              "start": 0.0
-            },
-            "aso": {
-              "audio": "assets/guitar/q0013/aso_audition.wav",
-              "start": 0.0
-            }
-          },
-          "waveform": [
-            1.0,
-            0.922,
-            0.979,
-            0.89,
-            0.951,
-            0.884,
-            0.927,
-            0.878,
-            0.886,
-            0.793,
-            0.726,
-            0.596,
-            0.428,
-            0.26,
-            0.167,
-            0.099,
-            0.055,
-            0.038,
-            0.022,
-            0.011,
-            0.006,
-            0.004,
-            0.003,
-            0.003,
-            0.002,
-            0.002,
-            0.001,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        {
-          "event": 14,
-          "pitch": 52,
-          "start": 0.2192,
-          "end": 1.2916,
-          "target": true,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0014/target.wav",
-              "spectrogram": "assets/guitar/q0014/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0014/aso.wav",
-              "spectrogram": "assets/guitar/q0014/aso.png",
-              "mask": "assets/guitar/q0014/aso_mask.png",
-              "audition": "assets/guitar/q0014/aso_audition.wav",
-              "auditionStart": 0.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0014/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0014/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0014/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0014/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0014/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0014/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0014/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0014/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0014/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0014/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0014/mixture_audition.wav",
-              "start": 0.1942
-            },
-            "target": {
-              "audio": "assets/guitar/q0014/target_audition.wav",
-              "start": 0.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0014/score_informed_nmf_audition.wav",
-              "start": 0.1942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0014/independent_ungated_audition.wav",
-              "start": 0.1942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0014/independent_selective_audition.wav",
-              "start": 0.1942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0014/symmetric_ungated_audition.wav",
-              "start": 0.1942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0014/symmetric_selective_audition.wav",
-              "start": 0.1942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0014/aso_audition.wav",
-              "start": 0.1942
-            }
-          },
-          "waveform": [
-            0.883,
-            1.0,
-            0.946,
-            0.912,
-            0.907,
-            0.874,
-            0.842,
-            0.806,
-            0.777,
-            0.741,
-            0.704,
-            0.663,
-            0.6,
-            0.571,
-            0.572,
-            0.549,
-            0.526,
-            0.506,
-            0.479,
-            0.467,
-            0.452,
-            0.444,
-            0.435,
-            0.354,
-            0.224,
-            0.046,
-            0.004,
-            0.001,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        {
-          "event": 15,
-          "pitch": 50,
-          "start": 1.2192,
-          "end": 1.7905,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0015/target.wav",
-              "spectrogram": "assets/guitar/q0015/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0015/aso.wav",
-              "spectrogram": "assets/guitar/q0015/aso.png",
-              "mask": "assets/guitar/q0015/aso_mask.png",
-              "audition": "assets/guitar/q0015/aso_audition.wav",
-              "auditionStart": 1.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0015/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0015/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0015/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0015/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0015/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0015/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0015/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0015/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0015/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0015/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0015/mixture_audition.wav",
-              "start": 1.1942
-            },
-            "target": {
-              "audio": "assets/guitar/q0015/target_audition.wav",
-              "start": 1.1942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0015/score_informed_nmf_audition.wav",
-              "start": 1.1942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0015/independent_ungated_audition.wav",
-              "start": 1.1942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0015/independent_selective_audition.wav",
-              "start": 1.1942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0015/symmetric_ungated_audition.wav",
-              "start": 1.1942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0015/symmetric_selective_audition.wav",
-              "start": 1.1942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0015/aso_audition.wav",
-              "start": 1.1942
-            }
-          },
-          "waveform": [
-            0.123,
-            0.944,
-            1.0,
-            0.872,
-            0.893,
-            0.83,
-            0.788,
-            0.779,
-            0.785,
-            0.771,
-            0.775,
-            0.794,
-            0.735,
-            0.736,
-            0.709,
-            0.697,
-            0.677,
-            0.688,
-            0.686,
-            0.656,
-            0.633,
-            0.618,
-            0.59,
-            0.524,
-            0.361,
-            0.243,
-            0.125,
-            0.05,
-            0.02,
-            0.01,
-            0.005,
-            0.002
-          ]
-        },
-        {
-          "event": 16,
-          "pitch": 48,
-          "start": 1.7192,
-          "end": 1.8774,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/guitar/q0016/target.wav",
-              "spectrogram": "assets/guitar/q0016/target.png"
-            },
-            "aso": {
-              "audio": "assets/guitar/q0016/aso.wav",
-              "spectrogram": "assets/guitar/q0016/aso.png",
-              "mask": "assets/guitar/q0016/aso_mask.png",
-              "audition": "assets/guitar/q0016/aso_audition.wav",
-              "auditionStart": 1.6942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0016/score_informed_nmf.wav",
-              "spectrogram": "assets/guitar/q0016/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0016/independent_ungated.wav",
-              "spectrogram": "assets/guitar/q0016/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0016/independent_selective.wav",
-              "spectrogram": "assets/guitar/q0016/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0016/symmetric_ungated.wav",
-              "spectrogram": "assets/guitar/q0016/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0016/symmetric_selective.wav",
-              "spectrogram": "assets/guitar/q0016/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/guitar/q0016/mixture_audition.wav",
-              "start": 1.6942
-            },
-            "target": {
-              "audio": "assets/guitar/q0016/target_audition.wav",
-              "start": 1.6942
-            },
-            "score_informed_nmf": {
-              "audio": "assets/guitar/q0016/score_informed_nmf_audition.wav",
-              "start": 1.6942
-            },
-            "independent_ungated": {
-              "audio": "assets/guitar/q0016/independent_ungated_audition.wav",
-              "start": 1.6942
-            },
-            "independent_selective": {
-              "audio": "assets/guitar/q0016/independent_selective_audition.wav",
-              "start": 1.6942
-            },
-            "symmetric_ungated": {
-              "audio": "assets/guitar/q0016/symmetric_ungated_audition.wav",
-              "start": 1.6942
-            },
-            "symmetric_selective": {
-              "audio": "assets/guitar/q0016/symmetric_selective_audition.wav",
-              "start": 1.6942
-            },
-            "aso": {
-              "audio": "assets/guitar/q0016/aso_audition.wav",
-              "start": 1.6942
-            }
-          },
-          "waveform": [
-            0.024,
-            0.053,
-            0.086,
-            0.19,
-            0.77,
-            0.828,
-            0.974,
-            1.0,
-            0.889,
-            0.883,
-            0.568,
-            0.823,
-            0.802,
-            0.729,
-            0.602,
-            0.743,
-            0.743,
-            0.699,
-            0.534,
-            0.682,
-            0.685,
-            0.618,
-            0.545,
-            0.634,
-            0.645,
-            0.588,
-            0.513,
-            0.601,
-            0.594,
-            0.537,
-            0.504,
-            0.549
-          ]
-        }
-      ],
-      "channels": [
-        {
-          "id": "mixture",
-          "label": "Original mixture",
-          "audio": "assets/guitar/mixture.wav",
-          "spectrogram": "assets/guitar/mixture.png"
-        },
-        {
-          "id": "target",
-          "label": "Isolated target",
-          "audio": "assets/guitar/q0014/target.wav",
-          "spectrogram": "assets/guitar/q0014/target.png"
-        },
-        {
-          "id": "score_informed_nmf",
-          "label": "Score-Informed NMF",
-          "audio": "assets/guitar/q0014/score_informed_nmf.wav",
-          "spectrogram": "assets/guitar/q0014/score_informed_nmf.png"
-        },
-        {
-          "id": "independent_ungated",
-          "label": "Independent Ungated",
-          "audio": "assets/guitar/q0014/independent_ungated.wav",
-          "spectrogram": "assets/guitar/q0014/independent_ungated.png"
-        },
-        {
-          "id": "independent_selective",
-          "label": "Independent Selective",
-          "audio": "assets/guitar/q0014/independent_selective.wav",
-          "spectrogram": "assets/guitar/q0014/independent_selective.png"
-        },
-        {
-          "id": "symmetric_ungated",
-          "label": "Symmetric Ungated",
-          "audio": "assets/guitar/q0014/symmetric_ungated.wav",
-          "spectrogram": "assets/guitar/q0014/symmetric_ungated.png"
-        },
-        {
-          "id": "symmetric_selective",
-          "label": "Symmetric Gated",
-          "audio": "assets/guitar/q0014/symmetric_selective.wav",
-          "spectrogram": "assets/guitar/q0014/symmetric_selective.png"
-        },
-        {
-          "id": "aso",
-          "label": "Symmetric Gated + ASO",
-          "audio": "assets/guitar/q0014/aso.wav",
-          "spectrogram": "assets/guitar/q0014/aso.png"
-        },
-        {
-          "id": "midi",
-          "label": "MIDI score",
-          "audio": "assets/guitar/midi.wav",
-          "spectrogram": "assets/guitar/midi.png"
-        }
-      ],
-      "midi": "assets/guitar/score.mid",
-      "asoFloatWaveformSha256": "bd78e8eb18c208c521a9e870100a4cd7fd5e6f243806f06ee78c97ba40ebc980",
-      "featuredMetrics": {
-        "asoSiSdrDb": 12.6392,
-        "preAsoSiSdrDb": 2.5292
-      },
-      "hitMap": "assets/guitar/aso_hit_map.png",
-      "hitMapSize": [
-        1440,
-        360
-      ]
-    },
-    {
-      "id": "cello",
-      "title": "Sustained cello phrase",
-      "instrument": "Cello",
-      "pieceId": "scns_eval_v3_028",
-      "dataset": "SCNS-Eval-v3",
-      "requestId": "scns_eval_v3_028:0012",
-      "duration": 1.194687,
-      "targetPitch": 46,
-      "targetEvent": 12,
-      "notes": [
-        {
-          "event": 6,
-          "pitch": 67,
-          "start": 0.0,
-          "end": 0.1773,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/cello/q0006/target.wav",
-              "spectrogram": "assets/cello/q0006/target.png"
-            },
-            "aso": {
-              "audio": "assets/cello/q0006/aso.wav",
-              "spectrogram": "assets/cello/q0006/aso.png",
-              "mask": "assets/cello/q0006/aso_mask.png",
-              "audition": "assets/cello/q0006/aso_audition.wav",
-              "auditionStart": 0.0
-            },
-            "score_informed_nmf": {
-              "audio": "assets/cello/q0006/score_informed_nmf.wav",
-              "spectrogram": "assets/cello/q0006/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/cello/q0006/independent_ungated.wav",
-              "spectrogram": "assets/cello/q0006/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/cello/q0006/independent_selective.wav",
-              "spectrogram": "assets/cello/q0006/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/cello/q0006/symmetric_ungated.wav",
-              "spectrogram": "assets/cello/q0006/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/cello/q0006/symmetric_selective.wav",
-              "spectrogram": "assets/cello/q0006/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/cello/q0006/mixture_audition.wav",
-              "start": 0.0
-            },
-            "target": {
-              "audio": "assets/cello/q0006/target_audition.wav",
-              "start": 0.0
-            },
-            "score_informed_nmf": {
-              "audio": "assets/cello/q0006/score_informed_nmf_audition.wav",
-              "start": 0.0
-            },
-            "independent_ungated": {
-              "audio": "assets/cello/q0006/independent_ungated_audition.wav",
-              "start": 0.0
-            },
-            "independent_selective": {
-              "audio": "assets/cello/q0006/independent_selective_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_ungated": {
-              "audio": "assets/cello/q0006/symmetric_ungated_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_selective": {
-              "audio": "assets/cello/q0006/symmetric_selective_audition.wav",
-              "start": 0.0
-            },
-            "aso": {
-              "audio": "assets/cello/q0006/aso_audition.wav",
-              "start": 0.0
-            }
-          },
-          "waveform": [
-            1.0,
-            0.924,
-            0.858,
-            0.786,
-            0.717,
-            0.671,
-            0.605,
-            0.558,
-            0.518,
-            0.485,
-            0.457,
-            0.389,
-            0.337,
-            0.279,
-            0.249,
-            0.212,
-            0.175,
-            0.139,
-            0.103,
-            0.081,
-            0.083,
-            0.091,
-            0.101,
-            0.117,
-            0.111,
-            0.078,
-            0.057,
-            0.016,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        },
-        {
-          "event": 11,
-          "pitch": 45,
-          "start": 0.0,
-          "end": 0.1581,
-          "target": false,
-          "outputs": {
-            "target": {
-              "audio": "assets/cello/q0011/target.wav",
-              "spectrogram": "assets/cello/q0011/target.png"
-            },
-            "aso": {
-              "audio": "assets/cello/q0011/aso.wav",
-              "spectrogram": "assets/cello/q0011/aso.png",
-              "mask": "assets/cello/q0011/aso_mask.png",
-              "audition": "assets/cello/q0011/aso_audition.wav",
-              "auditionStart": 0.0
-            },
-            "score_informed_nmf": {
-              "audio": "assets/cello/q0011/score_informed_nmf.wav",
-              "spectrogram": "assets/cello/q0011/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/cello/q0011/independent_ungated.wav",
-              "spectrogram": "assets/cello/q0011/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/cello/q0011/independent_selective.wav",
-              "spectrogram": "assets/cello/q0011/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/cello/q0011/symmetric_ungated.wav",
-              "spectrogram": "assets/cello/q0011/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/cello/q0011/symmetric_selective.wav",
-              "spectrogram": "assets/cello/q0011/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/cello/q0011/mixture_audition.wav",
-              "start": 0.0
-            },
-            "target": {
-              "audio": "assets/cello/q0011/target_audition.wav",
-              "start": 0.0
-            },
-            "score_informed_nmf": {
-              "audio": "assets/cello/q0011/score_informed_nmf_audition.wav",
-              "start": 0.0
-            },
-            "independent_ungated": {
-              "audio": "assets/cello/q0011/independent_ungated_audition.wav",
-              "start": 0.0
-            },
-            "independent_selective": {
-              "audio": "assets/cello/q0011/independent_selective_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_ungated": {
-              "audio": "assets/cello/q0011/symmetric_ungated_audition.wav",
-              "start": 0.0
-            },
-            "symmetric_selective": {
-              "audio": "assets/cello/q0011/symmetric_selective_audition.wav",
-              "start": 0.0
-            },
-            "aso": {
-              "audio": "assets/cello/q0011/aso_audition.wav",
-              "start": 0.0
-            }
-          },
-          "waveform": [
-            1.0,
-            0.944,
-            0.792,
-            0.898,
-            0.736,
-            0.752,
-            0.648,
-            0.627,
-            0.575,
-            0.455,
-            0.462,
-            0.314,
-            0.228,
-            0.138,
-            0.092,
-            0.086,
-            0.068,
-            0.042,
-            0.015,
-            0.005,
-            0.001,
-            0.001,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.001
-          ]
-        },
-        {
-          "event": 12,
-          "pitch": 46,
-          "start": 0.1695,
-          "end": 0.9921,
-          "target": true,
-          "outputs": {
-            "target": {
-              "audio": "assets/cello/q0012/target.wav",
-              "spectrogram": "assets/cello/q0012/target.png"
-            },
-            "aso": {
-              "audio": "assets/cello/q0012/aso.wav",
-              "spectrogram": "assets/cello/q0012/aso.png",
-              "mask": "assets/cello/q0012/aso_mask.png",
-              "audition": "assets/cello/q0012/aso_audition.wav",
-              "auditionStart": 0.1445
-            },
-            "score_informed_nmf": {
-              "audio": "assets/cello/q0012/score_informed_nmf.wav",
-              "spectrogram": "assets/cello/q0012/score_informed_nmf.png"
-            },
-            "independent_ungated": {
-              "audio": "assets/cello/q0012/independent_ungated.wav",
-              "spectrogram": "assets/cello/q0012/independent_ungated.png"
-            },
-            "independent_selective": {
-              "audio": "assets/cello/q0012/independent_selective.wav",
-              "spectrogram": "assets/cello/q0012/independent_selective.png"
-            },
-            "symmetric_ungated": {
-              "audio": "assets/cello/q0012/symmetric_ungated.wav",
-              "spectrogram": "assets/cello/q0012/symmetric_ungated.png"
-            },
-            "symmetric_selective": {
-              "audio": "assets/cello/q0012/symmetric_selective.wav",
-              "spectrogram": "assets/cello/q0012/symmetric_selective.png"
-            }
-          },
-          "auditions": {
-            "mixture": {
-              "audio": "assets/cello/q0012/mixture_audition.wav",
-              "start": 0.1445
-            },
-            "target": {
-              "audio": "assets/cello/q0012/target_audition.wav",
-              "start": 0.1445
-            },
-            "score_informed_nmf": {
-              "audio": "assets/cello/q0012/score_informed_nmf_audition.wav",
-              "start": 0.1445
-            },
-            "independent_ungated": {
-              "audio": "assets/cello/q0012/independent_ungated_audition.wav",
-              "start": 0.1445
-            },
-            "independent_selective": {
-              "audio": "assets/cello/q0012/independent_selective_audition.wav",
-              "start": 0.1445
-            },
-            "symmetric_ungated": {
-              "audio": "assets/cello/q0012/symmetric_ungated_audition.wav",
-              "start": 0.1445
-            },
-            "symmetric_selective": {
-              "audio": "assets/cello/q0012/symmetric_selective_audition.wav",
-              "start": 0.1445
-            },
-            "aso": {
-              "audio": "assets/cello/q0012/aso_audition.wav",
-              "start": 0.1445
-            }
-          },
-          "waveform": [
-            0.035,
-            0.351,
-            0.74,
-            0.787,
-            0.838,
-            0.883,
-            0.899,
+            0.859,
             0.937,
-            0.933,
-            0.947,
+            0.969,
+            0.951,
+            0.997,
+            0.923,
+            0.972,
+            0.921,
+            0.986,
+            0.956,
             1.0,
-            0.996,
-            0.954,
-            0.98,
-            0.917,
-            0.836,
-            0.783,
+            0.959,
+            0.952,
+            0.946,
+            0.885,
+            0.686,
+            0.327,
+            0.42,
+            0.413,
+            0.297,
+            0.285,
+            0.409,
+            0.453,
+            0.395,
+            0.336,
+            0.193,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 184,
+          "pitch": 70,
+          "start": 0.201,
+          "end": 2.901,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0184/target.wav",
+              "spectrogram": "assets/orchestra/q0184/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0184/aso.wav",
+              "spectrogram": "assets/orchestra/q0184/aso.png",
+              "mask": "assets/orchestra/q0184/aso_mask.png",
+              "audition": "assets/orchestra/q0184/aso_audition.wav",
+              "auditionStart": 0.176
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0184/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0184/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0184/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0184/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0184/mixture_audition.wav",
+              "start": 0.176
+            },
+            "target": {
+              "audio": "assets/orchestra/q0184/target_audition.wav",
+              "start": 0.176
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0184/score_informed_nmf_audition.wav",
+              "start": 0.176
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0184/symmetric_selective_audition.wav",
+              "start": 0.176
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0184/aso_audition.wav",
+              "start": 0.176
+            }
+          },
+          "auditionGainDb": 13.83,
+          "waveform": [
+            0.191,
+            0.553,
+            0.708,
+            0.554,
+            0.577,
             0.719,
-            0.661,
-            0.592,
-            0.513,
-            0.455,
-            0.386,
-            0.32,
-            0.237,
-            0.186,
-            0.126,
-            0.066,
-            0.016,
+            0.521,
+            0.578,
+            0.79,
+            0.9,
+            0.854,
+            1.0,
+            0.802,
+            0.83,
+            0.791,
+            0.556,
+            0.697,
+            0.751,
+            0.581,
+            0.627,
+            0.59,
+            0.346,
+            0.297,
+            0.351,
+            0.356,
+            0.281,
+            0.217,
+            0.2,
+            0.017,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 185,
+          "pitch": 62,
+          "start": 0.231,
+          "end": 2.901,
+          "target": true,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0185/target.wav",
+              "spectrogram": "assets/orchestra/q0185/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0185/aso.wav",
+              "spectrogram": "assets/orchestra/q0185/aso.png",
+              "mask": "assets/orchestra/q0185/aso_mask.png",
+              "audition": "assets/orchestra/q0185/aso_audition.wav",
+              "auditionStart": 0.206
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0185/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0185/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0185/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0185/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0185/mixture_audition.wav",
+              "start": 0.206
+            },
+            "target": {
+              "audio": "assets/orchestra/q0185/target_audition.wav",
+              "start": 0.206
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0185/score_informed_nmf_audition.wav",
+              "start": 0.206
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0185/symmetric_selective_audition.wav",
+              "start": 0.206
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0185/aso_audition.wav",
+              "start": 0.206
+            }
+          },
+          "auditionGainDb": 11.12,
+          "waveform": [
+            0.222,
+            0.848,
+            0.997,
+            1.0,
+            0.982,
+            0.994,
+            0.981,
+            0.976,
+            0.978,
+            0.974,
+            0.98,
+            0.967,
+            0.966,
+            0.935,
+            0.94,
+            0.908,
+            0.916,
+            0.916,
+            0.912,
+            0.904,
+            0.879,
+            0.86,
+            0.799,
+            0.742,
+            0.685,
+            0.634,
+            0.589,
+            0.543,
+            0.174,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 186,
+          "pitch": 46,
+          "start": 0.291,
+          "end": 2.901,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0186/target.wav",
+              "spectrogram": "assets/orchestra/q0186/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0186/aso.wav",
+              "spectrogram": "assets/orchestra/q0186/aso.png",
+              "mask": "assets/orchestra/q0186/aso_mask.png",
+              "audition": "assets/orchestra/q0186/aso_audition.wav",
+              "auditionStart": 0.266
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0186/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0186/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0186/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0186/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0186/mixture_audition.wav",
+              "start": 0.266
+            },
+            "target": {
+              "audio": "assets/orchestra/q0186/target_audition.wav",
+              "start": 0.266
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0186/score_informed_nmf_audition.wav",
+              "start": 0.266
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0186/symmetric_selective_audition.wav",
+              "start": 0.266
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0186/aso_audition.wav",
+              "start": 0.266
+            }
+          },
+          "auditionGainDb": 11.27,
+          "waveform": [
+            0.363,
+            0.798,
+            0.879,
+            0.888,
+            0.816,
+            0.955,
+            0.827,
+            0.967,
+            0.879,
+            1.0,
+            0.972,
+            0.999,
+            0.861,
+            0.797,
+            0.849,
+            0.754,
+            0.674,
+            0.654,
+            0.588,
+            0.538,
+            0.459,
+            0.372,
+            0.376,
+            0.369,
+            0.366,
+            0.277,
+            0.183,
+            0.118,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 187,
+          "pitch": 53,
+          "start": 0.321,
+          "end": 2.761,
+          "target": false,
+          "outputs": {
+            "target": {
+              "audio": "assets/orchestra/q0187/target.wav",
+              "spectrogram": "assets/orchestra/q0187/target.png"
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0187/aso.wav",
+              "spectrogram": "assets/orchestra/q0187/aso.png",
+              "mask": "assets/orchestra/q0187/aso_mask.png",
+              "audition": "assets/orchestra/q0187/aso_audition.wav",
+              "auditionStart": 0.296
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0187/symmetric_selective.wav",
+              "spectrogram": "assets/orchestra/q0187/symmetric_selective.png"
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0187/score_informed_nmf.wav",
+              "spectrogram": "assets/orchestra/q0187/score_informed_nmf.png"
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/orchestra/q0187/mixture_audition.wav",
+              "start": 0.296
+            },
+            "target": {
+              "audio": "assets/orchestra/q0187/target_audition.wav",
+              "start": 0.296
+            },
+            "score_informed_nmf": {
+              "audio": "assets/orchestra/q0187/score_informed_nmf_audition.wav",
+              "start": 0.296
+            },
+            "symmetric_selective": {
+              "audio": "assets/orchestra/q0187/symmetric_selective_audition.wav",
+              "start": 0.296
+            },
+            "aso": {
+              "audio": "assets/orchestra/q0187/aso_audition.wav",
+              "start": 0.296
+            }
+          },
+          "auditionGainDb": 9.63,
+          "waveform": [
+            0.3,
+            1.0,
+            0.874,
+            0.992,
+            0.837,
+            0.942,
+            0.846,
+            0.914,
+            0.833,
+            0.948,
+            0.855,
+            0.81,
+            0.894,
+            0.695,
+            0.817,
+            0.732,
+            0.662,
+            0.707,
+            0.625,
+            0.642,
+            0.51,
+            0.547,
+            0.341,
+            0.254,
+            0.141,
+            0.128,
+            0.084,
+            0.0,
+            0.0,
             0.0,
             0.0,
             0.0
@@ -4570,66 +3875,43 @@
       "channels": [
         {
           "id": "mixture",
-          "label": "Original mixture",
-          "audio": "assets/cello/mixture.wav",
-          "spectrogram": "assets/cello/mixture.png"
+          "label": "Original four-part mixture",
+          "audio": "assets/orchestra/mixture.wav",
+          "spectrogram": "assets/orchestra/mixture.png"
         },
         {
           "id": "target",
-          "label": "Isolated target",
-          "audio": "assets/cello/q0012/target.wav",
-          "spectrogram": "assets/cello/q0012/target.png"
-        },
-        {
-          "id": "score_informed_nmf",
-          "label": "Score-Informed NMF",
-          "audio": "assets/cello/q0012/score_informed_nmf.wav",
-          "spectrogram": "assets/cello/q0012/score_informed_nmf.png"
-        },
-        {
-          "id": "independent_ungated",
-          "label": "Independent Ungated",
-          "audio": "assets/cello/q0012/independent_ungated.wav",
-          "spectrogram": "assets/cello/q0012/independent_ungated.png"
-        },
-        {
-          "id": "independent_selective",
-          "label": "Independent Selective",
-          "audio": "assets/cello/q0012/independent_selective.wav",
-          "spectrogram": "assets/cello/q0012/independent_selective.png"
-        },
-        {
-          "id": "symmetric_ungated",
-          "label": "Symmetric Ungated",
-          "audio": "assets/cello/q0012/symmetric_ungated.wav",
-          "spectrogram": "assets/cello/q0012/symmetric_ungated.png"
-        },
-        {
-          "id": "symmetric_selective",
-          "label": "Symmetric Gated",
-          "audio": "assets/cello/q0012/symmetric_selective.wav",
-          "spectrogram": "assets/cello/q0012/symmetric_selective.png"
+          "label": "Aligned isolated part",
+          "audio": "assets/orchestra/q0185/target.wav",
+          "spectrogram": "assets/orchestra/q0185/target.png"
         },
         {
           "id": "aso",
           "label": "Symmetric Gated + ASO",
-          "audio": "assets/cello/q0012/aso.wav",
-          "spectrogram": "assets/cello/q0012/aso.png"
+          "audio": "assets/orchestra/q0185/aso.wav",
+          "spectrogram": "assets/orchestra/q0185/aso.png"
         },
         {
-          "id": "midi",
-          "label": "MIDI score",
-          "audio": "assets/cello/midi.wav",
-          "spectrogram": "assets/cello/midi.png"
+          "id": "symmetric_selective",
+          "label": "Symmetric Gated",
+          "audio": "assets/orchestra/q0185/symmetric_selective.wav",
+          "spectrogram": "assets/orchestra/q0185/symmetric_selective.png"
+        },
+        {
+          "id": "score_informed_nmf",
+          "label": "Score-Informed NMF",
+          "audio": "assets/orchestra/q0185/score_informed_nmf.wav",
+          "spectrogram": "assets/orchestra/q0185/score_informed_nmf.png"
         }
       ],
-      "midi": "assets/cello/score.mid",
-      "asoFloatWaveformSha256": "ba232e6b2d3c6bd90b0c8f0b9f3861f4f212e2e436b1a380afd77e2e7db973f9",
-      "featuredMetrics": {
-        "asoSiSdrDb": 18.9579,
-        "preAsoSiSdrDb": 3.6683
+      "midi": "assets/orchestra/score.mid",
+      "auditionGainCapDb": 15.56,
+      "provenance": {
+        "separatorCheckpointSha256": "a3535f3ad99a297967dd18a4c4b8a9a8f7d47f3c6b05f72c0e2449d8c4be2d68",
+        "asoCheckpointSha256": "ff89599cef65e5eb98ff061372d8362e0752d2060d167aaf553b24c29577ae2a",
+        "reference": "score-windowed isolated monophonic part with measured decay, capped at the next onset"
       },
-      "hitMap": "assets/cello/aso_hit_map.png",
+      "hitMap": "assets/orchestra/aso_hit_map.png",
       "hitMapSize": [
         1440,
         360

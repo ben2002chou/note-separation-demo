@@ -275,8 +275,7 @@ function navigateScore(note, key) {
 }
 
 function renderTabs() {
-  const publishedExamples = state.manifest.examples.filter((example) => example.id !== 'guitar');
-  ui.tabs.replaceChildren(...publishedExamples.map((example) => {
+  ui.tabs.replaceChildren(...state.manifest.examples.map((example) => {
     const button = document.createElement('button');
     button.className = 'tab';
     button.type = 'button';
@@ -564,7 +563,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=20260912-0345')
+fetch('assets/manifest.json?v=20260912-0430')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();
