@@ -23,8 +23,10 @@ python build_assets.py --source-root /path/to/staged-assets
 
 The build script preserves one shared amplitude scale within each example. The
 approved Debussy passage from the MAESTRO v3 test split provides a qualitative
-real-performance example. Three controlled examples cover piano, acoustic
-guitar, and cello with isolated references. The proposed extraction uses the
+real-performance example. Two public controlled examples cover piano and cello
+with isolated references. The acoustic-guitar assets are retained for research
+comparison but are hidden until a convincing recorded replacement is ready.
+The proposed extraction uses the
 final temporal ASO checkpoint at step 29,058, while the comparison controls
 expose the four matched 30k separator ablations and the score-informed NMF
 baseline reported with the main results. Browser audio and ownership maps are

@@ -23,8 +23,6 @@ const ui = {
   region: document.querySelector('#region-readout'),
   roll: document.querySelector('#piano-roll'),
   scoreNote: document.querySelector('#score-note'),
-  figure: document.querySelector('#figure-grid'),
-  showFigureExample: document.querySelector('#show-figure-example'),
 };
 
 const state = {
@@ -277,7 +275,8 @@ function navigateScore(note, key) {
 }
 
 function renderTabs() {
-  ui.tabs.replaceChildren(...state.manifest.examples.map((example) => {
+  const publishedExamples = state.manifest.examples.filter((example) => example.id !== 'guitar');
+  ui.tabs.replaceChildren(...publishedExamples.map((example) => {
     const button = document.createElement('button');
     button.className = 'tab';
     button.type = 'button';
@@ -525,45 +524,9 @@ function spectrogramTime(event) {
   return clamp((event.clientX - bounds.left) / bounds.width, 0, 1) * state.example.duration;
 }
 
-function renderFigureCompanion() {
-  const guitar = state.manifest.examples.find((example) => example.id === 'guitar');
-  const figureOrder = [
-    'independent_ungated', 'independent_selective', 'symmetric_ungated',
-    'symmetric_selective', 'aso', 'score_informed_nmf',
-  ];
-  const cards = figureOrder.map((id) => guitar.channels.find((channel) => channel.id === id)).map((channel) => {
-    const button = document.createElement('button');
-    button.className = 'figure-card';
-    button.type = 'button';
-    const image = document.createElement('img');
-    image.src = channel.spectrogram;
-    image.loading = 'lazy';
-    image.decoding = 'async';
-    image.alt = '';
-    const label = document.createElement('span');
-    label.textContent = channel.label;
-    const detail = document.createElement('small');
-    detail.textContent = 'Load and listen';
-    label.append(detail);
-    button.append(image, label);
-    button.addEventListener('click', () => {
-      selectExample('guitar');
-      selectChannel(channel.id);
-      document.querySelector('.demo-shell').scrollIntoView({behavior: 'smooth'});
-      play(0);
-    });
-    return button;
-  });
-  ui.figure.replaceChildren(...cards);
-}
-
 ui.playWhole.addEventListener('click', () => play(0));
 ui.playRegion.addEventListener('click', () => play(state.start, state.end));
 ui.stop.addEventListener('click', stop);
-ui.showFigureExample.addEventListener('click', () => {
-  selectExample('guitar');
-  document.querySelector('.demo-shell').scrollIntoView({behavior: 'smooth'});
-});
 
 ui.maskToggle.addEventListener('change', () => {
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
@@ -601,7 +564,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=20260912-0300')
+fetch('assets/manifest.json?v=20260912-0345')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();
@@ -609,7 +572,6 @@ fetch('assets/manifest.json?v=20260912-0300')
   .then((manifest) => {
     state.manifest = manifest;
     selectExample(manifest.examples[0].id);
-    renderFigureCompanion();
     updatePlayhead();
   })
   .catch((error) => {
