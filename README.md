@@ -22,11 +22,13 @@ python build_assets.py --source-root /path/to/staged-assets
 ```
 
 The build script preserves one shared amplitude scale within each example. The
-three curated examples cover piano, acoustic guitar, and cello. The headline
-The proposed extraction uses the final temporal ASO checkpoint at step 29,058,
-and the comparison controls expose the four matched 30k separator ablations
-reported in Table 1. Browser audio
-and ownership maps are loaded only when an example or note is selected.
+approved Debussy passage from the MAESTRO v3 test split provides a qualitative
+real-performance example. Three controlled examples cover piano, acoustic
+guitar, and cello with isolated references. The proposed extraction uses the
+final temporal ASO checkpoint at step 29,058, while the comparison controls
+expose the four matched 30k separator ablations and the score-informed NMF
+baseline reported with the main results. Browser audio and ownership maps are
+loaded only when an example or note is selected.
 
 Run `python build_mask_overlays.py` after rebuilding the audio assets. It
 recovers each note's displayed ASO magnitude allocation from the aligned

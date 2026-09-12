@@ -47,6 +47,7 @@ const state = {
 const channelNotes = {
   mixture: 'Full polyphonic recording',
   target: 'Ground-truth isolated note',
+  score_informed_nmf: 'Score-informed harmonic NMF baseline',
   aso: 'Final jointly allocated note output',
   independent_ungated: 'Independent branches without the selective octave gate',
   independent_selective: 'Independent branches with the selective octave gate',
@@ -92,12 +93,14 @@ function setSelection(start, end, event = null, refreshChannel = true) {
     waveform.classList.toggle('roll-waveform--selected', Number(waveform.dataset.event) === state.selectedEvent);
   });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
-  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2140` : '';
+  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260912-0300` : '';
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
   ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
   ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
   if (selected) {
-    ui.request.textContent = `Frozen request ${state.example.pieceId}:${String(selected.event).padStart(4, '0')} · queried pitch ${pitchName(selected.pitch)}`;
+    ui.request.textContent = state.example.qualitative
+      ? `${state.example.requestLabel} · queried pitch ${pitchName(selected.pitch)}`
+      : `Frozen request ${state.example.pieceId}:${String(selected.event).padStart(4, '0')} · queried pitch ${pitchName(selected.pitch)}`;
   }
   ui.scoreNote.textContent = selected
     ? `${pitchName(selected.pitch)}, ${state.start.toFixed(2)}–${state.end.toFixed(2)} s · ${currentChannel()?.label || 'selected method'}`
@@ -132,7 +135,7 @@ function loadHitMap() {
     canvas.height = image.naturalHeight;
     canvas.getContext('2d', {willReadFrequently: true}).drawImage(image, 0, 0);
   }, {once: true});
-  image.src = `${state.example.hitMap}?v=20260911-2140`;
+  image.src = `${state.example.hitMap}?v=20260912-0300`;
 }
 
 function fallbackSpectralNote(time, frequency) {
@@ -309,7 +312,7 @@ function channelButton(channel) {
 function renderChannels() {
   const order = [
     'aso', 'symmetric_selective', 'symmetric_ungated',
-    'independent_selective', 'independent_ungated', 'target', 'mixture',
+    'independent_selective', 'independent_ungated', 'score_informed_nmf', 'target', 'mixture',
   ];
   const channels = order
     .map((id) => state.example.channels.find((channel) => channel.id === id))
@@ -467,7 +470,9 @@ function selectExample(id) {
   state.selectedEvent = state.example.targetEvent;
   ui.title.textContent = state.example.title;
   ui.instrument.textContent = state.example.instrument;
-  ui.request.textContent = `Frozen request ${state.example.requestId} · queried pitch ${pitchName(state.example.targetPitch)}`;
+  ui.request.textContent = state.example.qualitative
+    ? `${state.example.requestLabel} · queried pitch ${pitchName(state.example.targetPitch)}`
+    : `Frozen request ${state.example.requestId} · queried pitch ${pitchName(state.example.targetPitch)}`;
   ui.duration.textContent = state.example.duration.toFixed(2);
   audio.src = currentChannel().audio;
   audio.load();
@@ -524,7 +529,7 @@ function renderFigureCompanion() {
   const guitar = state.manifest.examples.find((example) => example.id === 'guitar');
   const figureOrder = [
     'independent_ungated', 'independent_selective', 'symmetric_ungated',
-    'symmetric_selective', 'aso',
+    'symmetric_selective', 'aso', 'score_informed_nmf',
   ];
   const cards = figureOrder.map((id) => guitar.channels.find((channel) => channel.id === id)).map((channel) => {
     const button = document.createElement('button');
@@ -596,7 +601,7 @@ auditionAudio.addEventListener('ended', () => {
   state.auditionOffset = null;
 });
 
-fetch('assets/manifest.json?v=20260911-2044')
+fetch('assets/manifest.json?v=20260912-0300')
   .then((response) => {
     if (!response.ok) throw new Error(`Could not load demo manifest (${response.status})`);
     return response.json();

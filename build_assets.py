@@ -57,6 +57,7 @@ EXAMPLES = (
 CHANNELS = (
     ("mixture", "Original mixture"),
     ("target", "Isolated target"),
+    ("score_informed_nmf", "Score-Informed NMF"),
     ("independent_ungated", "Independent Ungated"),
     ("independent_selective", "Independent Selective"),
     ("symmetric_ungated", "Symmetric Ungated"),
@@ -200,6 +201,7 @@ def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, lis
     sprites = {}
     for key, filename in {
         "aso": "selected_aso_sprite.wav",
+        "score_informed_nmf": "score_informed_nmf_sprite.wav",
         "independent_ungated": "independent_ungated_sprite.wav",
         "independent_selective": "independent_selective_sprite.wav",
         "symmetric_ungated": "symmetric_ungated_sprite.wav",
@@ -268,6 +270,11 @@ def main() -> None:
         "datasets": ["SCNS-Eval-v3"],
         "checkpointSha256": "ff89599cef65e5eb98ff061372d8362e0752d2060d167aaf553b24c29577ae2a",
         "evaluationResultSha256": "1fab27ff756bfb3a1757798e31a1a959fd7f52981daa16623cbd0f58a75e67d0",
+        "scoreInformedNmf": {
+            "implementation": "Ewert-Mueller configuration A adapted to note-event masks",
+            "solver": "multiplicative-update NMF with Frobenius loss",
+            "iterations": 1000,
+        },
         "selection": "Curated held-out examples selected for separation quality, audible ASO improvement, and onset or reattack preservation.",
         "examples": [],
     }
@@ -308,7 +315,7 @@ def main() -> None:
         }]
         channels.extend({"id": key, "label": labels[key], **default_note["outputs"][key]}
                         for key in (
-                            "target", "independent_ungated", "independent_selective",
+                            "target", "score_informed_nmf", "independent_ungated", "independent_selective",
                             "symmetric_ungated", "symmetric_selective", "aso",
                         ))
         channels.append({"id": "midi", "label": "MIDI score",

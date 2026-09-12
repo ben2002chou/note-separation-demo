@@ -16,7 +16,7 @@ MANIFEST = ROOT / "assets" / "manifest.json"
 LEAD_SECONDS = 0.025
 RELEASE_SECONDS = 0.250
 AUDITION_CHANNELS = (
-    "mixture", "target", "independent_ungated", "independent_selective",
+    "mixture", "target", "score_informed_nmf", "independent_ungated", "independent_selective",
     "symmetric_ungated", "symmetric_selective", "aso",
 )
 
@@ -49,14 +49,28 @@ def main() -> None:
             end = min(duration, float(note["end"]) + RELEASE_SECONDS)
             auditions = {}
             aso_clip = None
-            for channel_id in AUDITION_CHANNELS:
+            available = ["mixture", *[channel for channel in AUDITION_CHANNELS if channel in note["outputs"]]]
+            clips = {}
+            rates = {}
+            for channel_id in available:
                 source = mixture_source if channel_id == "mixture" else ROOT / note["outputs"][channel_id]["audio"]
                 rate, signal = wavfile.read(source)
                 left = max(0, round(start * rate))
                 right = min(len(signal), round(end * rate))
-                clip = np.asarray(signal[left:right])
+                clips[channel_id] = np.asarray(signal[left:right])
+                rates[channel_id] = rate
+            gain = 1.0
+            if example.get("auditionGainCapDb") is not None:
+                non_mixture = [np.asarray(clips[key], dtype=np.float64) for key in available if key != "mixture"]
+                peak = max((float(np.max(np.abs(value))) for value in non_mixture), default=0.0)
+                if peak > 0:
+                    gain = min(10 ** (float(example["auditionGainCapDb"]) / 20), 0.92 * 32767 / peak)
+            for channel_id in available:
+                clip = clips[channel_id]
+                if channel_id != "mixture" and gain != 1.0:
+                    clip = np.clip(np.asarray(clip, dtype=np.float64) * gain, -32767, 32767).astype(np.int16)
                 output = (ROOT / note["outputs"]["aso"]["audio"]).with_name(f"{channel_id}_audition.wav")
-                wavfile.write(output, rate, clip)
+                wavfile.write(output, rates[channel_id], clip)
                 auditions[channel_id] = {
                     "audio": output.relative_to(ROOT).as_posix(),
                     "start": round(start, 4),
@@ -66,6 +80,8 @@ def main() -> None:
                     note["outputs"]["aso"]["audition"] = output.relative_to(ROOT).as_posix()
                     note["outputs"]["aso"]["auditionStart"] = round(start, 4)
             note["auditions"] = auditions
+            if gain != 1.0:
+                note["auditionGainDb"] = round(20 * np.log10(gain), 2)
             note["waveform"] = waveform_envelope(aso_clip)
 
             mask_path = ROOT / note["outputs"]["aso"]["mask"]

@@ -2,12 +2,1159 @@
   "schema": "note-separation-demo-v2",
   "model": "ASO, final temporal checkpoint step 29,058",
   "datasets": [
-    "SCNS-Eval-v3"
+    "SCNS-Eval-v3",
+    "MAESTRO v3 test"
   ],
   "checkpointSha256": "ff89599cef65e5eb98ff061372d8362e0752d2060d167aaf553b24c29577ae2a",
   "evaluationResultSha256": "1fab27ff756bfb3a1757798e31a1a959fd7f52981daa16623cbd0f58a75e67d0",
+  "scoreInformedNmf": {
+    "implementation": "Ewert-Mueller configuration A adapted to note-event masks",
+    "solver": "multiplicative-update NMF with Frobenius loss",
+    "iterations": 1000
+  },
   "selection": "Curated held-out examples selected for separation quality, audible ASO improvement, and onset or reattack preservation.",
   "examples": [
+    {
+      "id": "real-piano",
+      "title": "\u00c9tude \u2018Pour les accords\u2019, Passage 3",
+      "instrument": "Real polyphonic piano",
+      "pieceId": "maestro-2009-debussy-accords",
+      "dataset": "MAESTRO v3 official test split",
+      "qualitative": true,
+      "requestId": "maestro-2009-debussy-accords:1771",
+      "requestLabel": "Qualitative transfer on a real 2009 performance",
+      "duration": 6.0,
+      "targetPitch": 75,
+      "targetEvent": 8,
+      "notes": [
+        {
+          "event": 0,
+          "sourceEvent": 1762,
+          "pitch": 71,
+          "start": 0.0,
+          "end": 2.2245,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0000/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0000/aso.wav",
+              "mask": "assets/real-piano/q0000/aso_mask.png",
+              "audition": "assets/real-piano/q0000/aso_audition.wav",
+              "auditionStart": 0.0
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0000/mixture_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0000/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0000/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.476,
+            0.399,
+            0.646,
+            0.598,
+            0.642,
+            0.415,
+            0.673,
+            0.498,
+            0.578,
+            0.648,
+            0.422,
+            0.414,
+            0.696,
+            1.0,
+            0.696,
+            0.389,
+            0.267,
+            0.273,
+            0.273,
+            0.308,
+            0.162,
+            0.229,
+            0.216,
+            0.18,
+            0.105,
+            0.081,
+            0.116,
+            0.099,
+            0.085,
+            0.041,
+            0.045,
+            0.041
+          ]
+        },
+        {
+          "event": 1,
+          "sourceEvent": 1763,
+          "pitch": 61,
+          "start": 0.0,
+          "end": 3.4094,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0001/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0001/aso.wav",
+              "mask": "assets/real-piano/q0001/aso_mask.png",
+              "audition": "assets/real-piano/q0001/aso_audition.wav",
+              "auditionStart": 0.0
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0001/mixture_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0001/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0001/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.835,
+            0.938,
+            0.805,
+            0.628,
+            0.858,
+            0.779,
+            0.763,
+            0.317,
+            0.775,
+            1.0,
+            0.4,
+            0.272,
+            0.236,
+            0.213,
+            0.219,
+            0.121,
+            0.081,
+            0.083,
+            0.091,
+            0.106,
+            0.132,
+            0.109,
+            0.095,
+            0.161,
+            0.091,
+            0.149,
+            0.156,
+            0.158,
+            0.311,
+            0.241,
+            0.029,
+            0.004
+          ]
+        },
+        {
+          "event": 2,
+          "sourceEvent": 1764,
+          "pitch": 64,
+          "start": 0.0,
+          "end": 2.6698,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0002/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0002/aso.wav",
+              "mask": "assets/real-piano/q0002/aso_mask.png",
+              "audition": "assets/real-piano/q0002/aso_audition.wav",
+              "auditionStart": 0.0
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0002/mixture_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0002/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0002/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.405,
+            0.406,
+            0.627,
+            0.518,
+            0.346,
+            0.564,
+            0.454,
+            0.555,
+            0.48,
+            0.284,
+            0.69,
+            1.0,
+            0.47,
+            0.395,
+            0.21,
+            0.187,
+            0.186,
+            0.13,
+            0.222,
+            0.102,
+            0.077,
+            0.06,
+            0.175,
+            0.219,
+            0.164,
+            0.199,
+            0.386,
+            0.222,
+            0.163,
+            0.172,
+            0.117,
+            0.06
+          ]
+        },
+        {
+          "event": 3,
+          "sourceEvent": 1765,
+          "pitch": 87,
+          "start": 0.0,
+          "end": 0.2935,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0003/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0003/aso.wav",
+              "mask": "assets/real-piano/q0003/aso_mask.png",
+              "audition": "assets/real-piano/q0003/aso_audition.wav",
+              "auditionStart": 0.0
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0003/mixture_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0003/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0003/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.85,
+            0.777,
+            0.867,
+            0.627,
+            0.706,
+            0.44,
+            0.211,
+            0.437,
+            0.512,
+            0.868,
+            0.896,
+            1.0,
+            0.836,
+            0.436,
+            0.358,
+            0.322,
+            0.295,
+            0.228,
+            0.2,
+            0.171,
+            0.148,
+            0.131,
+            0.155,
+            0.109,
+            0.086,
+            0.123,
+            0.096,
+            0.045,
+            0.09,
+            0.102,
+            0.087,
+            0.079
+          ]
+        },
+        {
+          "event": 4,
+          "sourceEvent": 1767,
+          "pitch": 75,
+          "start": 0.0,
+          "end": 0.3977,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0004/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0004/aso.wav",
+              "mask": "assets/real-piano/q0004/aso_mask.png",
+              "audition": "assets/real-piano/q0004/aso_audition.wav",
+              "auditionStart": 0.0
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0004/mixture_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0004/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0004/aso_audition.wav",
+              "start": 0.0
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            1.0,
+            0.46,
+            0.466,
+            0.25,
+            0.177,
+            0.125,
+            0.397,
+            0.613,
+            0.645,
+            0.909,
+            0.876,
+            0.551,
+            0.667,
+            0.567,
+            0.539,
+            0.42,
+            0.327,
+            0.308,
+            0.193,
+            0.122,
+            0.06,
+            0.049,
+            0.023,
+            0.022,
+            0.048,
+            0.059,
+            0.045,
+            0.028,
+            0.029,
+            0.022,
+            0.042,
+            0.055
+          ]
+        },
+        {
+          "event": 5,
+          "sourceEvent": 1768,
+          "pitch": 82,
+          "start": 1.2422,
+          "end": 2.0643,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0005/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0005/aso.wav",
+              "mask": "assets/real-piano/q0005/aso_mask.png",
+              "audition": "assets/real-piano/q0005/aso_audition.wav",
+              "auditionStart": 1.2172
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0005/mixture_audition.wav",
+              "start": 1.2172
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0005/symmetric_selective_audition.wav",
+              "start": 1.2172
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0005/aso_audition.wav",
+              "start": 1.2172
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.311,
+            1.0,
+            0.728,
+            0.725,
+            0.677,
+            0.67,
+            0.545,
+            0.325,
+            0.425,
+            0.291,
+            0.175,
+            0.171,
+            0.139,
+            0.144,
+            0.1,
+            0.064,
+            0.062,
+            0.059,
+            0.05,
+            0.035,
+            0.021,
+            0.018,
+            0.016,
+            0.017,
+            0.012,
+            0.01,
+            0.008,
+            0.009,
+            0.009,
+            0.008,
+            0.003,
+            0.006
+          ]
+        },
+        {
+          "event": 6,
+          "sourceEvent": 1769,
+          "pitch": 70,
+          "start": 1.263,
+          "end": 2.0135,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0006/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0006/aso.wav",
+              "mask": "assets/real-piano/q0006/aso_mask.png",
+              "audition": "assets/real-piano/q0006/aso_audition.wav",
+              "auditionStart": 1.238
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0006/mixture_audition.wav",
+              "start": 1.238
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0006/symmetric_selective_audition.wav",
+              "start": 1.238
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0006/aso_audition.wav",
+              "start": 1.238
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.276,
+            0.334,
+            0.507,
+            1.0,
+            0.911,
+            0.951,
+            0.718,
+            0.767,
+            0.941,
+            0.628,
+            0.531,
+            0.577,
+            0.553,
+            0.555,
+            0.51,
+            0.543,
+            0.495,
+            0.407,
+            0.285,
+            0.267,
+            0.199,
+            0.093,
+            0.063,
+            0.072,
+            0.094,
+            0.085,
+            0.048,
+            0.03,
+            0.021,
+            0.017,
+            0.011,
+            0.004
+          ]
+        },
+        {
+          "event": 7,
+          "sourceEvent": 1770,
+          "pitch": 63,
+          "start": 1.6823,
+          "end": 2.9979,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0007/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0007/aso.wav",
+              "mask": "assets/real-piano/q0007/aso_mask.png",
+              "audition": "assets/real-piano/q0007/aso_audition.wav",
+              "auditionStart": 1.6573
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0007/mixture_audition.wav",
+              "start": 1.6573
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0007/symmetric_selective_audition.wav",
+              "start": 1.6573
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0007/aso_audition.wav",
+              "start": 1.6573
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.912,
+            1.0,
+            0.521,
+            0.623,
+            0.591,
+            0.762,
+            0.767,
+            0.744,
+            0.667,
+            0.605,
+            0.605,
+            0.425,
+            0.341,
+            0.435,
+            0.392,
+            0.617,
+            0.534,
+            0.353,
+            0.2,
+            0.482,
+            0.358,
+            0.575,
+            0.313,
+            0.275,
+            0.216,
+            0.426,
+            0.185,
+            0.109,
+            0.033,
+            0.038,
+            0.048,
+            0.05
+          ]
+        },
+        {
+          "event": 8,
+          "sourceEvent": 1771,
+          "pitch": 75,
+          "start": 1.7031,
+          "end": 2.9523,
+          "target": true,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0008/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0008/aso.wav",
+              "mask": "assets/real-piano/q0008/aso_mask.png",
+              "audition": "assets/real-piano/q0008/aso_audition.wav",
+              "auditionStart": 1.6781
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0008/mixture_audition.wav",
+              "start": 1.6781
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0008/symmetric_selective_audition.wav",
+              "start": 1.6781
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0008/aso_audition.wav",
+              "start": 1.6781
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.664,
+            0.776,
+            0.585,
+            0.602,
+            0.623,
+            0.927,
+            1.0,
+            0.869,
+            0.682,
+            0.568,
+            0.524,
+            0.41,
+            0.235,
+            0.277,
+            0.301,
+            0.31,
+            0.321,
+            0.177,
+            0.113,
+            0.227,
+            0.233,
+            0.244,
+            0.266,
+            0.07,
+            0.127,
+            0.152,
+            0.152,
+            0.08,
+            0.099,
+            0.031,
+            0.041,
+            0.033
+          ]
+        },
+        {
+          "event": 9,
+          "sourceEvent": 1772,
+          "pitch": 70,
+          "start": 4.4232,
+          "end": 4.9706,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0009/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0009/aso.wav",
+              "mask": "assets/real-piano/q0009/aso_mask.png",
+              "audition": "assets/real-piano/q0009/aso_audition.wav",
+              "auditionStart": 4.3982
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0009/mixture_audition.wav",
+              "start": 4.3982
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0009/symmetric_selective_audition.wav",
+              "start": 4.3982
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0009/aso_audition.wav",
+              "start": 4.3982
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.201,
+            0.633,
+            0.598,
+            0.836,
+            1.0,
+            0.884,
+            0.814,
+            0.915,
+            0.643,
+            0.829,
+            0.985,
+            0.732,
+            0.571,
+            0.589,
+            0.616,
+            0.585,
+            0.623,
+            0.623,
+            0.616,
+            0.636,
+            0.596,
+            0.58,
+            0.546,
+            0.535,
+            0.488,
+            0.359,
+            0.217,
+            0.094,
+            0.024,
+            0.004,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 10,
+          "sourceEvent": 1773,
+          "pitch": 61,
+          "start": 4.444,
+          "end": 5.4706,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0010/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0010/aso.wav",
+              "mask": "assets/real-piano/q0010/aso_mask.png",
+              "audition": "assets/real-piano/q0010/aso_audition.wav",
+              "auditionStart": 4.419
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0010/mixture_audition.wav",
+              "start": 4.419
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0010/symmetric_selective_audition.wav",
+              "start": 4.419
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0010/aso_audition.wav",
+              "start": 4.419
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.119,
+            0.353,
+            0.579,
+            0.686,
+            0.974,
+            0.9,
+            0.991,
+            1.0,
+            0.952,
+            0.609,
+            0.736,
+            0.703,
+            0.791,
+            0.737,
+            0.863,
+            0.944,
+            0.593,
+            0.474,
+            0.512,
+            0.442,
+            0.503,
+            0.322,
+            0.416,
+            0.372,
+            0.289,
+            0.28,
+            0.148,
+            0.07,
+            0.035,
+            0.007,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "event": 11,
+          "sourceEvent": 1774,
+          "pitch": 44,
+          "start": 5.1068,
+          "end": 6.0,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0011/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0011/aso.wav",
+              "mask": "assets/real-piano/q0011/aso_mask.png",
+              "audition": "assets/real-piano/q0011/aso_audition.wav",
+              "auditionStart": 5.0818
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0011/mixture_audition.wav",
+              "start": 5.0818
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0011/symmetric_selective_audition.wav",
+              "start": 5.0818
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0011/aso_audition.wav",
+              "start": 5.0818
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.267,
+            0.85,
+            1.0,
+            0.914,
+            0.856,
+            0.75,
+            0.613,
+            0.601,
+            0.621,
+            0.685,
+            0.741,
+            0.657,
+            0.603,
+            0.697,
+            0.597,
+            0.601,
+            0.65,
+            0.815,
+            0.518,
+            0.492,
+            0.475,
+            0.446,
+            0.415,
+            0.414,
+            0.386,
+            0.431,
+            0.41,
+            0.286,
+            0.306,
+            0.404,
+            0.428,
+            0.835
+          ]
+        },
+        {
+          "event": 12,
+          "sourceEvent": 1775,
+          "pitch": 53,
+          "start": 5.1172,
+          "end": 6.0,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0012/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0012/aso.wav",
+              "mask": "assets/real-piano/q0012/aso_mask.png",
+              "audition": "assets/real-piano/q0012/aso_audition.wav",
+              "auditionStart": 5.0922
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0012/mixture_audition.wav",
+              "start": 5.0922
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0012/symmetric_selective_audition.wav",
+              "start": 5.0922
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0012/aso_audition.wav",
+              "start": 5.0922
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.291,
+            0.783,
+            0.93,
+            0.775,
+            0.745,
+            0.61,
+            0.808,
+            1.0,
+            0.97,
+            0.913,
+            0.923,
+            0.873,
+            0.905,
+            0.952,
+            0.849,
+            0.807,
+            0.826,
+            0.814,
+            0.8,
+            0.83,
+            0.907,
+            0.877,
+            0.836,
+            0.717,
+            0.707,
+            0.729,
+            0.721,
+            0.727,
+            0.73,
+            0.694,
+            0.646,
+            0.624
+          ]
+        },
+        {
+          "event": 13,
+          "sourceEvent": 1776,
+          "pitch": 63,
+          "start": 5.1862,
+          "end": 6.0,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0013/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0013/aso.wav",
+              "mask": "assets/real-piano/q0013/aso_mask.png",
+              "audition": "assets/real-piano/q0013/aso_audition.wav",
+              "auditionStart": 5.1612
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0013/mixture_audition.wav",
+              "start": 5.1612
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0013/symmetric_selective_audition.wav",
+              "start": 5.1612
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0013/aso_audition.wav",
+              "start": 5.1612
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.278,
+            1.0,
+            0.898,
+            0.46,
+            0.456,
+            0.425,
+            0.318,
+            0.331,
+            0.281,
+            0.27,
+            0.371,
+            0.44,
+            0.371,
+            0.324,
+            0.363,
+            0.368,
+            0.317,
+            0.397,
+            0.362,
+            0.335,
+            0.281,
+            0.239,
+            0.284,
+            0.273,
+            0.248,
+            0.262,
+            0.274,
+            0.286,
+            0.287,
+            0.284,
+            0.292,
+            0.238
+          ]
+        },
+        {
+          "event": 14,
+          "sourceEvent": 1777,
+          "pitch": 59,
+          "start": 5.2266,
+          "end": 6.0,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0014/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0014/aso.wav",
+              "mask": "assets/real-piano/q0014/aso_mask.png",
+              "audition": "assets/real-piano/q0014/aso_audition.wav",
+              "auditionStart": 5.2016
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0014/mixture_audition.wav",
+              "start": 5.2016
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0014/symmetric_selective_audition.wav",
+              "start": 5.2016
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0014/aso_audition.wav",
+              "start": 5.2016
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.166,
+            0.871,
+            1.0,
+            0.864,
+            0.836,
+            0.734,
+            0.554,
+            0.436,
+            0.423,
+            0.487,
+            0.394,
+            0.428,
+            0.388,
+            0.291,
+            0.321,
+            0.32,
+            0.284,
+            0.303,
+            0.287,
+            0.257,
+            0.238,
+            0.239,
+            0.22,
+            0.168,
+            0.209,
+            0.182,
+            0.16,
+            0.158,
+            0.155,
+            0.346,
+            0.73,
+            0.635
+          ]
+        },
+        {
+          "event": 15,
+          "sourceEvent": 1778,
+          "pitch": 46,
+          "start": 5.9531,
+          "end": 6.0,
+          "target": false,
+          "outputs": {
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0015/symmetric_selective.wav"
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0015/aso.wav",
+              "mask": "assets/real-piano/q0015/aso_mask.png",
+              "audition": "assets/real-piano/q0015/aso_audition.wav",
+              "auditionStart": 5.9281
+            }
+          },
+          "auditions": {
+            "mixture": {
+              "audio": "assets/real-piano/q0015/mixture_audition.wav",
+              "start": 5.9281
+            },
+            "symmetric_selective": {
+              "audio": "assets/real-piano/q0015/symmetric_selective_audition.wav",
+              "start": 5.9281
+            },
+            "aso": {
+              "audio": "assets/real-piano/q0015/aso_audition.wav",
+              "start": 5.9281
+            }
+          },
+          "auditionGainDb": 15.56,
+          "waveform": [
+            0.047,
+            0.065,
+            0.118,
+            0.102,
+            0.089,
+            0.066,
+            0.087,
+            0.058,
+            0.078,
+            0.21,
+            0.228,
+            0.404,
+            0.436,
+            0.484,
+            0.38,
+            0.622,
+            0.721,
+            0.815,
+            0.467,
+            0.876,
+            0.724,
+            1.0,
+            0.359,
+            0.91,
+            0.554,
+            0.959,
+            0.543,
+            0.906,
+            0.631,
+            0.861,
+            0.618,
+            0.912
+          ]
+        }
+      ],
+      "channels": [
+        {
+          "id": "mixture",
+          "label": "Original recording",
+          "audio": "assets/real-piano/mixture.wav",
+          "spectrogram": "assets/real-piano/mixture.png"
+        },
+        {
+          "id": "aso",
+          "label": "Symmetric Gated + ASO",
+          "audio": "assets/real-piano/q0008/aso.wav"
+        },
+        {
+          "id": "symmetric_selective",
+          "label": "Symmetric Gated",
+          "audio": "assets/real-piano/q0008/symmetric_selective.wav"
+        }
+      ],
+      "midi": "assets/real-piano/score.mid",
+      "auditionGainCapDb": 15.56,
+      "provenance": {
+        "source": "MAESTRO v3 official test split, 2009 performance",
+        "windowSeconds": {
+          "start_seconds": 193.5,
+          "stop_seconds": 199.5,
+          "event_count": 16,
+          "max_concurrency": 6,
+          "median_concurrency": 3.0,
+          "collision_rate": 0.0,
+          "selection_score": 17.6
+        },
+        "scope": "Qualitative transfer only; no isolated per-note reference"
+      },
+      "hitMap": "assets/real-piano/aso_hit_map.png",
+      "hitMapSize": [
+        1440,
+        360
+      ]
+    },
     {
       "id": "piano",
       "title": "Repeated-note passage",
@@ -37,6 +1184,10 @@
               "audition": "assets/piano/q0024/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0024/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0024/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0024/independent_ungated.wav",
               "spectrogram": "assets/piano/q0024/independent_ungated.png"
@@ -61,6 +1212,10 @@
             },
             "target": {
               "audio": "assets/piano/q0024/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0024/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -137,6 +1292,10 @@
               "audition": "assets/piano/q0028/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0028/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0028/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0028/independent_ungated.wav",
               "spectrogram": "assets/piano/q0028/independent_ungated.png"
@@ -161,6 +1320,10 @@
             },
             "target": {
               "audio": "assets/piano/q0028/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0028/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -237,6 +1400,10 @@
               "audition": "assets/piano/q0029/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0029/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0029/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0029/independent_ungated.wav",
               "spectrogram": "assets/piano/q0029/independent_ungated.png"
@@ -261,6 +1428,10 @@
             },
             "target": {
               "audio": "assets/piano/q0029/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0029/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -337,6 +1508,10 @@
               "audition": "assets/piano/q0030/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0030/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0030/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0030/independent_ungated.wav",
               "spectrogram": "assets/piano/q0030/independent_ungated.png"
@@ -361,6 +1536,10 @@
             },
             "target": {
               "audio": "assets/piano/q0030/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0030/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -437,6 +1616,10 @@
               "audition": "assets/piano/q0031/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0031/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0031/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0031/independent_ungated.wav",
               "spectrogram": "assets/piano/q0031/independent_ungated.png"
@@ -461,6 +1644,10 @@
             },
             "target": {
               "audio": "assets/piano/q0031/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0031/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -537,6 +1724,10 @@
               "audition": "assets/piano/q0032/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0032/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0032/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0032/independent_ungated.wav",
               "spectrogram": "assets/piano/q0032/independent_ungated.png"
@@ -561,6 +1752,10 @@
             },
             "target": {
               "audio": "assets/piano/q0032/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0032/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -637,6 +1832,10 @@
               "audition": "assets/piano/q0033/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0033/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0033/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0033/independent_ungated.wav",
               "spectrogram": "assets/piano/q0033/independent_ungated.png"
@@ -661,6 +1860,10 @@
             },
             "target": {
               "audio": "assets/piano/q0033/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0033/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -737,6 +1940,10 @@
               "audition": "assets/piano/q0034/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0034/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0034/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0034/independent_ungated.wav",
               "spectrogram": "assets/piano/q0034/independent_ungated.png"
@@ -761,6 +1968,10 @@
             },
             "target": {
               "audio": "assets/piano/q0034/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0034/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -837,6 +2048,10 @@
               "audition": "assets/piano/q0035/aso_audition.wav",
               "auditionStart": 0.0628
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0035/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0035/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0035/independent_ungated.wav",
               "spectrogram": "assets/piano/q0035/independent_ungated.png"
@@ -861,6 +2076,10 @@
             },
             "target": {
               "audio": "assets/piano/q0035/target_audition.wav",
+              "start": 0.0628
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0035/score_informed_nmf_audition.wav",
               "start": 0.0628
             },
             "independent_ungated": {
@@ -937,6 +2156,10 @@
               "audition": "assets/piano/q0036/aso_audition.wav",
               "auditionStart": 0.1991
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0036/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0036/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0036/independent_ungated.wav",
               "spectrogram": "assets/piano/q0036/independent_ungated.png"
@@ -961,6 +2184,10 @@
             },
             "target": {
               "audio": "assets/piano/q0036/target_audition.wav",
+              "start": 0.1991
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0036/score_informed_nmf_audition.wav",
               "start": 0.1991
             },
             "independent_ungated": {
@@ -1037,6 +2264,10 @@
               "audition": "assets/piano/q0037/aso_audition.wav",
               "auditionStart": 0.1991
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0037/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0037/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0037/independent_ungated.wav",
               "spectrogram": "assets/piano/q0037/independent_ungated.png"
@@ -1061,6 +2292,10 @@
             },
             "target": {
               "audio": "assets/piano/q0037/target_audition.wav",
+              "start": 0.1991
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0037/score_informed_nmf_audition.wav",
               "start": 0.1991
             },
             "independent_ungated": {
@@ -1137,6 +2372,10 @@
               "audition": "assets/piano/q0038/aso_audition.wav",
               "auditionStart": 0.3355
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0038/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0038/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0038/independent_ungated.wav",
               "spectrogram": "assets/piano/q0038/independent_ungated.png"
@@ -1161,6 +2400,10 @@
             },
             "target": {
               "audio": "assets/piano/q0038/target_audition.wav",
+              "start": 0.3355
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0038/score_informed_nmf_audition.wav",
               "start": 0.3355
             },
             "independent_ungated": {
@@ -1237,6 +2480,10 @@
               "audition": "assets/piano/q0039/aso_audition.wav",
               "auditionStart": 0.4718
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0039/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0039/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0039/independent_ungated.wav",
               "spectrogram": "assets/piano/q0039/independent_ungated.png"
@@ -1261,6 +2508,10 @@
             },
             "target": {
               "audio": "assets/piano/q0039/target_audition.wav",
+              "start": 0.4718
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0039/score_informed_nmf_audition.wav",
               "start": 0.4718
             },
             "independent_ungated": {
@@ -1337,6 +2588,10 @@
               "audition": "assets/piano/q0040/aso_audition.wav",
               "auditionStart": 0.4718
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0040/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0040/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0040/independent_ungated.wav",
               "spectrogram": "assets/piano/q0040/independent_ungated.png"
@@ -1361,6 +2616,10 @@
             },
             "target": {
               "audio": "assets/piano/q0040/target_audition.wav",
+              "start": 0.4718
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0040/score_informed_nmf_audition.wav",
               "start": 0.4718
             },
             "independent_ungated": {
@@ -1437,6 +2696,10 @@
               "audition": "assets/piano/q0041/aso_audition.wav",
               "auditionStart": 0.4718
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0041/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0041/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0041/independent_ungated.wav",
               "spectrogram": "assets/piano/q0041/independent_ungated.png"
@@ -1461,6 +2724,10 @@
             },
             "target": {
               "audio": "assets/piano/q0041/target_audition.wav",
+              "start": 0.4718
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0041/score_informed_nmf_audition.wav",
               "start": 0.4718
             },
             "independent_ungated": {
@@ -1537,6 +2804,10 @@
               "audition": "assets/piano/q0042/aso_audition.wav",
               "auditionStart": 0.6082
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0042/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0042/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0042/independent_ungated.wav",
               "spectrogram": "assets/piano/q0042/independent_ungated.png"
@@ -1561,6 +2832,10 @@
             },
             "target": {
               "audio": "assets/piano/q0042/target_audition.wav",
+              "start": 0.6082
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0042/score_informed_nmf_audition.wav",
               "start": 0.6082
             },
             "independent_ungated": {
@@ -1637,6 +2912,10 @@
               "audition": "assets/piano/q0043/aso_audition.wav",
               "auditionStart": 0.7445
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0043/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0043/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0043/independent_ungated.wav",
               "spectrogram": "assets/piano/q0043/independent_ungated.png"
@@ -1661,6 +2940,10 @@
             },
             "target": {
               "audio": "assets/piano/q0043/target_audition.wav",
+              "start": 0.7445
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0043/score_informed_nmf_audition.wav",
               "start": 0.7445
             },
             "independent_ungated": {
@@ -1737,6 +3020,10 @@
               "audition": "assets/piano/q0044/aso_audition.wav",
               "auditionStart": 0.8809
             },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0044/score_informed_nmf.wav",
+              "spectrogram": "assets/piano/q0044/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/piano/q0044/independent_ungated.wav",
               "spectrogram": "assets/piano/q0044/independent_ungated.png"
@@ -1761,6 +3048,10 @@
             },
             "target": {
               "audio": "assets/piano/q0044/target_audition.wav",
+              "start": 0.8809
+            },
+            "score_informed_nmf": {
+              "audio": "assets/piano/q0044/score_informed_nmf_audition.wav",
               "start": 0.8809
             },
             "independent_ungated": {
@@ -1832,6 +3123,12 @@
           "label": "Isolated target",
           "audio": "assets/piano/q0036/target.wav",
           "spectrogram": "assets/piano/q0036/target.png"
+        },
+        {
+          "id": "score_informed_nmf",
+          "label": "Score-Informed NMF",
+          "audio": "assets/piano/q0036/score_informed_nmf.wav",
+          "spectrogram": "assets/piano/q0036/score_informed_nmf.png"
         },
         {
           "id": "independent_ungated",
@@ -1911,6 +3208,10 @@
               "audition": "assets/guitar/q0005/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0005/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0005/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0005/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0005/independent_ungated.png"
@@ -1935,6 +3236,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0005/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0005/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -2011,6 +3316,10 @@
               "audition": "assets/guitar/q0006/aso_audition.wav",
               "auditionStart": 0.1942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0006/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0006/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0006/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0006/independent_ungated.png"
@@ -2035,6 +3344,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0006/target_audition.wav",
+              "start": 0.1942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0006/score_informed_nmf_audition.wav",
               "start": 0.1942
             },
             "independent_ungated": {
@@ -2111,6 +3424,10 @@
               "audition": "assets/guitar/q0007/aso_audition.wav",
               "auditionStart": 0.6942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0007/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0007/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0007/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0007/independent_ungated.png"
@@ -2135,6 +3452,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0007/target_audition.wav",
+              "start": 0.6942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0007/score_informed_nmf_audition.wav",
               "start": 0.6942
             },
             "independent_ungated": {
@@ -2211,6 +3532,10 @@
               "audition": "assets/guitar/q0008/aso_audition.wav",
               "auditionStart": 1.1942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0008/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0008/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0008/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0008/independent_ungated.png"
@@ -2235,6 +3560,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0008/target_audition.wav",
+              "start": 1.1942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0008/score_informed_nmf_audition.wav",
               "start": 1.1942
             },
             "independent_ungated": {
@@ -2311,6 +3640,10 @@
               "audition": "assets/guitar/q0009/aso_audition.wav",
               "auditionStart": 1.6942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0009/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0009/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0009/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0009/independent_ungated.png"
@@ -2335,6 +3668,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0009/target_audition.wav",
+              "start": 1.6942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0009/score_informed_nmf_audition.wav",
               "start": 1.6942
             },
             "independent_ungated": {
@@ -2411,6 +3748,10 @@
               "audition": "assets/guitar/q0013/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0013/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0013/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0013/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0013/independent_ungated.png"
@@ -2435,6 +3776,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0013/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0013/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -2511,6 +3856,10 @@
               "audition": "assets/guitar/q0014/aso_audition.wav",
               "auditionStart": 0.1942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0014/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0014/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0014/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0014/independent_ungated.png"
@@ -2535,6 +3884,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0014/target_audition.wav",
+              "start": 0.1942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0014/score_informed_nmf_audition.wav",
               "start": 0.1942
             },
             "independent_ungated": {
@@ -2611,6 +3964,10 @@
               "audition": "assets/guitar/q0015/aso_audition.wav",
               "auditionStart": 1.1942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0015/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0015/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0015/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0015/independent_ungated.png"
@@ -2635,6 +3992,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0015/target_audition.wav",
+              "start": 1.1942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0015/score_informed_nmf_audition.wav",
               "start": 1.1942
             },
             "independent_ungated": {
@@ -2711,6 +4072,10 @@
               "audition": "assets/guitar/q0016/aso_audition.wav",
               "auditionStart": 1.6942
             },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0016/score_informed_nmf.wav",
+              "spectrogram": "assets/guitar/q0016/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/guitar/q0016/independent_ungated.wav",
               "spectrogram": "assets/guitar/q0016/independent_ungated.png"
@@ -2735,6 +4100,10 @@
             },
             "target": {
               "audio": "assets/guitar/q0016/target_audition.wav",
+              "start": 1.6942
+            },
+            "score_informed_nmf": {
+              "audio": "assets/guitar/q0016/score_informed_nmf_audition.wav",
               "start": 1.6942
             },
             "independent_ungated": {
@@ -2806,6 +4175,12 @@
           "label": "Isolated target",
           "audio": "assets/guitar/q0014/target.wav",
           "spectrogram": "assets/guitar/q0014/target.png"
+        },
+        {
+          "id": "score_informed_nmf",
+          "label": "Score-Informed NMF",
+          "audio": "assets/guitar/q0014/score_informed_nmf.wav",
+          "spectrogram": "assets/guitar/q0014/score_informed_nmf.png"
         },
         {
           "id": "independent_ungated",
@@ -2885,6 +4260,10 @@
               "audition": "assets/cello/q0006/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/cello/q0006/score_informed_nmf.wav",
+              "spectrogram": "assets/cello/q0006/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/cello/q0006/independent_ungated.wav",
               "spectrogram": "assets/cello/q0006/independent_ungated.png"
@@ -2909,6 +4288,10 @@
             },
             "target": {
               "audio": "assets/cello/q0006/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/cello/q0006/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -2985,6 +4368,10 @@
               "audition": "assets/cello/q0011/aso_audition.wav",
               "auditionStart": 0.0
             },
+            "score_informed_nmf": {
+              "audio": "assets/cello/q0011/score_informed_nmf.wav",
+              "spectrogram": "assets/cello/q0011/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/cello/q0011/independent_ungated.wav",
               "spectrogram": "assets/cello/q0011/independent_ungated.png"
@@ -3009,6 +4396,10 @@
             },
             "target": {
               "audio": "assets/cello/q0011/target_audition.wav",
+              "start": 0.0
+            },
+            "score_informed_nmf": {
+              "audio": "assets/cello/q0011/score_informed_nmf_audition.wav",
               "start": 0.0
             },
             "independent_ungated": {
@@ -3085,6 +4476,10 @@
               "audition": "assets/cello/q0012/aso_audition.wav",
               "auditionStart": 0.1445
             },
+            "score_informed_nmf": {
+              "audio": "assets/cello/q0012/score_informed_nmf.wav",
+              "spectrogram": "assets/cello/q0012/score_informed_nmf.png"
+            },
             "independent_ungated": {
               "audio": "assets/cello/q0012/independent_ungated.wav",
               "spectrogram": "assets/cello/q0012/independent_ungated.png"
@@ -3109,6 +4504,10 @@
             },
             "target": {
               "audio": "assets/cello/q0012/target_audition.wav",
+              "start": 0.1445
+            },
+            "score_informed_nmf": {
+              "audio": "assets/cello/q0012/score_informed_nmf_audition.wav",
               "start": 0.1445
             },
             "independent_ungated": {
@@ -3180,6 +4579,12 @@
           "label": "Isolated target",
           "audio": "assets/cello/q0012/target.wav",
           "spectrogram": "assets/cello/q0012/target.png"
+        },
+        {
+          "id": "score_informed_nmf",
+          "label": "Score-Informed NMF",
+          "audio": "assets/cello/q0012/score_informed_nmf.wav",
+          "spectrogram": "assets/cello/q0012/score_informed_nmf.png"
         },
         {
           "id": "independent_ungated",
