@@ -48,8 +48,10 @@ const channelNotes = {
   mixture: 'Full polyphonic recording',
   target: 'Ground-truth isolated note',
   aso: 'Final jointly allocated note output',
-  magnitude: 'Mixture magnitude divided by raw separator evidence',
-  symmetric: 'Final separator output before ASO allocation',
+  independent_ungated: 'Independent branches without the selective octave gate',
+  independent_selective: 'Independent branches with the selective octave gate',
+  symmetric_ungated: 'Bidirectional branch interaction without the selective gate',
+  symmetric_selective: 'Bidirectional branch interaction with the selective gate',
 };
 
 function pitchName(pitch) {
@@ -90,7 +92,7 @@ function setSelection(start, end, event = null, refreshChannel = true) {
     waveform.classList.toggle('roll-waveform--selected', Number(waveform.dataset.event) === state.selectedEvent);
   });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
-  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2044` : '';
+  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2118` : '';
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
   ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
   ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
@@ -269,7 +271,7 @@ function channelButton(channel) {
   if (channel.id === 'aso') button.classList.add('source-button--ours');
   button.setAttribute('aria-pressed', String(channel.id === state.channel));
   const strong = document.createElement('strong');
-  strong.textContent = channel.id === 'aso' ? 'ASO · ours' : channel.label;
+  strong.textContent = channel.id === 'aso' ? 'Symmetric Gated + ASO · ours' : channel.label;
   const small = document.createElement('small');
   small.textContent = channelNotes[channel.id] || '';
   button.append(strong, small);
@@ -282,7 +284,10 @@ function channelButton(channel) {
 }
 
 function renderChannels() {
-  const order = ['aso', 'mixture', 'target', 'symmetric', 'magnitude'];
+  const order = [
+    'aso', 'symmetric_selective', 'symmetric_ungated',
+    'independent_selective', 'independent_ungated', 'target', 'mixture',
+  ];
   const channels = order
     .map((id) => state.example.channels.find((channel) => channel.id === id))
     .filter(Boolean);
@@ -494,7 +499,10 @@ function spectrogramTime(event) {
 
 function renderFigureCompanion() {
   const guitar = state.manifest.examples.find((example) => example.id === 'guitar');
-  const figureOrder = ['mixture', 'target', 'symmetric', 'magnitude', 'aso'];
+  const figureOrder = [
+    'independent_ungated', 'independent_selective', 'symmetric_ungated',
+    'symmetric_selective', 'aso',
+  ];
   const cards = figureOrder.map((id) => guitar.channels.find((channel) => channel.id === id)).map((channel) => {
     const button = document.createElement('button');
     button.className = 'figure-card';

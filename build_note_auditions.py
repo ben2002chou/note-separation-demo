@@ -15,7 +15,10 @@ ROOT = Path(__file__).resolve().parent
 MANIFEST = ROOT / "assets" / "manifest.json"
 LEAD_SECONDS = 0.025
 RELEASE_SECONDS = 0.250
-AUDITION_CHANNELS = ("mixture", "aso", "target", "symmetric", "magnitude")
+AUDITION_CHANNELS = (
+    "mixture", "target", "independent_ungated", "independent_selective",
+    "symmetric_ungated", "symmetric_selective", "aso",
+)
 
 
 def waveform_envelope(signal: np.ndarray, bins: int = 32) -> list[float]:
@@ -92,7 +95,7 @@ def main() -> None:
         example["hitMapSize"] = [int(hit_map.shape[1]), int(hit_map.shape[0])]
 
     MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote five-method auditions, waveform envelopes, and ownership maps for {count} notes")
+    print(f"Wrote Table 1 auditions, waveform envelopes, and ownership maps for {count} notes")
 
 
 if __name__ == "__main__":

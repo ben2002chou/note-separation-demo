@@ -37,13 +37,21 @@
               "audition": "assets/piano/q0024/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0024/magnitude.wav",
-              "spectrogram": "assets/piano/q0024/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0024/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0024/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0024/symmetric.wav",
-              "spectrogram": "assets/piano/q0024/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0024/independent_selective.wav",
+              "spectrogram": "assets/piano/q0024/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0024/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0024/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0024/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0024/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -51,20 +59,28 @@
               "audio": "assets/piano/q0024/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0024/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0024/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0024/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0024/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0024/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0024/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0024/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0024/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0024/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -121,13 +137,21 @@
               "audition": "assets/piano/q0028/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0028/magnitude.wav",
-              "spectrogram": "assets/piano/q0028/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0028/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0028/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0028/symmetric.wav",
-              "spectrogram": "assets/piano/q0028/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0028/independent_selective.wav",
+              "spectrogram": "assets/piano/q0028/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0028/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0028/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0028/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0028/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -135,20 +159,28 @@
               "audio": "assets/piano/q0028/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0028/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0028/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0028/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0028/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0028/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0028/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0028/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0028/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0028/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -205,13 +237,21 @@
               "audition": "assets/piano/q0029/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0029/magnitude.wav",
-              "spectrogram": "assets/piano/q0029/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0029/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0029/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0029/symmetric.wav",
-              "spectrogram": "assets/piano/q0029/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0029/independent_selective.wav",
+              "spectrogram": "assets/piano/q0029/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0029/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0029/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0029/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0029/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -219,20 +259,28 @@
               "audio": "assets/piano/q0029/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0029/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0029/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0029/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0029/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0029/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0029/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0029/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0029/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0029/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -289,13 +337,21 @@
               "audition": "assets/piano/q0030/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0030/magnitude.wav",
-              "spectrogram": "assets/piano/q0030/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0030/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0030/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0030/symmetric.wav",
-              "spectrogram": "assets/piano/q0030/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0030/independent_selective.wav",
+              "spectrogram": "assets/piano/q0030/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0030/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0030/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0030/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0030/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -303,20 +359,28 @@
               "audio": "assets/piano/q0030/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0030/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0030/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0030/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0030/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0030/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0030/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0030/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0030/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0030/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -373,13 +437,21 @@
               "audition": "assets/piano/q0031/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0031/magnitude.wav",
-              "spectrogram": "assets/piano/q0031/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0031/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0031/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0031/symmetric.wav",
-              "spectrogram": "assets/piano/q0031/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0031/independent_selective.wav",
+              "spectrogram": "assets/piano/q0031/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0031/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0031/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0031/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0031/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -387,20 +459,28 @@
               "audio": "assets/piano/q0031/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0031/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0031/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0031/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0031/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0031/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0031/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0031/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0031/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0031/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -457,13 +537,21 @@
               "audition": "assets/piano/q0032/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0032/magnitude.wav",
-              "spectrogram": "assets/piano/q0032/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0032/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0032/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0032/symmetric.wav",
-              "spectrogram": "assets/piano/q0032/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0032/independent_selective.wav",
+              "spectrogram": "assets/piano/q0032/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0032/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0032/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0032/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0032/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -471,20 +559,28 @@
               "audio": "assets/piano/q0032/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0032/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0032/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0032/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0032/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0032/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0032/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0032/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0032/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0032/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -541,13 +637,21 @@
               "audition": "assets/piano/q0033/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0033/magnitude.wav",
-              "spectrogram": "assets/piano/q0033/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0033/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0033/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0033/symmetric.wav",
-              "spectrogram": "assets/piano/q0033/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0033/independent_selective.wav",
+              "spectrogram": "assets/piano/q0033/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0033/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0033/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0033/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0033/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -555,20 +659,28 @@
               "audio": "assets/piano/q0033/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0033/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0033/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0033/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0033/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0033/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0033/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0033/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0033/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0033/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -625,13 +737,21 @@
               "audition": "assets/piano/q0034/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0034/magnitude.wav",
-              "spectrogram": "assets/piano/q0034/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0034/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0034/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0034/symmetric.wav",
-              "spectrogram": "assets/piano/q0034/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0034/independent_selective.wav",
+              "spectrogram": "assets/piano/q0034/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0034/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0034/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0034/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0034/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -639,20 +759,28 @@
               "audio": "assets/piano/q0034/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/piano/q0034/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/piano/q0034/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/piano/q0034/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0034/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/piano/q0034/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0034/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0034/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0034/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/piano/q0034/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -709,13 +837,21 @@
               "audition": "assets/piano/q0035/aso_audition.wav",
               "auditionStart": 0.0628
             },
-            "magnitude": {
-              "audio": "assets/piano/q0035/magnitude.wav",
-              "spectrogram": "assets/piano/q0035/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0035/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0035/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0035/symmetric.wav",
-              "spectrogram": "assets/piano/q0035/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0035/independent_selective.wav",
+              "spectrogram": "assets/piano/q0035/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0035/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0035/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0035/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0035/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -723,20 +859,28 @@
               "audio": "assets/piano/q0035/mixture_audition.wav",
               "start": 0.0628
             },
-            "aso": {
-              "audio": "assets/piano/q0035/aso_audition.wav",
-              "start": 0.0628
-            },
             "target": {
               "audio": "assets/piano/q0035/target_audition.wav",
               "start": 0.0628
             },
-            "symmetric": {
-              "audio": "assets/piano/q0035/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0035/independent_ungated_audition.wav",
               "start": 0.0628
             },
-            "magnitude": {
-              "audio": "assets/piano/q0035/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0035/independent_selective_audition.wav",
+              "start": 0.0628
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0035/symmetric_ungated_audition.wav",
+              "start": 0.0628
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0035/symmetric_selective_audition.wav",
+              "start": 0.0628
+            },
+            "aso": {
+              "audio": "assets/piano/q0035/aso_audition.wav",
               "start": 0.0628
             }
           },
@@ -793,13 +937,21 @@
               "audition": "assets/piano/q0036/aso_audition.wav",
               "auditionStart": 0.1991
             },
-            "magnitude": {
-              "audio": "assets/piano/q0036/magnitude.wav",
-              "spectrogram": "assets/piano/q0036/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0036/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0036/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0036/symmetric.wav",
-              "spectrogram": "assets/piano/q0036/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0036/independent_selective.wav",
+              "spectrogram": "assets/piano/q0036/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0036/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0036/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0036/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0036/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -807,20 +959,28 @@
               "audio": "assets/piano/q0036/mixture_audition.wav",
               "start": 0.1991
             },
-            "aso": {
-              "audio": "assets/piano/q0036/aso_audition.wav",
-              "start": 0.1991
-            },
             "target": {
               "audio": "assets/piano/q0036/target_audition.wav",
               "start": 0.1991
             },
-            "symmetric": {
-              "audio": "assets/piano/q0036/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0036/independent_ungated_audition.wav",
               "start": 0.1991
             },
-            "magnitude": {
-              "audio": "assets/piano/q0036/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0036/independent_selective_audition.wav",
+              "start": 0.1991
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0036/symmetric_ungated_audition.wav",
+              "start": 0.1991
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0036/symmetric_selective_audition.wav",
+              "start": 0.1991
+            },
+            "aso": {
+              "audio": "assets/piano/q0036/aso_audition.wav",
               "start": 0.1991
             }
           },
@@ -877,13 +1037,21 @@
               "audition": "assets/piano/q0037/aso_audition.wav",
               "auditionStart": 0.1991
             },
-            "magnitude": {
-              "audio": "assets/piano/q0037/magnitude.wav",
-              "spectrogram": "assets/piano/q0037/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0037/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0037/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0037/symmetric.wav",
-              "spectrogram": "assets/piano/q0037/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0037/independent_selective.wav",
+              "spectrogram": "assets/piano/q0037/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0037/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0037/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0037/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0037/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -891,20 +1059,28 @@
               "audio": "assets/piano/q0037/mixture_audition.wav",
               "start": 0.1991
             },
-            "aso": {
-              "audio": "assets/piano/q0037/aso_audition.wav",
-              "start": 0.1991
-            },
             "target": {
               "audio": "assets/piano/q0037/target_audition.wav",
               "start": 0.1991
             },
-            "symmetric": {
-              "audio": "assets/piano/q0037/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0037/independent_ungated_audition.wav",
               "start": 0.1991
             },
-            "magnitude": {
-              "audio": "assets/piano/q0037/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0037/independent_selective_audition.wav",
+              "start": 0.1991
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0037/symmetric_ungated_audition.wav",
+              "start": 0.1991
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0037/symmetric_selective_audition.wav",
+              "start": 0.1991
+            },
+            "aso": {
+              "audio": "assets/piano/q0037/aso_audition.wav",
               "start": 0.1991
             }
           },
@@ -961,13 +1137,21 @@
               "audition": "assets/piano/q0038/aso_audition.wav",
               "auditionStart": 0.3355
             },
-            "magnitude": {
-              "audio": "assets/piano/q0038/magnitude.wav",
-              "spectrogram": "assets/piano/q0038/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0038/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0038/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0038/symmetric.wav",
-              "spectrogram": "assets/piano/q0038/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0038/independent_selective.wav",
+              "spectrogram": "assets/piano/q0038/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0038/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0038/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0038/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0038/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -975,20 +1159,28 @@
               "audio": "assets/piano/q0038/mixture_audition.wav",
               "start": 0.3355
             },
-            "aso": {
-              "audio": "assets/piano/q0038/aso_audition.wav",
-              "start": 0.3355
-            },
             "target": {
               "audio": "assets/piano/q0038/target_audition.wav",
               "start": 0.3355
             },
-            "symmetric": {
-              "audio": "assets/piano/q0038/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0038/independent_ungated_audition.wav",
               "start": 0.3355
             },
-            "magnitude": {
-              "audio": "assets/piano/q0038/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0038/independent_selective_audition.wav",
+              "start": 0.3355
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0038/symmetric_ungated_audition.wav",
+              "start": 0.3355
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0038/symmetric_selective_audition.wav",
+              "start": 0.3355
+            },
+            "aso": {
+              "audio": "assets/piano/q0038/aso_audition.wav",
               "start": 0.3355
             }
           },
@@ -1045,13 +1237,21 @@
               "audition": "assets/piano/q0039/aso_audition.wav",
               "auditionStart": 0.4718
             },
-            "magnitude": {
-              "audio": "assets/piano/q0039/magnitude.wav",
-              "spectrogram": "assets/piano/q0039/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0039/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0039/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0039/symmetric.wav",
-              "spectrogram": "assets/piano/q0039/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0039/independent_selective.wav",
+              "spectrogram": "assets/piano/q0039/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0039/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0039/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0039/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0039/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1059,20 +1259,28 @@
               "audio": "assets/piano/q0039/mixture_audition.wav",
               "start": 0.4718
             },
-            "aso": {
-              "audio": "assets/piano/q0039/aso_audition.wav",
-              "start": 0.4718
-            },
             "target": {
               "audio": "assets/piano/q0039/target_audition.wav",
               "start": 0.4718
             },
-            "symmetric": {
-              "audio": "assets/piano/q0039/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0039/independent_ungated_audition.wav",
               "start": 0.4718
             },
-            "magnitude": {
-              "audio": "assets/piano/q0039/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0039/independent_selective_audition.wav",
+              "start": 0.4718
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0039/symmetric_ungated_audition.wav",
+              "start": 0.4718
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0039/symmetric_selective_audition.wav",
+              "start": 0.4718
+            },
+            "aso": {
+              "audio": "assets/piano/q0039/aso_audition.wav",
               "start": 0.4718
             }
           },
@@ -1129,13 +1337,21 @@
               "audition": "assets/piano/q0040/aso_audition.wav",
               "auditionStart": 0.4718
             },
-            "magnitude": {
-              "audio": "assets/piano/q0040/magnitude.wav",
-              "spectrogram": "assets/piano/q0040/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0040/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0040/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0040/symmetric.wav",
-              "spectrogram": "assets/piano/q0040/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0040/independent_selective.wav",
+              "spectrogram": "assets/piano/q0040/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0040/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0040/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0040/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0040/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1143,20 +1359,28 @@
               "audio": "assets/piano/q0040/mixture_audition.wav",
               "start": 0.4718
             },
-            "aso": {
-              "audio": "assets/piano/q0040/aso_audition.wav",
-              "start": 0.4718
-            },
             "target": {
               "audio": "assets/piano/q0040/target_audition.wav",
               "start": 0.4718
             },
-            "symmetric": {
-              "audio": "assets/piano/q0040/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0040/independent_ungated_audition.wav",
               "start": 0.4718
             },
-            "magnitude": {
-              "audio": "assets/piano/q0040/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0040/independent_selective_audition.wav",
+              "start": 0.4718
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0040/symmetric_ungated_audition.wav",
+              "start": 0.4718
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0040/symmetric_selective_audition.wav",
+              "start": 0.4718
+            },
+            "aso": {
+              "audio": "assets/piano/q0040/aso_audition.wav",
               "start": 0.4718
             }
           },
@@ -1213,13 +1437,21 @@
               "audition": "assets/piano/q0041/aso_audition.wav",
               "auditionStart": 0.4718
             },
-            "magnitude": {
-              "audio": "assets/piano/q0041/magnitude.wav",
-              "spectrogram": "assets/piano/q0041/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0041/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0041/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0041/symmetric.wav",
-              "spectrogram": "assets/piano/q0041/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0041/independent_selective.wav",
+              "spectrogram": "assets/piano/q0041/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0041/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0041/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0041/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0041/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1227,20 +1459,28 @@
               "audio": "assets/piano/q0041/mixture_audition.wav",
               "start": 0.4718
             },
-            "aso": {
-              "audio": "assets/piano/q0041/aso_audition.wav",
-              "start": 0.4718
-            },
             "target": {
               "audio": "assets/piano/q0041/target_audition.wav",
               "start": 0.4718
             },
-            "symmetric": {
-              "audio": "assets/piano/q0041/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0041/independent_ungated_audition.wav",
               "start": 0.4718
             },
-            "magnitude": {
-              "audio": "assets/piano/q0041/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0041/independent_selective_audition.wav",
+              "start": 0.4718
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0041/symmetric_ungated_audition.wav",
+              "start": 0.4718
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0041/symmetric_selective_audition.wav",
+              "start": 0.4718
+            },
+            "aso": {
+              "audio": "assets/piano/q0041/aso_audition.wav",
               "start": 0.4718
             }
           },
@@ -1297,13 +1537,21 @@
               "audition": "assets/piano/q0042/aso_audition.wav",
               "auditionStart": 0.6082
             },
-            "magnitude": {
-              "audio": "assets/piano/q0042/magnitude.wav",
-              "spectrogram": "assets/piano/q0042/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0042/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0042/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0042/symmetric.wav",
-              "spectrogram": "assets/piano/q0042/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0042/independent_selective.wav",
+              "spectrogram": "assets/piano/q0042/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0042/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0042/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0042/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0042/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1311,20 +1559,28 @@
               "audio": "assets/piano/q0042/mixture_audition.wav",
               "start": 0.6082
             },
-            "aso": {
-              "audio": "assets/piano/q0042/aso_audition.wav",
-              "start": 0.6082
-            },
             "target": {
               "audio": "assets/piano/q0042/target_audition.wav",
               "start": 0.6082
             },
-            "symmetric": {
-              "audio": "assets/piano/q0042/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0042/independent_ungated_audition.wav",
               "start": 0.6082
             },
-            "magnitude": {
-              "audio": "assets/piano/q0042/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0042/independent_selective_audition.wav",
+              "start": 0.6082
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0042/symmetric_ungated_audition.wav",
+              "start": 0.6082
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0042/symmetric_selective_audition.wav",
+              "start": 0.6082
+            },
+            "aso": {
+              "audio": "assets/piano/q0042/aso_audition.wav",
               "start": 0.6082
             }
           },
@@ -1381,13 +1637,21 @@
               "audition": "assets/piano/q0043/aso_audition.wav",
               "auditionStart": 0.7445
             },
-            "magnitude": {
-              "audio": "assets/piano/q0043/magnitude.wav",
-              "spectrogram": "assets/piano/q0043/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0043/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0043/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0043/symmetric.wav",
-              "spectrogram": "assets/piano/q0043/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0043/independent_selective.wav",
+              "spectrogram": "assets/piano/q0043/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0043/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0043/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0043/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0043/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1395,20 +1659,28 @@
               "audio": "assets/piano/q0043/mixture_audition.wav",
               "start": 0.7445
             },
-            "aso": {
-              "audio": "assets/piano/q0043/aso_audition.wav",
-              "start": 0.7445
-            },
             "target": {
               "audio": "assets/piano/q0043/target_audition.wav",
               "start": 0.7445
             },
-            "symmetric": {
-              "audio": "assets/piano/q0043/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0043/independent_ungated_audition.wav",
               "start": 0.7445
             },
-            "magnitude": {
-              "audio": "assets/piano/q0043/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0043/independent_selective_audition.wav",
+              "start": 0.7445
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0043/symmetric_ungated_audition.wav",
+              "start": 0.7445
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0043/symmetric_selective_audition.wav",
+              "start": 0.7445
+            },
+            "aso": {
+              "audio": "assets/piano/q0043/aso_audition.wav",
               "start": 0.7445
             }
           },
@@ -1465,13 +1737,21 @@
               "audition": "assets/piano/q0044/aso_audition.wav",
               "auditionStart": 0.8809
             },
-            "magnitude": {
-              "audio": "assets/piano/q0044/magnitude.wav",
-              "spectrogram": "assets/piano/q0044/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/piano/q0044/independent_ungated.wav",
+              "spectrogram": "assets/piano/q0044/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/piano/q0044/symmetric.wav",
-              "spectrogram": "assets/piano/q0044/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/piano/q0044/independent_selective.wav",
+              "spectrogram": "assets/piano/q0044/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0044/symmetric_ungated.wav",
+              "spectrogram": "assets/piano/q0044/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0044/symmetric_selective.wav",
+              "spectrogram": "assets/piano/q0044/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1479,20 +1759,28 @@
               "audio": "assets/piano/q0044/mixture_audition.wav",
               "start": 0.8809
             },
-            "aso": {
-              "audio": "assets/piano/q0044/aso_audition.wav",
-              "start": 0.8809
-            },
             "target": {
               "audio": "assets/piano/q0044/target_audition.wav",
               "start": 0.8809
             },
-            "symmetric": {
-              "audio": "assets/piano/q0044/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/piano/q0044/independent_ungated_audition.wav",
               "start": 0.8809
             },
-            "magnitude": {
-              "audio": "assets/piano/q0044/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/piano/q0044/independent_selective_audition.wav",
+              "start": 0.8809
+            },
+            "symmetric_ungated": {
+              "audio": "assets/piano/q0044/symmetric_ungated_audition.wav",
+              "start": 0.8809
+            },
+            "symmetric_selective": {
+              "audio": "assets/piano/q0044/symmetric_selective_audition.wav",
+              "start": 0.8809
+            },
+            "aso": {
+              "audio": "assets/piano/q0044/aso_audition.wav",
               "start": 0.8809
             }
           },
@@ -1546,22 +1834,34 @@
           "spectrogram": "assets/piano/q0036/target.png"
         },
         {
+          "id": "independent_ungated",
+          "label": "Independent Ungated",
+          "audio": "assets/piano/q0036/independent_ungated.wav",
+          "spectrogram": "assets/piano/q0036/independent_ungated.png"
+        },
+        {
+          "id": "independent_selective",
+          "label": "Independent Selective",
+          "audio": "assets/piano/q0036/independent_selective.wav",
+          "spectrogram": "assets/piano/q0036/independent_selective.png"
+        },
+        {
+          "id": "symmetric_ungated",
+          "label": "Symmetric Ungated",
+          "audio": "assets/piano/q0036/symmetric_ungated.wav",
+          "spectrogram": "assets/piano/q0036/symmetric_ungated.png"
+        },
+        {
+          "id": "symmetric_selective",
+          "label": "Symmetric Gated",
+          "audio": "assets/piano/q0036/symmetric_selective.wav",
+          "spectrogram": "assets/piano/q0036/symmetric_selective.png"
+        },
+        {
           "id": "aso",
-          "label": "ASO",
+          "label": "Symmetric Gated + ASO",
           "audio": "assets/piano/q0036/aso.wav",
           "spectrogram": "assets/piano/q0036/aso.png"
-        },
-        {
-          "id": "magnitude",
-          "label": "Magnitude partition",
-          "audio": "assets/piano/q0036/magnitude.wav",
-          "spectrogram": "assets/piano/q0036/magnitude.png"
-        },
-        {
-          "id": "symmetric",
-          "label": "Raw separator",
-          "audio": "assets/piano/q0036/symmetric.wav",
-          "spectrogram": "assets/piano/q0036/symmetric.png"
         },
         {
           "id": "midi",
@@ -1611,13 +1911,21 @@
               "audition": "assets/guitar/q0005/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0005/magnitude.wav",
-              "spectrogram": "assets/guitar/q0005/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0005/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0005/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0005/symmetric.wav",
-              "spectrogram": "assets/guitar/q0005/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0005/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0005/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0005/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0005/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0005/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0005/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1625,20 +1933,28 @@
               "audio": "assets/guitar/q0005/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/guitar/q0005/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/guitar/q0005/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0005/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0005/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0005/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0005/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0005/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0005/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/guitar/q0005/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -1695,13 +2011,21 @@
               "audition": "assets/guitar/q0006/aso_audition.wav",
               "auditionStart": 0.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0006/magnitude.wav",
-              "spectrogram": "assets/guitar/q0006/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0006/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0006/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0006/symmetric.wav",
-              "spectrogram": "assets/guitar/q0006/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0006/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0006/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0006/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0006/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0006/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0006/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1709,20 +2033,28 @@
               "audio": "assets/guitar/q0006/mixture_audition.wav",
               "start": 0.1942
             },
-            "aso": {
-              "audio": "assets/guitar/q0006/aso_audition.wav",
-              "start": 0.1942
-            },
             "target": {
               "audio": "assets/guitar/q0006/target_audition.wav",
               "start": 0.1942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0006/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0006/independent_ungated_audition.wav",
               "start": 0.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0006/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0006/independent_selective_audition.wav",
+              "start": 0.1942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0006/symmetric_ungated_audition.wav",
+              "start": 0.1942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0006/symmetric_selective_audition.wav",
+              "start": 0.1942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0006/aso_audition.wav",
               "start": 0.1942
             }
           },
@@ -1779,13 +2111,21 @@
               "audition": "assets/guitar/q0007/aso_audition.wav",
               "auditionStart": 0.6942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0007/magnitude.wav",
-              "spectrogram": "assets/guitar/q0007/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0007/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0007/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0007/symmetric.wav",
-              "spectrogram": "assets/guitar/q0007/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0007/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0007/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0007/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0007/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0007/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0007/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1793,20 +2133,28 @@
               "audio": "assets/guitar/q0007/mixture_audition.wav",
               "start": 0.6942
             },
-            "aso": {
-              "audio": "assets/guitar/q0007/aso_audition.wav",
-              "start": 0.6942
-            },
             "target": {
               "audio": "assets/guitar/q0007/target_audition.wav",
               "start": 0.6942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0007/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0007/independent_ungated_audition.wav",
               "start": 0.6942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0007/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0007/independent_selective_audition.wav",
+              "start": 0.6942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0007/symmetric_ungated_audition.wav",
+              "start": 0.6942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0007/symmetric_selective_audition.wav",
+              "start": 0.6942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0007/aso_audition.wav",
               "start": 0.6942
             }
           },
@@ -1863,13 +2211,21 @@
               "audition": "assets/guitar/q0008/aso_audition.wav",
               "auditionStart": 1.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0008/magnitude.wav",
-              "spectrogram": "assets/guitar/q0008/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0008/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0008/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0008/symmetric.wav",
-              "spectrogram": "assets/guitar/q0008/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0008/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0008/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0008/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0008/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0008/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0008/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1877,20 +2233,28 @@
               "audio": "assets/guitar/q0008/mixture_audition.wav",
               "start": 1.1942
             },
-            "aso": {
-              "audio": "assets/guitar/q0008/aso_audition.wav",
-              "start": 1.1942
-            },
             "target": {
               "audio": "assets/guitar/q0008/target_audition.wav",
               "start": 1.1942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0008/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0008/independent_ungated_audition.wav",
               "start": 1.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0008/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0008/independent_selective_audition.wav",
+              "start": 1.1942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0008/symmetric_ungated_audition.wav",
+              "start": 1.1942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0008/symmetric_selective_audition.wav",
+              "start": 1.1942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0008/aso_audition.wav",
               "start": 1.1942
             }
           },
@@ -1947,13 +2311,21 @@
               "audition": "assets/guitar/q0009/aso_audition.wav",
               "auditionStart": 1.6942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0009/magnitude.wav",
-              "spectrogram": "assets/guitar/q0009/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0009/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0009/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0009/symmetric.wav",
-              "spectrogram": "assets/guitar/q0009/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0009/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0009/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0009/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0009/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0009/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0009/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -1961,20 +2333,28 @@
               "audio": "assets/guitar/q0009/mixture_audition.wav",
               "start": 1.6942
             },
-            "aso": {
-              "audio": "assets/guitar/q0009/aso_audition.wav",
-              "start": 1.6942
-            },
             "target": {
               "audio": "assets/guitar/q0009/target_audition.wav",
               "start": 1.6942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0009/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0009/independent_ungated_audition.wav",
               "start": 1.6942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0009/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0009/independent_selective_audition.wav",
+              "start": 1.6942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0009/symmetric_ungated_audition.wav",
+              "start": 1.6942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0009/symmetric_selective_audition.wav",
+              "start": 1.6942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0009/aso_audition.wav",
               "start": 1.6942
             }
           },
@@ -2031,13 +2411,21 @@
               "audition": "assets/guitar/q0013/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0013/magnitude.wav",
-              "spectrogram": "assets/guitar/q0013/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0013/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0013/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0013/symmetric.wav",
-              "spectrogram": "assets/guitar/q0013/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0013/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0013/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0013/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0013/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0013/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0013/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2045,20 +2433,28 @@
               "audio": "assets/guitar/q0013/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/guitar/q0013/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/guitar/q0013/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0013/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0013/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0013/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0013/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0013/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0013/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/guitar/q0013/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -2115,13 +2511,21 @@
               "audition": "assets/guitar/q0014/aso_audition.wav",
               "auditionStart": 0.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0014/magnitude.wav",
-              "spectrogram": "assets/guitar/q0014/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0014/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0014/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0014/symmetric.wav",
-              "spectrogram": "assets/guitar/q0014/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0014/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0014/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0014/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0014/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0014/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0014/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2129,20 +2533,28 @@
               "audio": "assets/guitar/q0014/mixture_audition.wav",
               "start": 0.1942
             },
-            "aso": {
-              "audio": "assets/guitar/q0014/aso_audition.wav",
-              "start": 0.1942
-            },
             "target": {
               "audio": "assets/guitar/q0014/target_audition.wav",
               "start": 0.1942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0014/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0014/independent_ungated_audition.wav",
               "start": 0.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0014/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0014/independent_selective_audition.wav",
+              "start": 0.1942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0014/symmetric_ungated_audition.wav",
+              "start": 0.1942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0014/symmetric_selective_audition.wav",
+              "start": 0.1942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0014/aso_audition.wav",
               "start": 0.1942
             }
           },
@@ -2199,13 +2611,21 @@
               "audition": "assets/guitar/q0015/aso_audition.wav",
               "auditionStart": 1.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0015/magnitude.wav",
-              "spectrogram": "assets/guitar/q0015/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0015/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0015/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0015/symmetric.wav",
-              "spectrogram": "assets/guitar/q0015/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0015/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0015/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0015/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0015/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0015/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0015/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2213,20 +2633,28 @@
               "audio": "assets/guitar/q0015/mixture_audition.wav",
               "start": 1.1942
             },
-            "aso": {
-              "audio": "assets/guitar/q0015/aso_audition.wav",
-              "start": 1.1942
-            },
             "target": {
               "audio": "assets/guitar/q0015/target_audition.wav",
               "start": 1.1942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0015/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0015/independent_ungated_audition.wav",
               "start": 1.1942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0015/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0015/independent_selective_audition.wav",
+              "start": 1.1942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0015/symmetric_ungated_audition.wav",
+              "start": 1.1942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0015/symmetric_selective_audition.wav",
+              "start": 1.1942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0015/aso_audition.wav",
               "start": 1.1942
             }
           },
@@ -2283,13 +2711,21 @@
               "audition": "assets/guitar/q0016/aso_audition.wav",
               "auditionStart": 1.6942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0016/magnitude.wav",
-              "spectrogram": "assets/guitar/q0016/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/guitar/q0016/independent_ungated.wav",
+              "spectrogram": "assets/guitar/q0016/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0016/symmetric.wav",
-              "spectrogram": "assets/guitar/q0016/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/guitar/q0016/independent_selective.wav",
+              "spectrogram": "assets/guitar/q0016/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0016/symmetric_ungated.wav",
+              "spectrogram": "assets/guitar/q0016/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0016/symmetric_selective.wav",
+              "spectrogram": "assets/guitar/q0016/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2297,20 +2733,28 @@
               "audio": "assets/guitar/q0016/mixture_audition.wav",
               "start": 1.6942
             },
-            "aso": {
-              "audio": "assets/guitar/q0016/aso_audition.wav",
-              "start": 1.6942
-            },
             "target": {
               "audio": "assets/guitar/q0016/target_audition.wav",
               "start": 1.6942
             },
-            "symmetric": {
-              "audio": "assets/guitar/q0016/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/guitar/q0016/independent_ungated_audition.wav",
               "start": 1.6942
             },
-            "magnitude": {
-              "audio": "assets/guitar/q0016/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/guitar/q0016/independent_selective_audition.wav",
+              "start": 1.6942
+            },
+            "symmetric_ungated": {
+              "audio": "assets/guitar/q0016/symmetric_ungated_audition.wav",
+              "start": 1.6942
+            },
+            "symmetric_selective": {
+              "audio": "assets/guitar/q0016/symmetric_selective_audition.wav",
+              "start": 1.6942
+            },
+            "aso": {
+              "audio": "assets/guitar/q0016/aso_audition.wav",
               "start": 1.6942
             }
           },
@@ -2364,22 +2808,34 @@
           "spectrogram": "assets/guitar/q0014/target.png"
         },
         {
+          "id": "independent_ungated",
+          "label": "Independent Ungated",
+          "audio": "assets/guitar/q0014/independent_ungated.wav",
+          "spectrogram": "assets/guitar/q0014/independent_ungated.png"
+        },
+        {
+          "id": "independent_selective",
+          "label": "Independent Selective",
+          "audio": "assets/guitar/q0014/independent_selective.wav",
+          "spectrogram": "assets/guitar/q0014/independent_selective.png"
+        },
+        {
+          "id": "symmetric_ungated",
+          "label": "Symmetric Ungated",
+          "audio": "assets/guitar/q0014/symmetric_ungated.wav",
+          "spectrogram": "assets/guitar/q0014/symmetric_ungated.png"
+        },
+        {
+          "id": "symmetric_selective",
+          "label": "Symmetric Gated",
+          "audio": "assets/guitar/q0014/symmetric_selective.wav",
+          "spectrogram": "assets/guitar/q0014/symmetric_selective.png"
+        },
+        {
           "id": "aso",
-          "label": "ASO",
+          "label": "Symmetric Gated + ASO",
           "audio": "assets/guitar/q0014/aso.wav",
           "spectrogram": "assets/guitar/q0014/aso.png"
-        },
-        {
-          "id": "magnitude",
-          "label": "Magnitude partition",
-          "audio": "assets/guitar/q0014/magnitude.wav",
-          "spectrogram": "assets/guitar/q0014/magnitude.png"
-        },
-        {
-          "id": "symmetric",
-          "label": "Raw separator",
-          "audio": "assets/guitar/q0014/symmetric.wav",
-          "spectrogram": "assets/guitar/q0014/symmetric.png"
         },
         {
           "id": "midi",
@@ -2429,13 +2885,21 @@
               "audition": "assets/cello/q0006/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/cello/q0006/magnitude.wav",
-              "spectrogram": "assets/cello/q0006/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/cello/q0006/independent_ungated.wav",
+              "spectrogram": "assets/cello/q0006/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/cello/q0006/symmetric.wav",
-              "spectrogram": "assets/cello/q0006/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/cello/q0006/independent_selective.wav",
+              "spectrogram": "assets/cello/q0006/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/cello/q0006/symmetric_ungated.wav",
+              "spectrogram": "assets/cello/q0006/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/cello/q0006/symmetric_selective.wav",
+              "spectrogram": "assets/cello/q0006/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2443,20 +2907,28 @@
               "audio": "assets/cello/q0006/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/cello/q0006/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/cello/q0006/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/cello/q0006/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/cello/q0006/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/cello/q0006/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/cello/q0006/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/cello/q0006/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/cello/q0006/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/cello/q0006/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -2513,13 +2985,21 @@
               "audition": "assets/cello/q0011/aso_audition.wav",
               "auditionStart": 0.0
             },
-            "magnitude": {
-              "audio": "assets/cello/q0011/magnitude.wav",
-              "spectrogram": "assets/cello/q0011/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/cello/q0011/independent_ungated.wav",
+              "spectrogram": "assets/cello/q0011/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/cello/q0011/symmetric.wav",
-              "spectrogram": "assets/cello/q0011/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/cello/q0011/independent_selective.wav",
+              "spectrogram": "assets/cello/q0011/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/cello/q0011/symmetric_ungated.wav",
+              "spectrogram": "assets/cello/q0011/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/cello/q0011/symmetric_selective.wav",
+              "spectrogram": "assets/cello/q0011/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2527,20 +3007,28 @@
               "audio": "assets/cello/q0011/mixture_audition.wav",
               "start": 0.0
             },
-            "aso": {
-              "audio": "assets/cello/q0011/aso_audition.wav",
-              "start": 0.0
-            },
             "target": {
               "audio": "assets/cello/q0011/target_audition.wav",
               "start": 0.0
             },
-            "symmetric": {
-              "audio": "assets/cello/q0011/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/cello/q0011/independent_ungated_audition.wav",
               "start": 0.0
             },
-            "magnitude": {
-              "audio": "assets/cello/q0011/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/cello/q0011/independent_selective_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_ungated": {
+              "audio": "assets/cello/q0011/symmetric_ungated_audition.wav",
+              "start": 0.0
+            },
+            "symmetric_selective": {
+              "audio": "assets/cello/q0011/symmetric_selective_audition.wav",
+              "start": 0.0
+            },
+            "aso": {
+              "audio": "assets/cello/q0011/aso_audition.wav",
               "start": 0.0
             }
           },
@@ -2597,13 +3085,21 @@
               "audition": "assets/cello/q0012/aso_audition.wav",
               "auditionStart": 0.1445
             },
-            "magnitude": {
-              "audio": "assets/cello/q0012/magnitude.wav",
-              "spectrogram": "assets/cello/q0012/magnitude.png"
+            "independent_ungated": {
+              "audio": "assets/cello/q0012/independent_ungated.wav",
+              "spectrogram": "assets/cello/q0012/independent_ungated.png"
             },
-            "symmetric": {
-              "audio": "assets/cello/q0012/symmetric.wav",
-              "spectrogram": "assets/cello/q0012/symmetric.png"
+            "independent_selective": {
+              "audio": "assets/cello/q0012/independent_selective.wav",
+              "spectrogram": "assets/cello/q0012/independent_selective.png"
+            },
+            "symmetric_ungated": {
+              "audio": "assets/cello/q0012/symmetric_ungated.wav",
+              "spectrogram": "assets/cello/q0012/symmetric_ungated.png"
+            },
+            "symmetric_selective": {
+              "audio": "assets/cello/q0012/symmetric_selective.wav",
+              "spectrogram": "assets/cello/q0012/symmetric_selective.png"
             }
           },
           "auditions": {
@@ -2611,20 +3107,28 @@
               "audio": "assets/cello/q0012/mixture_audition.wav",
               "start": 0.1445
             },
-            "aso": {
-              "audio": "assets/cello/q0012/aso_audition.wav",
-              "start": 0.1445
-            },
             "target": {
               "audio": "assets/cello/q0012/target_audition.wav",
               "start": 0.1445
             },
-            "symmetric": {
-              "audio": "assets/cello/q0012/symmetric_audition.wav",
+            "independent_ungated": {
+              "audio": "assets/cello/q0012/independent_ungated_audition.wav",
               "start": 0.1445
             },
-            "magnitude": {
-              "audio": "assets/cello/q0012/magnitude_audition.wav",
+            "independent_selective": {
+              "audio": "assets/cello/q0012/independent_selective_audition.wav",
+              "start": 0.1445
+            },
+            "symmetric_ungated": {
+              "audio": "assets/cello/q0012/symmetric_ungated_audition.wav",
+              "start": 0.1445
+            },
+            "symmetric_selective": {
+              "audio": "assets/cello/q0012/symmetric_selective_audition.wav",
+              "start": 0.1445
+            },
+            "aso": {
+              "audio": "assets/cello/q0012/aso_audition.wav",
               "start": 0.1445
             }
           },
@@ -2678,22 +3182,34 @@
           "spectrogram": "assets/cello/q0012/target.png"
         },
         {
+          "id": "independent_ungated",
+          "label": "Independent Ungated",
+          "audio": "assets/cello/q0012/independent_ungated.wav",
+          "spectrogram": "assets/cello/q0012/independent_ungated.png"
+        },
+        {
+          "id": "independent_selective",
+          "label": "Independent Selective",
+          "audio": "assets/cello/q0012/independent_selective.wav",
+          "spectrogram": "assets/cello/q0012/independent_selective.png"
+        },
+        {
+          "id": "symmetric_ungated",
+          "label": "Symmetric Ungated",
+          "audio": "assets/cello/q0012/symmetric_ungated.wav",
+          "spectrogram": "assets/cello/q0012/symmetric_ungated.png"
+        },
+        {
+          "id": "symmetric_selective",
+          "label": "Symmetric Gated",
+          "audio": "assets/cello/q0012/symmetric_selective.wav",
+          "spectrogram": "assets/cello/q0012/symmetric_selective.png"
+        },
+        {
           "id": "aso",
-          "label": "ASO",
+          "label": "Symmetric Gated + ASO",
           "audio": "assets/cello/q0012/aso.wav",
           "spectrogram": "assets/cello/q0012/aso.png"
-        },
-        {
-          "id": "magnitude",
-          "label": "Magnitude partition",
-          "audio": "assets/cello/q0012/magnitude.wav",
-          "spectrogram": "assets/cello/q0012/magnitude.png"
-        },
-        {
-          "id": "symmetric",
-          "label": "Raw separator",
-          "audio": "assets/cello/q0012/symmetric.wav",
-          "spectrogram": "assets/cello/q0012/symmetric.png"
         },
         {
           "id": "midi",

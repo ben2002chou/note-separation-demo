@@ -57,9 +57,11 @@ EXAMPLES = (
 CHANNELS = (
     ("mixture", "Original mixture"),
     ("target", "Isolated target"),
-    ("aso", "ASO"),
-    ("magnitude", "Magnitude partition"),
-    ("symmetric", "Raw separator"),
+    ("independent_ungated", "Independent Ungated"),
+    ("independent_selective", "Independent Selective"),
+    ("symmetric_ungated", "Symmetric Ungated"),
+    ("symmetric_selective", "Symmetric Gated"),
+    ("aso", "Symmetric Gated + ASO"),
 )
 
 
@@ -197,8 +199,11 @@ def load_example(source_root: Path, config: dict) -> tuple[dict, np.ndarray, lis
     duration = samples / RATE
     sprites = {}
     for key, filename in {
-        "aso": "selected_aso_sprite.wav", "magnitude": "magnitude_sprite.wav",
-        "symmetric": "symmetric_sprite.wav",
+        "aso": "selected_aso_sprite.wav",
+        "independent_ungated": "independent_ungated_sprite.wav",
+        "independent_selective": "independent_selective_sprite.wav",
+        "symmetric_ungated": "symmetric_ungated_sprite.wav",
+        "symmetric_selective": "symmetric_selective_sprite.wav",
     }.items():
         sprites[key], sprite_rate = sf.read(root / filename, dtype="float32")
         if sprite_rate != RATE:
@@ -302,7 +307,10 @@ def main() -> None:
             "spectrogram": f"assets/{config['id']}/mixture.png",
         }]
         channels.extend({"id": key, "label": labels[key], **default_note["outputs"][key]}
-                        for key in ("target", "aso", "magnitude", "symmetric"))
+                        for key in (
+                            "target", "independent_ungated", "independent_selective",
+                            "symmetric_ungated", "symmetric_selective", "aso",
+                        ))
         channels.append({"id": "midi", "label": "MIDI score",
                          "audio": f"assets/{config['id']}/midi.wav",
                          "spectrogram": f"assets/{config['id']}/midi.png"})
