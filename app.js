@@ -137,7 +137,8 @@ function loadHitMap() {
 
 function fallbackSpectralNote(time, frequency) {
   const active = state.example.notes.filter((note) => time >= note.start - 0.04 && time <= note.end + 0.25);
-  const candidates = active.length ? active : state.example.notes;
+  if (!active.length) return null;
+  const candidates = active;
   const safeFrequency = Math.max(20, frequency);
   return [...candidates].sort((a, b) => {
     const harmonicError = (note) => {
@@ -148,6 +149,21 @@ function fallbackSpectralNote(time, frequency) {
     return harmonicError(a) - harmonicError(b)
       || Math.abs(a.start - time) - Math.abs(b.start - time);
   })[0];
+}
+
+function clearSpectralSelection(time, frequency) {
+  stop();
+  state.selectedEvent = null;
+  ui.mask.src = '';
+  ui.mask.classList.add('mask-overlay--hidden');
+  ui.maskDimmer.classList.add('mask-dimmer--hidden');
+  document.querySelectorAll('.roll-note, .roll-waveform').forEach((note) => {
+    note.classList.remove('roll-note--selected', 'roll-waveform--selected');
+  });
+  ui.request.textContent = `No allocated note at ${time.toFixed(2)} s, ${frequency >= 1000 ? `${(frequency / 1000).toFixed(1)} kHz` : `${Math.round(frequency)} Hz`}`;
+  ui.scoreNote.textContent = 'This time–frequency region is silent or has no confident note owner.';
+  ui.binCandidates.hidden = false;
+  ui.binCandidates.replaceChildren(document.createTextNode('No note energy was detected at this point.'));
 }
 
 function renderBinCandidates(notes, time, frequency, shared) {
@@ -176,9 +192,11 @@ function selectSpectrogramPoint(event) {
   const frequency = (1 - yRatio) * 8000;
   let candidates = [];
   let shared = false;
+  let ownershipMapReady = false;
 
   const image = state.hitMapImage;
   if (image?.complete && image.naturalWidth) {
+    ownershipMapReady = true;
     const x = clamp(Math.floor(xRatio * image.naturalWidth), 0, image.naturalWidth - 1);
     const y = clamp(Math.floor(yRatio * image.naturalHeight), 0, image.naturalHeight - 1);
     const [winnerEvent, runnerEvent, packed] = state.hitMapCanvas
@@ -195,8 +213,13 @@ function selectSpectrogramPoint(event) {
     }
   }
 
-  if (!candidates.length) candidates = [fallbackSpectralNote(time, frequency)].filter(Boolean);
-  if (!candidates.length) return;
+  if (!candidates.length && !ownershipMapReady) {
+    candidates = [fallbackSpectralNote(time, frequency)].filter(Boolean);
+  }
+  if (!candidates.length) {
+    clearSpectralSelection(time, frequency);
+    return;
+  }
   auditionNote(candidates[0]);
   renderBinCandidates(candidates, time, frequency, shared);
 }
