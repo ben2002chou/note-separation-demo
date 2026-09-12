@@ -6,8 +6,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image
 from scipy.io import wavfile
 
 
@@ -30,7 +30,11 @@ def read_audio(path: Path) -> tuple[int, np.ndarray]:
     return rate, np.asarray(signal, dtype=np.float64).reshape(-1)
 
 
-def rgba_overlay(mixture: np.ndarray, estimate: np.ndarray) -> np.ndarray:
+def rgba_overlay(
+    mixture: np.ndarray,
+    estimate: np.ndarray,
+    mixture_image: np.ndarray,
+) -> np.ndarray:
     mixture_mag = stft_magnitude(mixture)
     estimate_mag = stft_magnitude(estimate)
     reference = max(float(mixture_mag.max()), 1e-12)
@@ -42,11 +46,26 @@ def rgba_overlay(mixture: np.ndarray, estimate: np.ndarray) -> np.ndarray:
     audible_energy = np.clip((mixture_db + 72.0) / 54.0, 0.0, 1.0)
     strength = np.power(allocation, 0.42) * np.power(audible_energy, 0.55)
 
-    low = np.array([0.08, 0.72, 1.00])[:, None, None]
-    high = np.array([0.06, 1.00, 0.76])[:, None, None]
-    rgb = low * (1.0 - allocation[None, :, :]) + high * allocation[None, :, :]
-    alpha = np.clip(1.18 * strength, 0.0, 0.96)[None, :, :]
-    return np.ascontiguousarray(np.moveaxis(np.concatenate((rgb, alpha), axis=0), 0, -1))
+    # Convert the STFT mask to the exact pixel grid used by the displayed
+    # mixture. Frequency bin zero is the bottom row of the spectrogram.
+    raw_alpha = np.flipud(np.clip(1.18 * strength, 0.0, 0.96))
+    height, width = mixture_image.shape[:2]
+    alpha = np.asarray(
+        Image.fromarray(np.round(raw_alpha * 255).astype(np.uint8)).resize(
+            (width, height), Image.Resampling.BILINEAR
+        ),
+        dtype=np.float64,
+    ) / 255.0
+
+    # Recolor the original mixture pixels instead of drawing a second
+    # spectrogram. Highlighted ridges therefore remain pixel-aligned with the
+    # visible mixture while the cyan-green tint indicates ASO ownership.
+    base = mixture_image[..., :3].astype(np.float64) / 255.0
+    rgb = base.copy()
+    rgb[..., 0] *= 0.52
+    rgb[..., 1] += 0.72 * (1.0 - rgb[..., 1])
+    rgb[..., 2] += 0.48 * (1.0 - rgb[..., 2])
+    return np.dstack((np.clip(rgb, 0.0, 1.0), alpha))
 
 
 def main() -> None:
@@ -55,7 +74,9 @@ def main() -> None:
     count = 0
     for example in manifest["examples"]:
         mixture_path = ROOT / example["channels"][0]["audio"]
+        mixture_image_path = ROOT / example["channels"][0]["spectrogram"]
         mix_rate, mixture = read_audio(mixture_path)
+        mixture_image = np.asarray(Image.open(mixture_image_path).convert("RGB"))
         for note in example["notes"]:
             aso = note["outputs"]["aso"]
             aso_path = ROOT / aso["audio"]
@@ -63,13 +84,14 @@ def main() -> None:
             if rate != mix_rate or len(estimate) != len(mixture):
                 raise ValueError(f"unaligned audio: {aso_path}")
             output_path = aso_path.with_name("aso_mask.png")
-            plt.imsave(output_path, rgba_overlay(mixture, estimate), origin="lower")
+            overlay = np.round(rgba_overlay(mixture, estimate, mixture_image) * 255).astype(np.uint8)
+            Image.fromarray(overlay, mode="RGBA").save(output_path)
             aso["mask"] = output_path.relative_to(ROOT).as_posix()
             count += 1
 
     manifest["maskVisualization"] = {
         "source": "ASO output magnitude divided by mixture magnitude",
-        "display": "allocation weighted by audible mixture energy",
+        "display": "original mixture pixels recolored by ASO allocation",
     }
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {count} ASO magnitude-allocation overlays")

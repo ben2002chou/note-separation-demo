@@ -1878,8 +1878,8 @@
       },
       "hitMap": "assets/piano/aso_hit_map.png",
       "hitMapSize": [
-        129,
-        513
+        1440,
+        360
       ]
     },
     {
@@ -2852,8 +2852,8 @@
       },
       "hitMap": "assets/guitar/aso_hit_map.png",
       "hitMapSize": [
-        235,
-        513
+        1440,
+        360
       ]
     },
     {
@@ -3226,13 +3226,13 @@
       },
       "hitMap": "assets/cello/aso_hit_map.png",
       "hitMapSize": [
-        150,
-        513
+        1440,
+        360
       ]
     }
   ],
   "maskVisualization": {
     "source": "ASO output magnitude divided by mixture magnitude",
-    "display": "allocation weighted by audible mixture energy"
+    "display": "original mixture pixels recolored by ASO allocation"
   }
 }

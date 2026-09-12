@@ -92,7 +92,7 @@ function setSelection(start, end, event = null, refreshChannel = true) {
     waveform.classList.toggle('roll-waveform--selected', Number(waveform.dataset.event) === state.selectedEvent);
   });
   const selected = state.example.notes.find((note) => note.event === state.selectedEvent);
-  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2118` : '';
+  ui.mask.src = selected?.outputs?.aso?.mask ? `${selected.outputs.aso.mask}?v=20260911-2140` : '';
   const hideMask = !ui.maskToggle.checked || !ui.mask.src;
   ui.mask.classList.toggle('mask-overlay--hidden', hideMask);
   ui.maskDimmer.classList.toggle('mask-dimmer--hidden', hideMask);
@@ -132,7 +132,7 @@ function loadHitMap() {
     canvas.height = image.naturalHeight;
     canvas.getContext('2d', {willReadFrequently: true}).drawImage(image, 0, 0);
   }, {once: true});
-  image.src = `${state.example.hitMap}?v=20260911-2044`;
+  image.src = `${state.example.hitMap}?v=20260911-2140`;
 }
 
 function fallbackSpectralNote(time, frequency) {
